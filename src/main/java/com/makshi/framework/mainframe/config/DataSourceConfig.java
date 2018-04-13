@@ -1,4 +1,4 @@
-package com.makshi.web.gateway.config;
+package com.makshi.framework.mainframe.config;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -19,7 +19,7 @@ import javax.sql.DataSource;
 @MapperScan(basePackages = "com.maishi.framework.*.mapper", sqlSessionTemplateRef = "sqlSessionTemplate")
 public class DataSourceConfig {
     @Bean(name = "dataSource")
-    @ConfigurationProperties(prefix = "spring.datasource.gateway")
+    @ConfigurationProperties(prefix = "spring.datasource.mainframe")
     @Primary
     public DataSource dataSource() {
         return DataSourceBuilder.create().build();

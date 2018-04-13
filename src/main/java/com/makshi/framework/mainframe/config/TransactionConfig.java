@@ -1,4 +1,4 @@
-package com.makshi.web.gateway.config;
+package com.makshi.framework.mainframe.config;
 
 import org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator;
 import org.springframework.beans.factory.annotation.Autowired;

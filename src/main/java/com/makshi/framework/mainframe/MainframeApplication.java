@@ -1,13 +1,12 @@
-package com.makshi.web.gateway;
+package com.makshi.framework.mainframe;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 @SpringBootApplication
 public class MainframeApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(GatewayApplication.class, args);
+        SpringApplication.run(MainframeApplication.class, args);
     }
 }
