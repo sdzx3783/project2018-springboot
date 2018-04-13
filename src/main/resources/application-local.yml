@@ -1,0 +1,7 @@
+param:
+  server-port: 8083
+  db-ip: localhost
+  db-port: 3306
+  db-name: demo
+  db-username: root
+  db-password: jklfgh
