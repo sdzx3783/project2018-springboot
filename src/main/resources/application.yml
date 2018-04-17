@@ -1,10 +1,10 @@
 param:
   server-port: 8080
-  db-ip: localhost
+  db-ip: 192.168.1.13
   db-port: 3306
-  db-name: demo
+  db-name: webframe
   db-username: root
-  db-password: password
+  db-password: 
 
 server:
   port: ${param.server-port}
@@ -25,9 +25,6 @@ logging:
   path: ./logs/
 
 spring:
-  thymeleaf:
-    cache: false
-    model: LEGACYHTML5
   datasource:
     mainframe:
       validation-query: SELECT 1 FROM DUAL
@@ -49,3 +46,6 @@ spring:
       enabled: true
   profiles:
     active: ${RUN_ENV}
+  view:
+    prefix:/view/
+    suffix:.jsp
