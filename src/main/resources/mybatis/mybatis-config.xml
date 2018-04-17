@@ -16,7 +16,7 @@
 	</settings>
 	<plugins>
 		<plugin interceptor="com.hotent.core.mybatis.OffsetLimitInterceptor">
-			<property name="jdbc.dbType" value="${jdbc.dbType}"/>
+			<property name="jdbc.dbType" value="mysql"/>
 			<property name="Dialect.oracle" value="com.hotent.core.mybatis.dialect.OracleDialect"/>
 			<property name="Dialect.mssql" value="com.hotent.core.mybatis.dialect.SQLServer2005Dialect"/>
 			<property name="Dialect.mysql" value="com.hotent.core.mybatis.dialect.MySQLDialect"/>

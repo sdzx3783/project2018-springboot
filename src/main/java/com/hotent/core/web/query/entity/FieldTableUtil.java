@@ -1,6 +1,6 @@
 package com.hotent.core.web.query.entity;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 public class FieldTableUtil {
 	public static String fixFieldName(String fieldName, String tableName, boolean isAs) {

@@ -1,18 +1,29 @@
 package com.hotent.core.table;
 
 import com.hotent.core.page.PageBean;
-import com.hotent.core.table.TableModel;
 import java.sql.SQLException;
 import java.util.List;
 
-public interface IDbView {
-	void createOrRep(String arg0, String arg1) throws Exception;
-
-	List<String> getViews(String arg0) throws SQLException;
-
-	List<String> getViews(String arg0, PageBean arg1) throws SQLException, Exception;
-
-	TableModel getModelByViewName(String arg0) throws SQLException;
-
-	List<TableModel> getViewsByName(String arg0, PageBean arg1) throws Exception;
+public abstract interface IDbView
+{
+  public abstract void createOrRep(String paramString1, String paramString2)
+    throws Exception;
+  
+  public abstract List<String> getViews(String paramString)
+    throws SQLException;
+  
+  public abstract List<String> getViews(String paramString, PageBean paramPageBean)
+    throws SQLException, Exception;
+  
+  public abstract TableModel getModelByViewName(String paramString)
+    throws SQLException;
+  
+  public abstract List<TableModel> getViewsByName(String paramString, PageBean paramPageBean)
+    throws Exception;
 }
+
+
+/* Location:           C:\Users\sun\Desktop\反编译class\hotentcore-1.3.6.8.jar
+ * Qualified Name:     com.hotent.core.table.IDbView
+ * JD-Core Version:    0.7.0.1
+ */
