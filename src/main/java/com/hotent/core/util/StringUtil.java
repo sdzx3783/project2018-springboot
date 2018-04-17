@@ -16,8 +16,8 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.apache.commons.codec.binary.Base64;
-import org.apache.commons.lang.StringEscapeUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringEscapeUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.safety.Whitelist;
 
@@ -128,13 +128,13 @@ public class StringUtil {
 		return trimSufffix(trimPrefix(toTrim, trimStr), trimStr);
 	}
 
-	public static String escapeHtml(String content) {
+	/*public static String escapeHtml(String content) {
 		return StringEscapeUtils.escapeHtml(content);
 	}
 
 	public static String unescapeHtml(String content) {
 		return StringEscapeUtils.unescapeHtml(content);
-	}
+	}*/
 
 	public static boolean isEmpty(String str) {
 		return str == null ? true : str.trim().equals("");

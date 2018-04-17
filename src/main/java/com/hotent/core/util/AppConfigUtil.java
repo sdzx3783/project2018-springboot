@@ -10,6 +10,7 @@ public class AppConfigUtil {
 		return properties.getProperty(propertyKey);
 	}
 
+
 	public static int getInt(String propertyKey) {
 		String val = get(propertyKey);
 		return Integer.parseInt(val);

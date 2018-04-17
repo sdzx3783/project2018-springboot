@@ -12,6 +12,7 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.ApplicationEvent;
 
 public class AppUtil implements ApplicationContextAware {
+	
 	private static ApplicationContext applicationContext;
 	private static ServletContext servletContext;
 

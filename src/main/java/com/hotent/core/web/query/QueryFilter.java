@@ -5,12 +5,10 @@ import com.hotent.core.page.PageUtils;
 import com.hotent.core.table.TableModel;
 import com.hotent.core.util.BeanUtils;
 import com.hotent.core.util.StringUtil;
-import com.hotent.core.util.jsonobject.JSONObjectUtil;
 import com.hotent.core.web.util.RequestUtil;
 import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
-import net.sf.json.JSONObject;
 import org.displaytag.util.ParamEncoder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -203,7 +201,7 @@ public class QueryFilter {
 
 	}
 
-	public QueryFilter(JSONObject json) {
+	/*public QueryFilter(JSONObject json) {
 		this.logger = LoggerFactory.getLogger(QueryFilter.class);
 		this.filters = new HashMap();
 		this.sortColumns = "";
@@ -228,7 +226,7 @@ public class QueryFilter {
 			this.logger.error(arg6.getMessage());
 		}
 
-	}
+	}*/
 
 	public HttpServletRequest getRequest() {
 		return this.request;

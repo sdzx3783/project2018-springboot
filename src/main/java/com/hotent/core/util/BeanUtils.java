@@ -27,6 +27,7 @@ import org.springframework.web.context.ContextLoader;
 import org.springframework.web.context.WebApplicationContext;
 
 public class BeanUtils {
+	
 	private static Logger logger = LoggerFactory.getLogger(BeanUtils.class);
 	public static ConvertUtilsBean convertUtilsBean = new ConvertUtilsBean();
 	private static BeanUtilsBean beanUtilsBean;
@@ -91,7 +92,7 @@ public class BeanUtils {
 					return true;
 				}
 			} else if (o instanceof Short) {
-				Short sEmpty3 = Short.valueOf(0);
+				Short sEmpty3 = Short.valueOf((short) 0);
 				if (o == sEmpty3) {
 					return true;
 				}
@@ -257,7 +258,7 @@ public class BeanUtils {
 		try {
 			target = destClass.newInstance();
 			copyProperties(target, orig);
-			return target;
+			return (T) target;
 		} catch (Exception arg3) {
 			handleReflectionException(arg3);
 			return null;

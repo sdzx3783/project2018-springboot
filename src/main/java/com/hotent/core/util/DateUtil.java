@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import org.apache.commons.lang.time.DateUtils;
+import org.apache.commons.lang3.time.DateUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -28,6 +28,7 @@ public class DateUtil {
 		cal.set(13, 59);
 		return cal;
 	}
+	
 
 	public static void copyYearMonthDay(Calendar destCal, Calendar sourceCal) {
 		destCal.set(1, sourceCal.get(1));
