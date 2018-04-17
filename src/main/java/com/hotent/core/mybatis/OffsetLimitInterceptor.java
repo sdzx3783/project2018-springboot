@@ -1,7 +1,6 @@
 package com.hotent.core.mybatis;
 
 import com.hotent.core.mybatis.Dialect;
-import com.hotent.core.mybatis.OffsetLimitInterceptor.BoundSqlSqlSource;
 import com.hotent.core.mybatis.support.PropertiesHelper;
 import java.util.Iterator;
 import java.util.Properties;
@@ -135,4 +134,18 @@ public class OffsetLimitInterceptor implements Interceptor {
 		logger.debug("dialectClass: {} ", dialect.getClass().getName());
 		this.dialect = dialect;
 	}
+	
+	
+	private class BoundSqlSqlSource implements SqlSource {
+	    BoundSql boundSql;
+
+	    public BoundSqlSqlSource(BoundSql boundSql) {
+	        this.boundSql = boundSql;
+	    }
+
+	    public BoundSql getBoundSql(Object parameterObject) {
+	        return this.boundSql;
+	    }
+	}
+
 }
