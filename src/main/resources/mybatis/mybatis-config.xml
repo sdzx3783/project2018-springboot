@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-    <typeAliases>
+
+	<!-- <typeAliases>
         <typeAlias alias="Integer" type="java.lang.Integer" />
         <typeAlias alias="Long" type="java.lang.Long" />
         <typeAlias alias="HashMap" type="java.util.HashMap" />
         <typeAlias alias="LinkedHashMap" type="java.util.LinkedHashMap" />
         <typeAlias alias="ArrayList" type="java.util.ArrayList" />
         <typeAlias alias="LinkedList" type="java.util.LinkedList" />
-    </typeAliases>
+    </typeAliases> -->
+	<properties resource="conf/application.properties"></properties>  
+	<settings >
+		<setting name="cacheEnabled" value="false"/>
+	</settings>
+	<plugins>
+		<plugin interceptor="com.hotent.core.mybatis.OffsetLimitInterceptor">
+			<property name="jdbc.dbType" value="${jdbc.dbType}"/>
+			<property name="Dialect.oracle" value="com.hotent.core.mybatis.dialect.OracleDialect"/>
+			<property name="Dialect.mssql" value="com.hotent.core.mybatis.dialect.SQLServer2005Dialect"/>
+			<property name="Dialect.mysql" value="com.hotent.core.mybatis.dialect.MySQLDialect"/>
+			<property name="Dialect.db2" value="com.hotent.core.mybatis.dialect.DB2Dialect"/>
+			<property name="Dialect.h2" value="com.hotent.core.mybatis.dialect.H2Dialect"/>
+			<property name="Dialect.dm" value="com.hotent.core.mybatis.dialect.DmDialect"/>
+		</plugin>
+	</plugins>
 </configuration>
