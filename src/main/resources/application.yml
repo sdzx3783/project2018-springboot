@@ -46,6 +46,10 @@ spring:
       enabled: true
   profiles:
     active: ${RUN_ENV}
-  view:
-    prefix:/view/
-    suffix:.jsp
+  mvc:
+    view:
+      prefix: /view/
+      suffix: .jsp
+  thymeleaf:
+    cache: false
+    enabled: false
