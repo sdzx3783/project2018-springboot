@@ -3,6 +3,9 @@ package com.hotent.core.mybatis;
 import com.hotent.core.mybatis.IbatisSql;
 import java.util.Collection;
 import java.util.List;
+
+import javax.annotation.Resource;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.ibatis.mapping.BoundSql;
@@ -20,7 +23,10 @@ import org.springframework.util.Assert;
 
 public abstract class BaseMyBatisDao extends DaoSupport {
 	protected final Log log = LogFactory.getLog(this.getClass());
+	
+	@Resource
 	private SqlSessionFactory sqlSessionFactory;
+	@Resource
 	private SqlSessionTemplate sqlSessionTemplate;
 
 	protected void checkDaoConfig() throws IllegalArgumentException {
