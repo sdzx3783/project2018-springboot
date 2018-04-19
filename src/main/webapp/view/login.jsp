@@ -19,13 +19,13 @@
 <body>
     <div class="header">
         <div class="top">
-            <h1>深水咨询OA管理系统</h1></div>
+            <h1>深水咨询OA管理系统    web</h1></div>
     </div>
 
     <div class="main">
         <img src="/images/login_bg2.png" alt="">
         <div class="form">
-            <h2>用户登录</h2>
+            <h2>用户登录 </h2>
 			<form id="form-login" action="${ctx}/login.ht" method="post">
                 <div class="form-line user-line">
                     <input type="text" class="input" id="txt_username" name="username" placeholder="请输入用户名/手机号码">
