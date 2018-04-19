@@ -6,7 +6,7 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 import org.springframework.security.access.ConfigAttribute;
 import org.springframework.security.access.SecurityConfig;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.GrantedAuthorityImpl;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import com.hotent.core.model.BaseModel;
 
@@ -19,7 +19,7 @@ public class SysRole extends BaseModel implements GrantedAuthority,Cloneable
 	private final static String ROLE_PUBLIC  = "ROLE_PUBLIC";//公共角色
 	private final static String ROLE_ANONYMOUS  = "ROLE_ANONYMOUS";//匿名级
 	
-	public final static GrantedAuthority ROLE_GRANT_SUPER=new GrantedAuthorityImpl(SysRole.ROLE_SUPER);
+	public final static GrantedAuthority ROLE_GRANT_SUPER=new SimpleGrantedAuthority(SysRole.ROLE_SUPER);
 	public final static ConfigAttribute  ROLE_CONFIG_PUBLIC=new SecurityConfig(SysRole.ROLE_PUBLIC);
 	public final static ConfigAttribute  ROLE_CONFIG_ANONYMOUS=new SecurityConfig(SysRole.ROLE_ANONYMOUS);
 	

@@ -6,7 +6,7 @@ import java.util.Date;
 
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.GrantedAuthorityImpl;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import com.hotent.core.api.org.model.ISysUser;
@@ -563,7 +563,7 @@ public class SysUser extends BaseModel implements UserDetails ,ISysUser{
 		Collection<String> totalRoleCol=  sysRoleService.getRolesByUserIdAndOrgId(userId, orgId);
 		if(BeanUtils.isNotEmpty(totalRoleCol)){
 			for(String role:totalRoleCol){
-				rtnList.add(new GrantedAuthorityImpl(role));
+				rtnList.add(new SimpleGrantedAuthority(role));
 			}
 		}
 		String admin=SysUser.getAdminAccount();

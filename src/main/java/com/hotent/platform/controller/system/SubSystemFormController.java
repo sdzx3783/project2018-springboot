@@ -6,7 +6,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -55,6 +55,7 @@ public class SubSystemFormController extends BaseFormController {
 		SysAuditThreadLocalHolder.putParamerter("isAdd", subSystem.getSystemId()== 0L);
 		String logo = subSystem.getLogo();
 		if (StringUtils.startsWith(logo, request.getContextPath()))
+			
 			logo = logo.replaceFirst(request.getContextPath(), "");
 		String resultMsg = null;
 		try {
