@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.hotent.platform.annotion.Action;
 import com.hotent.core.log.SysAuditThreadLocalHolder;
-import com.hotent.core.util.JSONUtil;
 import com.hotent.core.util.UniqueIdUtil;
 import com.hotent.core.web.ResultMessage;
 import com.hotent.core.web.controller.BaseFormController;

@@ -3,13 +3,13 @@ package com.hotent.core.consts;
 import org.springframework.security.access.ConfigAttribute;
 import org.springframework.security.access.SecurityConfig;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.GrantedAuthorityImpl;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 public class SystemConst {
 	private static final String ROLE_SUPER = "ROLE_SUPER";
 	private static final String ROLE_PUBLIC = "ROLE_PUBLIC";
 	private static final String ROLE_ANONYMOUS = "ROLE_ANONYMOUS";
-	public static final GrantedAuthority ROLE_GRANT_SUPER = new GrantedAuthorityImpl("ROLE_SUPER");
+	public static final GrantedAuthority ROLE_GRANT_SUPER = new SimpleGrantedAuthority("ROLE_SUPER");
 	public static final ConfigAttribute ROLE_CONFIG_PUBLIC = new SecurityConfig("ROLE_PUBLIC");
 	public static final ConfigAttribute ROLE_CONFIG_ANONYMOUS = new SecurityConfig("ROLE_ANONYMOUS");
 	private static final long serialVersionUID = 1L;

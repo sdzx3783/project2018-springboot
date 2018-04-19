@@ -14,12 +14,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.hotent.platform.annotion.Action;
-import com.hotent.platform.annotion.ActionExecOrder;
 import com.alibaba.fastjson.JSONObject;
 import com.hotent.core.db.datasource.DbContextHolder;
 import com.hotent.core.engine.FreemarkEngine;
@@ -29,23 +25,20 @@ import com.hotent.core.table.BaseTableMeta;
 import com.hotent.core.table.IDbView;
 import com.hotent.core.table.TableModel;
 import com.hotent.core.table.impl.TableMetaFactory;
-import com.hotent.core.util.AppUtil;
 import com.hotent.core.util.BeanUtils;
-import com.hotent.core.util.DateFormatUtil;
-import com.hotent.core.util.FileUtil;
 import com.hotent.core.util.StringUtil;
 import com.hotent.core.web.ResultMessage;
 import com.hotent.core.web.controller.BaseController;
 import com.hotent.core.web.query.QueryFilter;
 import com.hotent.core.web.util.RequestUtil;
+import com.hotent.platform.annotion.Action;
+import com.hotent.platform.annotion.ActionExecOrder;
 import com.hotent.platform.model.form.BpmFormDialog;
 import com.hotent.platform.model.form.BpmFormDialogCombinate;
 import com.hotent.platform.model.form.DialogField;
 import com.hotent.platform.model.system.SysAuditModelType;
-import com.hotent.platform.model.system.SysUser;
 import com.hotent.platform.service.form.BpmFormDialogCombinateService;
 import com.hotent.platform.service.form.BpmFormDialogService;
-import com.hotent.platform.xml.util.MsgUtil;
 
 /**
  * 对象功能:通用表单对话框 控制器类 开发公司:广州宏天软件有限公司 开发人员:ray 创建时间:2012-06-25 11:05:09

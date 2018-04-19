@@ -2,7 +2,6 @@ package com.hotent.platform.controller.system;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
@@ -25,14 +24,12 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.hotent.core.api.util.ContextUtil;
 import com.hotent.core.log.SysAuditThreadLocalHolder;
-import com.hotent.core.model.CurrentUser;
 import com.hotent.core.util.BeanUtils;
 import com.hotent.core.util.ExceptionUtil;
 import com.hotent.core.util.PinyinUtil;
 import com.hotent.core.util.StringUtil;
 import com.hotent.core.web.ResultMessage;
 import com.hotent.core.web.controller.BaseController;
-import com.hotent.core.web.query.QueryFilter;
 import com.hotent.core.web.util.RequestUtil;
 import com.hotent.platform.annotion.Action;
 import com.hotent.platform.annotion.ActionExecOrder;
@@ -45,7 +42,6 @@ import com.hotent.platform.service.system.SysOrgService;
 import com.hotent.platform.service.system.SysRoleService;
 import com.hotent.platform.service.system.SysTypeKeyService;
 import com.hotent.platform.service.util.MessageUtil;
-import com.hotent.platform.service.util.ServiceUtil;
 
 /**
  * 对象功能:系统分类表 控制器类 开发公司:广州宏天软件有限公司 开发人员:ray 创建时间:2011-11-23 11:07:27

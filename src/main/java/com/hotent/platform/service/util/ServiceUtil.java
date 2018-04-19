@@ -28,12 +28,8 @@ import com.hotent.core.engine.GroovyScriptEngine;
 import com.hotent.core.jms.IMessageHandler;
 import com.hotent.core.model.CurrentUser;
 import com.hotent.core.mybatis.Dialect;
-import com.hotent.core.mybatis.dialect.DB2Dialect;
 import com.hotent.core.mybatis.dialect.DmDialect;
-import com.hotent.core.mybatis.dialect.H2Dialect;
 import com.hotent.core.mybatis.dialect.MySQLDialect;
-import com.hotent.core.mybatis.dialect.OracleDialect;
-import com.hotent.core.mybatis.dialect.SQLServer2005Dialect;
 import com.hotent.core.table.ColumnModel;
 import com.hotent.core.table.SqlTypeConst;
 import com.hotent.core.util.AppUtil;
@@ -306,17 +302,9 @@ public class ServiceUtil {
 	 * @throws Exception
 	 */
 	private static Dialect getDialect(String dbType) throws Exception {
-		Dialect  dialect = new OracleDialect();
-		if (dbType.equals(SqlTypeConst.ORACLE)) {
-			dialect = new OracleDialect();
-		} else if (dbType.equals(SqlTypeConst.SQLSERVER)) {
-			dialect = new SQLServer2005Dialect();
-		} else if (dbType.equals(SqlTypeConst.DB2)) {
-			dialect = new DB2Dialect();
-		} else if (dbType.equals(SqlTypeConst.MYSQL)) {
+		Dialect  dialect;
+		if (dbType.equals(SqlTypeConst.MYSQL)) {
 			dialect = new MySQLDialect();
-		} else if (dbType.equals(SqlTypeConst.H2)) {
-			dialect = new H2Dialect();
 		} else if (dbType.equals(SqlTypeConst.DM)) {
 			dialect = new DmDialect();
 		} else {

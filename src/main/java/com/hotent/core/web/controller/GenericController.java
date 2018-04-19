@@ -1,26 +1,26 @@
 package com.hotent.core.web.controller;
 
-import com.hotent.core.api.util.ContextUtil;
-import com.hotent.core.util.StringUtil;
-import com.hotent.core.web.ResultMessage;
-import com.hotent.core.web.controller.BaseController;
-import com.hotent.core.web.query.QueryFilter;
-import com.hotent.core.web.util.RequestContext;
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Properties;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.context.support.MessageSourceAccessor;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.hotent.core.api.util.ContextUtil;
+import com.hotent.core.util.StringUtil;
+import com.hotent.core.web.ResultMessage;
+import com.hotent.core.web.util.RequestContext;
 
 public class GenericController {
 	protected Logger logger = LoggerFactory.getLogger(BaseController.class);

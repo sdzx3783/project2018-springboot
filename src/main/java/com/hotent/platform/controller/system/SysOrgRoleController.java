@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.hotent.platform.annotion.Action;
-import com.hotent.core.cache.ICache;
 import com.hotent.core.util.ExceptionUtil;
 import com.hotent.core.util.StringUtil;
 import com.hotent.core.util.UniqueIdUtil;

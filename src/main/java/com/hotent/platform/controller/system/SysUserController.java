@@ -33,7 +33,6 @@ import com.hotent.core.api.util.ContextUtil;
 import com.hotent.core.api.util.PropertyUtil;
 import com.hotent.core.encrypt.EncryptUtil;
 import com.hotent.core.engine.GroovyScriptEngine;
-import com.hotent.core.ldap.model.LdapUser;
 import com.hotent.core.log.SysAuditThreadLocalHolder;
 import com.hotent.core.model.OnlineUser;
 import com.hotent.core.model.TaskExecutor;
