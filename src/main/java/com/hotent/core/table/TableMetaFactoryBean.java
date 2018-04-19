@@ -4,7 +4,7 @@ import com.hotent.core.table.BaseTableMeta;
 import com.hotent.core.table.impl.TableMetaFactory;
 import org.springframework.beans.factory.FactoryBean;
 
-public class TableMetaFactoryBean implements FactoryBean<BaseTableMeta> {
+public class TableMetaFactoryBean implements FactoryBean {
 	private BaseTableMeta tableMeta;
 	private String dbType = "mysql";
 

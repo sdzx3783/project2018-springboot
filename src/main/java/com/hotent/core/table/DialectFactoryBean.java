@@ -9,7 +9,7 @@ import com.hotent.core.mybatis.dialect.OracleDialect;
 import com.hotent.core.mybatis.dialect.SQLServer2005Dialect;
 import org.springframework.beans.factory.FactoryBean;
 
-public class DialectFactoryBean implements FactoryBean<Dialect> {
+public class DialectFactoryBean implements FactoryBean{
 	private Dialect dialect;
 	private String dbType = "mysql";
 

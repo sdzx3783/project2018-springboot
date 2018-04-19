@@ -105,7 +105,7 @@ public class MySqlTableMeta extends BaseTableMeta {
 		}
 	}
 
-	private TableModel getTableModel(String tableName) {
+	private TableModel getTableModel(final String tableName) {
       String sql = String.format("select table_name,table_comment  from information_schema.tables t where t.table_schema=DATABASE() and table_name=\'%s\' ", new Object[]{tableName});
       TableModel tableModel = (TableModel)this.jdbcTemplate.queryForObject(sql, (Object[])null, new RowMapper<TableModel>() {
     	  public TableModel mapRow(ResultSet rs, int row) throws SQLException {

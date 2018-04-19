@@ -174,7 +174,7 @@ public class DmTableMeta extends BaseTableMeta {
       return rtn;
    }
 
-	private TableModel getTableModel(String tableName) {
+	private TableModel getTableModel(final String tableName) {
       String sql = String.format(this.sqlTableComment, new Object[]{tableName});
       TableModel tableModel = (TableModel)this.jdbcTemplate.queryForObject(sql, (Object[])null, new RowMapper<TableModel>() {
     	  public TableModel mapRow(ResultSet rs, int row) throws SQLException {
