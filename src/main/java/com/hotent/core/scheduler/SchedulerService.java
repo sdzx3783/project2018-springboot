@@ -28,7 +28,8 @@ import org.quartz.TriggerBuilder;
 import org.quartz.TriggerKey;
 import org.quartz.Trigger.TriggerState;
 import org.quartz.impl.matchers.GroupMatcher;
-
+import org.springframework.stereotype.Service;
+@Service
 public class SchedulerService {
 	Scheduler scheduler;
 	private static HashMap<String, String> mapWeek = new HashMap();

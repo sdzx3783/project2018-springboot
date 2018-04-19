@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.stereotype.Component;
 
 import com.hotent.core.api.org.ICurrentContext;
 import com.hotent.core.api.org.model.IPosition;
@@ -30,7 +31,7 @@ import com.hotent.platform.service.system.SysOrgService;
 import com.hotent.platform.service.system.SysOrgTacticService;
 import com.hotent.platform.service.system.SysUserService;
 import com.hotent.platform.web.tag.AnchorTag;
-
+@Component
 public class CurrentContext implements ICurrentContext {
 	
 	private static ThreadLocal<String> curUserAccount=new ThreadLocal<String>();

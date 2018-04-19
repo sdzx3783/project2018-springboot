@@ -4,9 +4,11 @@ import com.hotent.core.db.IRollBack;
 import java.util.Map;
 import javax.annotation.Resource;
 
+import org.springframework.stereotype.Component;
 import org.springframework.transaction.support.TransactionCallback;
 import org.springframework.transaction.support.TransactionTemplate;
 
+@Component
 public class RollbackJdbcTemplate {
 	@Resource
 	private TransactionTemplate txTemplate;

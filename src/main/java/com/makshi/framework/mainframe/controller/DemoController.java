@@ -11,10 +11,4 @@ public class DemoController {
     public String demo(){
         return "hi";
     }
-    
-    @RequestMapping("/login.ht")
-	public ModelAndView edit() {
-		ModelAndView mv = new ModelAndView("login");
-		return mv;
-	}
 }

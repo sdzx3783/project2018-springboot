@@ -15,7 +15,6 @@ import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.authentication.AccountExpiredException;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.LockedException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -64,8 +63,6 @@ import com.hotent.platform.service.system.SysUserService;
 public class LoginController extends BaseController {
 	@Resource
 	private SysUserService sysUserService;
-	@Resource(name = "authenticationManager")
-	private AuthenticationManager authenticationManager = null;
 	@Resource
 	private Properties configproperties;
 	/*@Resource

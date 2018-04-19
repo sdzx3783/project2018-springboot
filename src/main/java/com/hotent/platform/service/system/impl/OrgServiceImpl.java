@@ -5,13 +5,15 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 
+import org.springframework.stereotype.Component;
+
 import com.hotent.core.engine.GroovyScriptEngine;
 import com.hotent.core.util.BeanUtils;
 import com.hotent.platform.model.system.SysOrg;
 import com.hotent.platform.service.system.IOrgHandler;
 import com.hotent.platform.service.system.IOrgService;
 import com.hotent.platform.service.system.SysOrgService;
-
+@Component
 public class OrgServiceImpl implements IOrgService {
 	
 	@Resource
