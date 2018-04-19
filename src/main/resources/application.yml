@@ -20,7 +20,7 @@ server:
 
 mybatis:
   config-locations: classpath:mybatis/mybatis-config.xml
-
+  mapper-locations: classpath:mybatis/mappers/*.map.xml
 logging:
   path: ./logs/
 
