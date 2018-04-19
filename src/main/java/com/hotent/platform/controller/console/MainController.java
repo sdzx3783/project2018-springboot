@@ -1,13 +1,10 @@
 package com.hotent.platform.controller.console;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import java.util.Random;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -23,25 +20,16 @@ import com.hotent.core.api.util.ContextUtil;
 import com.hotent.core.api.util.PropertyUtil;
 import com.hotent.core.engine.FreemarkEngine;
 import com.hotent.core.engine.GroovyScriptEngine;
-import com.hotent.core.page.PageBean;
 import com.hotent.core.util.AppUtil;
 import com.hotent.core.util.StringUtil;
 import com.hotent.core.web.controller.BaseController;
-import com.hotent.core.web.query.QueryFilter;
 import com.hotent.core.web.util.RequestUtil;
-/*import com.hotent.makshi.model.doc.Doc;
-import com.hotent.makshi.model.project.ClassifyLibrary;
-import com.hotent.makshi.service.doc.DocService;
-import com.hotent.makshi.service.project.ClassifyLibraryService;
-import com.hotent.makshi.utils.OrgResUtils;*/
-import com.hotent.platform.model.system.MessageSend;
 import com.hotent.platform.model.system.Position;
 import com.hotent.platform.model.system.Resources;
 import com.hotent.platform.model.system.SubSystem;
 import com.hotent.platform.model.system.SysOrg;
 import com.hotent.platform.model.system.SysRole;
 import com.hotent.platform.model.system.SysUser;
-import com.hotent.platform.model.system.UserPosition;
 import com.hotent.platform.service.system.PositionService;
 import com.hotent.platform.service.system.ResourcesService;
 import com.hotent.platform.service.system.SubSystemService;
@@ -49,8 +37,6 @@ import com.hotent.platform.service.system.SubSystemUtil;
 import com.hotent.platform.service.system.SysOrgService;
 import com.hotent.platform.service.system.SysRoleService;
 import com.hotent.platform.service.system.UserPositionService;
-
-import edu.emory.mathcs.backport.java.util.Arrays;
 
 @Controller
 @RequestMapping("/platform/console")
