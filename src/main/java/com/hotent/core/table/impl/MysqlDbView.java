@@ -1,14 +1,6 @@
 package com.hotent.core.table.impl;
 
-import com.hotent.core.db.datasource.JdbcTemplateUtil;
-import com.hotent.core.page.PageBean;
-import com.hotent.core.table.BaseDbView;
-import com.hotent.core.table.ColumnModel;
-import com.hotent.core.table.IDbView;
-import com.hotent.core.table.TableModel;
-import com.hotent.core.table.colmap.MySqlColumnMap;
-import com.hotent.core.table.impl.MysqlDbView.1;
-import com.hotent.core.util.StringUtil;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -16,9 +8,21 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+
 import javax.annotation.Resource;
+
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
+
+import com.hotent.core.db.datasource.JdbcTemplateUtil;
+import com.hotent.core.page.PageBean;
+import com.hotent.core.table.BaseDbView;
+import com.hotent.core.table.ColumnModel;
+import com.hotent.core.table.IDbView;
+import com.hotent.core.table.TableModel;
+import com.hotent.core.table.colmap.MySqlColumnMap;
+import com.hotent.core.util.StringUtil;
 
 @Component
 public class MysqlDbView extends BaseDbView implements IDbView {
@@ -61,7 +65,14 @@ public class MysqlDbView extends BaseDbView implements IDbView {
          sql = sql + " AND TABLE_NAME LIKE \'" + viewName + "%\'";
       }
 
-      1 rowMapper = new 1(this);
+      RowMapper rowMapper = new RowMapper<TableModel>() {
+    	  public TableModel mapRow(ResultSet rs, int row) throws SQLException {
+    	        TableModel tableModel = new TableModel();
+    	        tableModel.setName(rs.getString("table_name"));
+    	        tableModel.setComment(tableModel.getName());
+    	        return tableModel;
+    	    }
+      };
       List tableModels = this.getForList(sql, pageBean, rowMapper, "mysql");
       ArrayList tableNames = new ArrayList();
       Iterator tableColumnsMap = tableModels.iterator();

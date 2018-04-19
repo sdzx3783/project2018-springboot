@@ -1,19 +1,7 @@
 package com.hotent.core.table.impl;
 
-import com.hotent.core.db.datasource.JdbcTemplateUtil;
-import com.hotent.core.page.PageBean;
-import com.hotent.core.table.BaseTableMeta;
-import com.hotent.core.table.ColumnModel;
-import com.hotent.core.table.TableModel;
-import com.hotent.core.table.colmap.DmColumnMap;
-import com.hotent.core.table.impl.DmTableMeta.1;
-import com.hotent.core.table.impl.DmTableMeta.2;
-import com.hotent.core.table.impl.DmTableMeta.3;
-import com.hotent.core.table.impl.DmTableMeta.4;
-import com.hotent.core.table.impl.DmTableMeta.5;
-import com.hotent.core.table.impl.DmTableMeta.6;
-import com.hotent.core.util.BeanUtils;
-import com.hotent.core.util.StringUtil;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -21,11 +9,23 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+
 import javax.annotation.Resource;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
+
+import com.hotent.core.db.datasource.JdbcTemplateUtil;
+import com.hotent.core.page.PageBean;
+import com.hotent.core.table.BaseTableMeta;
+import com.hotent.core.table.ColumnModel;
+import com.hotent.core.table.TableModel;
+import com.hotent.core.table.colmap.DmColumnMap;
+import com.hotent.core.util.BeanUtils;
+import com.hotent.core.util.StringUtil;
 
 @Component
 public class DmTableMeta extends BaseTableMeta {
@@ -45,7 +45,16 @@ public class DmTableMeta extends BaseTableMeta {
       }
 
       HashMap parameter = new HashMap();
-      List list = JdbcTemplateUtil.getNamedParameterJdbcTemplate(this.jdbcTemplate).query(sql, parameter, new 1(this));
+      List list = JdbcTemplateUtil.getNamedParameterJdbcTemplate(this.jdbcTemplate).query(sql, parameter, new RowMapper<Map<String, String>>(){
+    	  public Map<String, String> mapRow(ResultSet rs, int row) throws SQLException {
+    	        String tableName = rs.getString("table_name");
+    	        String comments = rs.getString("comments");
+    	        Map<String, String> map = new HashMap();
+    	        map.put("name", tableName);
+    	        map.put("comments", comments);
+    	        return map;
+    	    }
+      });
       LinkedHashMap map = new LinkedHashMap();
 
       for(int i = 0; i < list.size(); ++i) {
@@ -72,7 +81,16 @@ public class DmTableMeta extends BaseTableMeta {
       sb.deleteCharAt(sb.length() - 1);
       String arg10 = this.sqlAllTables + " and  lower(TABLE_NAME) in (" + sb.toString().toLowerCase() + ")";
       HashMap arg11 = new HashMap();
-      List list = JdbcTemplateUtil.getNamedParameterJdbcTemplate(this.jdbcTemplate).query(arg10, arg11, new 2(this));
+      List list = JdbcTemplateUtil.getNamedParameterJdbcTemplate(this.jdbcTemplate).query(arg10, arg11, new RowMapper<Map<String, String>>(){
+    	  public Map<String, String> mapRow(ResultSet rs, int row) throws SQLException {
+    	        String tableName = rs.getString("TABLE_NAME");
+    	        String comments = rs.getString("COMMENTS");
+    	        Map<String, String> map = new HashMap();
+    	        map.put("NAME", tableName);
+    	        map.put("COMMENTS", comments);
+    	        return map;
+    	    }
+      });
       LinkedHashMap map = new LinkedHashMap();
 
       for(int i = 0; i < list.size(); ++i) {
@@ -99,7 +117,14 @@ public class DmTableMeta extends BaseTableMeta {
          sql = sql + " AND  LOWER(TABLE_NAME) LIKE \'%" + tableName.toLowerCase() + "%\'";
       }
 
-      3 rowMapper = new 3(this);
+		RowMapper<TableModel> rowMapper = new RowMapper<TableModel>() {
+			public TableModel mapRow(ResultSet rs, int row) throws SQLException {
+				TableModel tableModel = new TableModel();
+				tableModel.setName(rs.getString("TABLE_NAME"));
+				tableModel.setComment(rs.getString("COMMENTS"));
+				return tableModel;
+			}
+		};
       List tableModels = this.getForList(sql, pageBean, rowMapper, "dm");
       ArrayList tableNames = new ArrayList();
       Iterator tableColumnsMap = tableModels.iterator();
@@ -130,20 +155,35 @@ public class DmTableMeta extends BaseTableMeta {
 	private String getPkColumn(String tableName) {
       tableName = tableName.toUpperCase();
       String sql = String.format(this.sqlPk, new Object[]{tableName});
-      Object rtn = this.jdbcTemplate.queryForObject(sql, (Object[])null, new 4(this));
+      Object rtn = this.jdbcTemplate.queryForObject(sql, (Object[])null, new RowMapper<String>() {
+    	  public String mapRow(ResultSet rs, int row) throws SQLException {
+    	        return rs.getString("COLUMN_NAME");
+    	    }
+      });
       return rtn == null?"":rtn.toString();
    }
 
 	private List<String> getPkColumns(String tableName) {
       tableName = tableName.toUpperCase();
       String sql = String.format(this.sqlPk, new Object[]{tableName});
-      List rtn = JdbcTemplateUtil.getNamedParameterJdbcTemplate(this.jdbcTemplate).query(sql, new HashMap(), new 5(this));
+      List rtn = JdbcTemplateUtil.getNamedParameterJdbcTemplate(this.jdbcTemplate).query(sql, new HashMap(), new RowMapper<String>() {
+    	  public String mapRow(ResultSet rs, int rowNum) throws SQLException {
+    	        return rs.getString("column_name");
+    	    }
+      });
       return rtn;
    }
 
 	private TableModel getTableModel(String tableName) {
       String sql = String.format(this.sqlTableComment, new Object[]{tableName});
-      TableModel tableModel = (TableModel)this.jdbcTemplate.queryForObject(sql, (Object[])null, new 6(this, tableName));
+      TableModel tableModel = (TableModel)this.jdbcTemplate.queryForObject(sql, (Object[])null, new RowMapper<TableModel>() {
+    	  public TableModel mapRow(ResultSet rs, int row) throws SQLException {
+    	        TableModel tableModel = new TableModel();
+    	        tableModel.setName(tableName);
+    	        tableModel.setComment(rs.getString("comments"));
+    	        return tableModel;
+    	    }
+      });
       if(BeanUtils.isEmpty(tableModel)) {
          tableModel = new TableModel();
       }

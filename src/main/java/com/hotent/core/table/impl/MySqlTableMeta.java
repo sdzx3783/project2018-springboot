@@ -1,18 +1,7 @@
 package com.hotent.core.table.impl;
 
-import com.hotent.core.db.datasource.JdbcTemplateUtil;
-import com.hotent.core.page.PageBean;
-import com.hotent.core.table.BaseTableMeta;
-import com.hotent.core.table.ColumnModel;
-import com.hotent.core.table.TableModel;
-import com.hotent.core.table.colmap.MySqlColumnMap;
-import com.hotent.core.table.impl.MySqlTableMeta.1;
-import com.hotent.core.table.impl.MySqlTableMeta.2;
-import com.hotent.core.table.impl.MySqlTableMeta.3;
-import com.hotent.core.table.impl.MySqlTableMeta.4;
-import com.hotent.core.table.impl.MySqlTableMeta.5;
-import com.hotent.core.util.BeanUtils;
-import com.hotent.core.util.StringUtil;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -20,9 +9,21 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+
 import javax.annotation.Resource;
+
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
+
+import com.hotent.core.db.datasource.JdbcTemplateUtil;
+import com.hotent.core.page.PageBean;
+import com.hotent.core.table.BaseTableMeta;
+import com.hotent.core.table.ColumnModel;
+import com.hotent.core.table.TableModel;
+import com.hotent.core.table.colmap.MySqlColumnMap;
+import com.hotent.core.util.BeanUtils;
+import com.hotent.core.util.StringUtil;
 
 @Component
 public class MySqlTableMeta extends BaseTableMeta {
@@ -43,7 +44,11 @@ public class MySqlTableMeta extends BaseTableMeta {
 
 	private String getPkColumn(String tableName) {
       String sql = String.format("SELECT k.column_name name FROM information_schema.table_constraints t JOIN information_schema.key_column_usage k USING(constraint_name,table_schema,table_name) WHERE t.constraint_type=\'PRIMARY KEY\' AND t.table_schema=DATABASE() AND t.table_name=\'%s\'", new Object[]{tableName});
-      Object rtn = this.jdbcTemplate.queryForObject(sql, (Object[])null, new 1(this));
+      Object rtn = this.jdbcTemplate.queryForObject(sql, (Object[])null, new RowMapper<String>() {
+    	  public String mapRow(ResultSet rs, int row) throws SQLException {
+    	        return rs.getString("name");
+    	    }
+      });
       return rtn == null?"":rtn.toString();
    }
 
@@ -102,7 +107,16 @@ public class MySqlTableMeta extends BaseTableMeta {
 
 	private TableModel getTableModel(String tableName) {
       String sql = String.format("select table_name,table_comment  from information_schema.tables t where t.table_schema=DATABASE() and table_name=\'%s\' ", new Object[]{tableName});
-      TableModel tableModel = (TableModel)this.jdbcTemplate.queryForObject(sql, (Object[])null, new 2(this, tableName));
+      TableModel tableModel = (TableModel)this.jdbcTemplate.queryForObject(sql, (Object[])null, new RowMapper<TableModel>() {
+    	  public TableModel mapRow(ResultSet rs, int row) throws SQLException {
+    	        TableModel tableModel = new TableModel();
+    	        String comments = rs.getString("table_comment");
+    	        comments = MySqlTableMeta.getComments(comments, tableName);
+    	        tableModel.setName(tableName);
+    	        tableModel.setComment(comments);
+    	        return tableModel;
+    	    }
+      });
       if(BeanUtils.isEmpty(tableModel)) {
          tableModel = new TableModel();
       }
@@ -117,7 +131,16 @@ public class MySqlTableMeta extends BaseTableMeta {
       }
 
       HashMap parameter = new HashMap();
-      List list = JdbcTemplateUtil.getNamedParameterJdbcTemplate(this.jdbcTemplate).query(sql, parameter, new 3(this));
+      List list = JdbcTemplateUtil.getNamedParameterJdbcTemplate(this.jdbcTemplate).query(sql, parameter, new RowMapper<Map<String, String>>(){
+    	  public Map<String, String> mapRow(ResultSet rs, int row) throws SQLException {
+    	        String tableName = rs.getString("table_name");
+    	        String comments = rs.getString("table_comment");
+    	        Map<String, String> map = new HashMap();
+    	        map.put("name", tableName);
+    	        map.put("comments", comments);
+    	        return map;
+    	    }
+      });
       LinkedHashMap map = new LinkedHashMap();
 
       for(int i = 0; i < list.size(); ++i) {
@@ -162,7 +185,16 @@ public class MySqlTableMeta extends BaseTableMeta {
       sb.deleteCharAt(sb.length() - 1);
       String arg10 = "select table_name,table_comment from information_schema.tables t where t.table_type=\'BASE TABLE\' AND t.table_schema=DATABASE() and  lower(table_name) in (" + sb.toString().toLowerCase() + ")";
       HashMap arg11 = new HashMap();
-      List list = JdbcTemplateUtil.getNamedParameterJdbcTemplate(this.jdbcTemplate).query(arg10, arg11, new 4(this));
+      List list = JdbcTemplateUtil.getNamedParameterJdbcTemplate(this.jdbcTemplate).query(arg10, arg11, new RowMapper<Map<String, String>>(){
+    	  public Map<String, String> mapRow(ResultSet rs, int row) throws SQLException {
+    	        String tableName = rs.getString("table_name");
+    	        String comments = rs.getString("table_comment");
+    	        Map<String, String> map = new HashMap();
+    	        map.put("tableName", tableName);
+    	        map.put("tableComment", comments);
+    	        return map;
+    	    }
+      });
       LinkedHashMap map = new LinkedHashMap();
 
       for(int i = 0; i < list.size(); ++i) {
@@ -181,7 +213,16 @@ public class MySqlTableMeta extends BaseTableMeta {
          sql = sql + " AND TABLE_NAME LIKE \'%" + tableName + "%\'";
       }
 
-      5 rowMapper = new 5(this);
+      RowMapper rowMapper = new RowMapper<TableModel>() {
+    	  public TableModel mapRow(ResultSet rs, int row) throws SQLException {
+    	        TableModel tableModel = new TableModel();
+    	        tableModel.setName(rs.getString("TABLE_NAME"));
+    	        String comments = rs.getString("TABLE_COMMENT");
+    	        comments = MySqlTableMeta.getComments(comments, tableModel.getName());
+    	        tableModel.setComment(comments);
+    	        return tableModel;
+    	    }
+      };
       List tableModels = this.getForList(sql, pageBean, rowMapper, "mysql");
       ArrayList tableNames = new ArrayList();
       Iterator tableColumnsMap = tableModels.iterator();

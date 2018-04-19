@@ -1,16 +1,6 @@
 package com.hotent.core.table.impl;
 
-import com.hotent.core.model.TableIndex;
-import com.hotent.core.page.PageBean;
-import com.hotent.core.table.AbstractTableOperator;
-import com.hotent.core.table.ColumnModel;
-import com.hotent.core.table.TableModel;
-import com.hotent.core.table.impl.MysqlTableOperator.1;
-import com.hotent.core.table.impl.MysqlTableOperator.2;
-import com.hotent.core.table.impl.MysqlTableOperator.3;
-import com.hotent.core.table.impl.MysqlTableOperator.4;
-import com.hotent.core.table.impl.MysqlTableOperator.5;
-import com.hotent.core.util.StringUtil;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -19,6 +9,15 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import org.springframework.jdbc.core.RowMapper;
+
+import com.hotent.core.model.TableIndex;
+import com.hotent.core.page.PageBean;
+import com.hotent.core.table.AbstractTableOperator;
+import com.hotent.core.table.ColumnModel;
+import com.hotent.core.table.TableModel;
+import com.hotent.core.util.StringUtil;
 
 public class MysqlTableOperator extends AbstractTableOperator {
 	private int BATCHSIZE = 100;
@@ -193,7 +192,19 @@ public class MysqlTableOperator extends AbstractTableOperator {
          sql = sql + " AND UPPER(INDEX_NAME) like UPPER(\'%" + indexName + "%\')";
       }
 
-      List indexes = this.jdbcTemplate.query(sql, new 1(this));
+      List indexes = this.jdbcTemplate.query(sql, new RowMapper<TableIndex>() {
+    	  public TableIndex mapRow(ResultSet rs, int rowNum) throws SQLException {
+    	        TableIndex index = new TableIndex();
+    	        List<String> columns = new ArrayList();
+    	        index.setIndexTable(rs.getString("TABLE_NAME"));
+    	        index.setIndexName(rs.getString("INDEX_NAME"));
+    	        index.setIndexType(rs.getString("INDEX_TYPE"));
+    	        index.setUnique(rs.getInt("NON_UNIQUE") == 0);
+    	        columns.add(rs.getString("COLUMN_NAME"));
+    	        index.setIndexFields(columns);
+    	        return index;
+    	    }
+      });
       ArrayList indexList = new ArrayList();
       Iterator i$ = indexes.iterator();
 
@@ -287,12 +298,24 @@ public class MysqlTableOperator extends AbstractTableOperator {
          int indexList = pageBean.getPageSize();
          int i$ = (indexes - 1) * indexList;
          String index = this.dialect.getCountSql(sql);
-         int found = this.jdbcTemplate.queryForInt(index);
+         int found = this.jdbcTemplate.queryForObject(index,Integer.class);
          sql = this.dialect.getLimitString(sql, i$, indexList);
          pageBean.setTotalCount(found);
       }
 
-      List indexes1 = this.jdbcTemplate.query(sql, new 2(this));
+      List indexes1 = this.jdbcTemplate.query(sql, new RowMapper<TableIndex>() {
+    	  public TableIndex mapRow(ResultSet rs, int rowNum) throws SQLException {
+    	        TableIndex index = new TableIndex();
+    	        List<String> columns = new ArrayList();
+    	        index.setIndexTable(rs.getString("TABLE_NAME"));
+    	        index.setIndexName(rs.getString("INDEX_NAME"));
+    	        index.setIndexType(rs.getString("INDEX_TYPE"));
+    	        index.setUnique(rs.getInt("NON_UNIQUE") == 0);
+    	        columns.add(rs.getString("COLUMN_NAME"));
+    	        index.setIndexFields(columns);
+    	        return index;
+    	    }
+      });
       ArrayList indexList1 = new ArrayList();
       Iterator i$2 = indexes1.iterator();
 
@@ -303,9 +326,9 @@ public class MysqlTableOperator extends AbstractTableOperator {
          Iterator i$1 = indexList1.iterator();
 
          while(i$1.hasNext()) {
-            TableIndex index1 = (TableIndex)i$1.next();
-            if(index1.getIndexName().equals(index1.getIndexName()) && index1.getIndexTable().equals(index1.getIndexTable())) {
-               index1.getIndexFields().add(index1.getIndexFields().get(0));
+            TableIndex index2 = (TableIndex)i$1.next();
+            if(index2.getIndexName().equals(index1.getIndexName()) && index2.getIndexTable().equals(index1.getIndexTable())) {
+            	index2.getIndexFields().add(index1.getIndexFields().get(0));
                found1 = true;
                break;
             }
@@ -331,7 +354,11 @@ public class MysqlTableOperator extends AbstractTableOperator {
 
 	public void rebuildIndex(String tableName, String indexName) {
       String sql = "SHOW CREATE TABLE " + tableName;
-      List ddls = this.jdbcTemplate.query(sql, new 3(this));
+      List ddls = this.jdbcTemplate.query(sql, new RowMapper<String>() {
+    	  public String mapRow(ResultSet rs, int rowNum) throws SQLException {
+    	        return rs.getString("Create Table");
+    	    }
+      });
       String ddl = (String)ddls.get(0);
       Pattern pattern = Pattern.compile("ENGINE\\s*=\\s*\\S+", 2);
       Matcher matcher = pattern.matcher(ddl);
@@ -346,7 +373,12 @@ public class MysqlTableOperator extends AbstractTableOperator {
 	public List<String> getPKColumns(String tableName) throws SQLException {
       String schema = this.getSchema();
       String sql = "SELECT k.column_name FROM information_schema.table_constraints t JOIN information_schema.key_column_usage k USING(constraint_name,table_schema,table_name) WHERE t.constraint_type=\'PRIMARY KEY\' AND t.table_schema=\'" + schema + "\' " + "AND t.table_name=\'" + tableName + "\'";
-      List columns = this.jdbcTemplate.query(sql, new 4(this));
+      List columns = this.jdbcTemplate.query(sql, new RowMapper<String>() {
+    	  public String mapRow(ResultSet rs, int rowNum) throws SQLException {
+    	        String column = rs.getString(1);
+    	        return column;
+    	    }
+      });
       return columns;
    }
 
@@ -366,7 +398,16 @@ public class MysqlTableOperator extends AbstractTableOperator {
       String schema1 = this.getSchema();
       sql = "SELECT t.table_name,k.column_name FROM information_schema.table_constraints t JOIN information_schema.key_column_usage k USING(constraint_name,table_schema,table_name) WHERE t.constraint_type=\'PRIMARY KEY\' AND t.table_schema=\'" + schema1 + "\' " + "AND t.table_name in (" + sb.toString().toUpperCase() + ")";
       HashMap columnsMap = new HashMap();
-      List maps = this.jdbcTemplate.query(sql, new 5(this));
+      List maps = this.jdbcTemplate.query(sql, new RowMapper<Map<String, String>>(){
+    	  public Map<String, String> mapRow(ResultSet rs, int rowNum) throws SQLException {
+    	        String table = rs.getString(1);
+    	        String column = rs.getString(2);
+    	        Map<String, String> map = new HashMap();
+    	        map.put("name", table);
+    	        map.put("column", column);
+    	        return map;
+    	    }
+      });
       Iterator i$ = maps.iterator();
 
       while(i$.hasNext()) {
@@ -437,7 +478,7 @@ public class MysqlTableOperator extends AbstractTableOperator {
 			sql = sql + " AND UPPER(INDEX_NAME) = UPPER(\'" + indexName + "\')";
 		}
 
-		int count = this.jdbcTemplate.queryForInt(sql);
+		int count = this.jdbcTemplate.queryForObject(sql,Integer.class);
 		return count > 0;
 	}
 
@@ -471,6 +512,6 @@ public class MysqlTableOperator extends AbstractTableOperator {
 		String schema = this.getSchema();
 		String sql = "select count(1) from information_schema.TABLES t where t.TABLE_SCHEMA=\'" + schema
 				+ "\' and table_name =\'" + tableName.toUpperCase() + "\'";
-		return this.jdbcTemplate.queryForInt(sql) > 0;
+		return this.jdbcTemplate.queryForObject(sql,Integer.class) > 0;
 	}
 }

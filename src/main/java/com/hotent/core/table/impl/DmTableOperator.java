@@ -1,24 +1,22 @@
 package com.hotent.core.table.impl;
 
-import com.hotent.core.model.TableIndex;
-import com.hotent.core.mybatis.Dialect;
-import com.hotent.core.page.PageBean;
-import com.hotent.core.table.AbstractTableOperator;
-import com.hotent.core.table.ColumnModel;
-import com.hotent.core.table.TableModel;
-import com.hotent.core.table.impl.DmTableOperator.1;
-import com.hotent.core.table.impl.DmTableOperator.2;
-import com.hotent.core.table.impl.DmTableOperator.3;
-import com.hotent.core.table.impl.DmTableOperator.4;
-import com.hotent.core.table.impl.DmTableOperator.5;
-import com.hotent.core.table.impl.DmTableOperator.6;
-import com.hotent.core.util.StringUtil;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+
+import org.springframework.jdbc.core.RowMapper;
+
+import com.hotent.core.model.TableIndex;
+import com.hotent.core.mybatis.Dialect;
+import com.hotent.core.page.PageBean;
+import com.hotent.core.table.AbstractTableOperator;
+import com.hotent.core.table.ColumnModel;
+import com.hotent.core.table.TableModel;
+import com.hotent.core.util.StringUtil;
 
 public class DmTableOperator extends AbstractTableOperator {
 	protected int BATCHSIZE = 100;
@@ -146,7 +144,7 @@ public class DmTableOperator extends AbstractTableOperator {
 
 	public void dropTable(String tableName) {
 		String selSql = "select count(*) amount from user_objects where object_name = upper(\'" + tableName + "\')";
-		int rtn = this.jdbcTemplate.queryForInt(selSql);
+		int rtn = this.jdbcTemplate.queryForObject(selSql,Integer.class);
 		if (rtn > 0) {
 			String sql = "drop table " + tableName;
 			this.jdbcTemplate.execute(sql);
@@ -197,7 +195,7 @@ public class DmTableOperator extends AbstractTableOperator {
 
 	private boolean isIndexExist(String index) {
 		String sql = "SELECT COUNT(*) FROM \"SYS\".\"USER_INDEXES\" WHERE INDEX_NAME = \'" + index + "\'";
-		int count = this.jdbcTemplate.queryForInt(sql);
+		int count = this.jdbcTemplate.queryForObject(sql,Integer.class);
 		return count > 0;
 	}
 
@@ -217,14 +215,44 @@ public class DmTableOperator extends AbstractTableOperator {
 
 	public TableIndex getIndex(String tableName, String indexName) {
       String sql = "SELECT IDX.TABLE_NAME,IDX.TABLE_TYPE,IDX.INDEX_NAME, IDX.INDEX_TYPE,IDX.UNIQUENESS,IDX.STATUS,IDC.COLUMN_NAME,DBMS_METADATA.GET_DDL(\'INDEX\',idx.INDEX_NAME) AS DDL FROM \"SYS\".\"USER_INDEXES\" IDX JOIN \"SYS\".\"USER_IND_COLUMNS\" IDC ON IDX.INDEX_NAME=IDC.INDEX_NAME  WHERE IDX.INDEX_NAME=UPPER(\'" + indexName + "\')";
-      List indexes = this.jdbcTemplate.query(sql, new 1(this));
+      List indexes = this.jdbcTemplate.query(sql, new RowMapper<TableIndex>() {
+    	  public TableIndex mapRow(ResultSet rs, int rowNum) throws SQLException {
+    	        TableIndex index = new TableIndex();
+    	        index.setIndexTable(rs.getString("TABLE_NAME"));
+    	        index.setTableType(rs.getString("TABLE_TYPE"));
+    	        index.setIndexName(rs.getString("INDEX_NAME"));
+    	        index.setIndexType(rs.getString("INDEX_TYPE"));
+    	        index.setUnique(rs.getString("UNIQUENESS").equalsIgnoreCase("UNIQUE"));
+    	        index.setIndexStatus(rs.getString("STATUS"));
+    	        index.setIndexDdl(rs.getString("DDL"));
+    	        List<String> indexFields = new ArrayList();
+    	        indexFields.add(rs.getString("COLUMN_NAME"));
+    	        index.setIndexFields(indexFields);
+    	        return index;
+    	    }
+      });
       List indexList = this.mergeIndex(indexes);
       return indexList.size() > 0?this.dedicatePKIndex((TableIndex)indexList.get(0)):null;
    }
 
 	public List<TableIndex> getIndexesByTable(String tableName) {
       String sql = "SELECT IDX.TABLE_NAME,IDX.TABLE_TYPE,IDX.INDEX_NAME, IDX.INDEX_TYPE,IDX.UNIQUENESS,IDX.STATUS,IDC.COLUMN_NAME,DBMS_METADATA.GET_DDL(\'INDEX\',idx.INDEX_NAME) AS DDL FROM \"SYS\".\"USER_INDEXES\" IDX JOIN \"SYS\".\"USER_IND_COLUMNS\" IDC ON IDX.INDEX_NAME=IDC.INDEX_NAME  WHERE IDX.TABLE_NAME=UPPER(\'" + tableName + "\')";
-      List indexes = this.jdbcTemplate.query(sql, new 2(this));
+      List indexes = this.jdbcTemplate.query(sql, new RowMapper<TableIndex>() {
+    	  public TableIndex mapRow(ResultSet rs, int rowNum) throws SQLException {
+    	        TableIndex index = new TableIndex();
+    	        index.setIndexTable(rs.getString("TABLE_NAME"));
+    	        index.setTableType(rs.getString("TABLE_TYPE"));
+    	        index.setIndexName(rs.getString("INDEX_NAME"));
+    	        index.setIndexType(rs.getString("INDEX_TYPE"));
+    	        index.setUnique(rs.getString("UNIQUENESS").equalsIgnoreCase("UNIQUE"));
+    	        index.setIndexStatus(rs.getString("STATUS"));
+    	        index.setIndexDdl(rs.getString("DDL"));
+    	        List<String> indexFields = new ArrayList();
+    	        indexFields.add(rs.getString("COLUMN_NAME"));
+    	        index.setIndexFields(indexFields);
+    	        return index;
+    	    }
+      });
       List indexList = this.mergeIndex(indexes);
       this.dedicateFKIndex(indexList);
       this.dedicatePKIndex(indexList);
@@ -256,13 +284,27 @@ public class DmTableOperator extends AbstractTableOperator {
          int indexList = pageBean.getPageSize();
          int offset = (indexes - 1) * indexList;
          String totalSql = this.dialect.getCountSql(sql);
-         int total = this.jdbcTemplate.queryForInt(totalSql);
+         int total = this.jdbcTemplate.queryForObject(totalSql,Integer.class);
          sql = this.dialect.getLimitString(sql, offset, indexList);
          pageBean.setTotalCount(total);
       }
 
       this.logger.debug(sql);
-      List indexes1 = this.jdbcTemplate.query(sql, new 3(this));
+      List indexes1 = this.jdbcTemplate.query(sql, new RowMapper<TableIndex>() {
+    	  public TableIndex mapRow(ResultSet rs, int rowNum) throws SQLException {
+    	        TableIndex index = new TableIndex();
+    	        index.setIndexTable(rs.getString("TABLE_NAME"));
+    	        index.setTableType(rs.getString("TABLE_TYPE"));
+    	        index.setIndexName(rs.getString("INDEX_NAME"));
+    	        index.setIndexType(rs.getString("INDEX_TYPE"));
+    	        index.setUnique(rs.getString("UNIQUENESS").equalsIgnoreCase("UNIQUE"));
+    	        index.setIndexStatus(rs.getString("STATUS"));
+    	        List<String> indexFields = new ArrayList();
+    	        indexFields.add(rs.getString("COLUMN_NAME"));
+    	        index.setIndexFields(indexFields);
+    	        return index;
+    	    }
+      });
       List indexList1 = this.mergeIndex(indexes1);
       this.dedicatePKIndex(indexList1);
       return indexList1;
@@ -297,7 +339,12 @@ public class DmTableOperator extends AbstractTableOperator {
 
 	public List<String> getPKColumns(String tableName) throws SQLException {
       String sql = "SELECT cols.column_name FROM \"SYS\".\"USER_CONSTRAINTS\" CONS, \"SYS\".\"USER_CONS_COLUMNS\" COLS WHERE UPPER(cols.table_name) = UPPER(\'" + tableName + "\')" + " AND cons.constraint_type = \'P\'  AND cols.position=1" + " AND cons.constraint_name = cols.constraint_name" + " AND cons.owner = cols.owner";
-      List columns = this.jdbcTemplate.query(sql, new 4(this));
+      List columns = this.jdbcTemplate.query(sql, new RowMapper<String>() {
+    	  public String mapRow(ResultSet rs, int rowNum) throws SQLException {
+    	        String column = rs.getString(1);
+    	        return column;
+    	    }
+      });
       return columns;
    }
 
@@ -315,7 +362,16 @@ public class DmTableOperator extends AbstractTableOperator {
       sb.deleteCharAt(sb.length() - 1);
       String sql1 = "SELECT cols.table_name,cols.column_name FROM \"SYS\".\"USER_CONSTRAINTS\" CONS, \"SYS\".\"USER_CONS_COLUMNS\" COLS WHERE UPPER(cols.table_name) in (" + sb.toString().toUpperCase() + ")" + " AND cons.constraint_type = \'P\' AND COLS.POSITION=1" + " AND cons.constraint_name = cols.constraint_name" + " AND CONS.OWNER = COLS.OWNER";
       HashMap columnsMap1 = new HashMap();
-      List maps = this.jdbcTemplate.query(sql1, new 5(this));
+      List maps = this.jdbcTemplate.query(sql1, new RowMapper<Map<String, String>>(){
+    	  public Map<String, String> mapRow(ResultSet rs, int rowNum) throws SQLException {
+    	        String table = rs.getString(1);
+    	        String column = rs.getString(2);
+    	        Map<String, String> map = new HashMap();
+    	        map.put("name", table);
+    	        map.put("column", column);
+    	        return map;
+    	    }
+      });
       Iterator i$ = maps.iterator();
 
       while(i$.hasNext()) {
@@ -461,7 +517,16 @@ public class DmTableOperator extends AbstractTableOperator {
       sb.deleteCharAt(sb.length() - 1);
       String sql1 = "SELECT cols.table_name,cols.column_name FROM \"SYS\".\"USER_CONSTRAINTS\" CONS, \"SYS\".\"USER_CONS_COLUMNS\" COLS WHERE UPPER(cols.table_name) in (" + sb.toString().toUpperCase() + ")" + " AND cons.constraint_type = \'F\' AND COLS.POSITION=1" + " AND cons.constraint_name = cols.constraint_name" + " AND CONS.OWNER = COLS.OWNER";
       HashMap columnsMap1 = new HashMap();
-      List maps = this.jdbcTemplate.query(sql1, new 6(this));
+      List maps = this.jdbcTemplate.query(sql1, new RowMapper<Map<String, String>>(){
+    	  public Map<String, String> mapRow(ResultSet rs, int rowNum) throws SQLException {
+    	        String table = rs.getString(1);
+    	        String column = rs.getString(2);
+    	        Map<String, String> map = new HashMap();
+    	        map.put("name", table);
+    	        map.put("column", column);
+    	        return map;
+    	    }
+      });
       Iterator i$ = maps.iterator();
 
       while(i$.hasNext()) {
@@ -482,6 +547,6 @@ public class DmTableOperator extends AbstractTableOperator {
 		StringBuffer sql = new StringBuffer();
 		sql.append("select COUNT(1) from user_tables t where t.TABLE_NAME=\'").append(tableName.toUpperCase())
 				.append("\'");
-		return this.jdbcTemplate.queryForInt(sql.toString()) > 0;
+		return this.jdbcTemplate.queryForObject(sql.toString(),Integer.class) > 0;
 	}
 }

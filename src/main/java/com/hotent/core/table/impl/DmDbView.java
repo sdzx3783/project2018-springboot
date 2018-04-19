@@ -7,8 +7,9 @@ import com.hotent.core.table.ColumnModel;
 import com.hotent.core.table.IDbView;
 import com.hotent.core.table.TableModel;
 import com.hotent.core.table.colmap.DmColumnMap;
-import com.hotent.core.table.impl.DmDbView.1;
 import com.hotent.core.util.StringUtil;
+
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,6 +19,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import javax.annotation.Resource;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -59,7 +61,13 @@ public class DmDbView extends BaseDbView implements IDbView {
          sql = sql + " and UPPER(VIEW_NAME) LIKE \'%" + viewName.toUpperCase() + "%\'";
       }
 
-      1 rowMapper = new 1(this);
+      RowMapper<TableModel> rowMapper = new RowMapper<TableModel>() {
+    	  public TableModel mapRow(ResultSet rs, int row) throws SQLException {
+    	        TableModel tableModel = new TableModel();
+    	        tableModel.setName(rs.getString("VIEW_NAME"));
+    	        return tableModel;
+    	    }
+      };
       List tableModels = this.getForList(sql, pageBean, rowMapper, "dm");
       ArrayList tableNames = new ArrayList();
       Iterator tableColumnsMap = tableModels.iterator();
