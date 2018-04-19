@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 import com.hotent.core.model.CurrentUser;
 import com.hotent.core.util.AppUtil;
 
-import edu.emory.mathcs.backport.java.util.Collections;
 
 @Service
 public class CurrentUserService {

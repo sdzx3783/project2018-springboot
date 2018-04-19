@@ -4,36 +4,21 @@ import java.io.IOException;
 import java.util.Properties;
 
 import javax.annotation.Resource;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import net.sf.json.JSONObject;
-
-import org.apache.commons.codec.binary.Base64;
-import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.authentication.AccountExpiredException;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.LockedException;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.web.WebAttributes;
-import org.springframework.security.web.authentication.WebAuthenticationDetails;
-import org.springframework.security.web.authentication.rememberme.TokenBasedRememberMeServices;
-import org.springframework.security.web.authentication.session.NullAuthenticatedSessionStrategy;
-import org.springframework.security.web.authentication.session.SessionAuthenticationStrategy;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
 import com.hotent.core.api.util.ContextUtil;
-import com.hotent.core.api.util.PropertyUtil;
 import com.hotent.core.encrypt.EncryptUtil;
 import com.hotent.core.log.SysAuditThreadLocalHolder;
 import com.hotent.core.web.controller.BaseController;
@@ -52,6 +37,8 @@ import com.hotent.platform.service.system.LoginLogService;
 import com.hotent.platform.service.system.PwdStrategyService;
 import com.hotent.platform.service.system.SecurityUtil;
 import com.hotent.platform.service.system.SysUserService;
+
+import net.sf.json.JSONObject;
 
 /**
  * 登录访问控制器，用于扩展Spring Security 缺省的登录处理器

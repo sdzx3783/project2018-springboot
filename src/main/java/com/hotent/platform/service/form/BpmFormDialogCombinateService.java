@@ -7,7 +7,6 @@ import java.util.HashMap;
 import com.hotent.core.web.query.QueryFilter;
 import net.sf.json.util.JSONUtils;
 import net.sf.ezmorph.object.DateMorpher;
-import com.hotent.core.bpm.model.ProcessCmd;
 import com.hotent.core.util.StringUtil;
 import net.sf.json.JSONObject;
 

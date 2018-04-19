@@ -12,7 +12,6 @@ import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
-import com.fr.base.Inter;
 import com.hotent.core.db.BaseDao;
 import com.hotent.platform.model.system.SysOrgParam;
 

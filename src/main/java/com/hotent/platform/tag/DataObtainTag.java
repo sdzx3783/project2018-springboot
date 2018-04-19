@@ -10,14 +10,10 @@ import java.util.regex.Pattern;
 import javax.servlet.jsp.JspTagException;
 import javax.servlet.jsp.tagext.BodyTagSupport;
 
-import org.eclipse.jdt.core.dom.ThisExpression;
-import org.junit.Test;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import com.fr.report.core.A.f;
 import com.hotent.core.util.AppUtil;
 import com.hotent.core.util.StringUtil;
-import com.ibm.db2.jcc.am.re;
 
 public class DataObtainTag extends BodyTagSupport {
 

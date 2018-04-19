@@ -7,7 +7,6 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import com.hotent.core.cache.ICache;
-import com.hotent.core.sms.impl.ModemMessage;
 import com.hotent.core.util.AppUtil;
 
 /**	
@@ -27,7 +26,6 @@ public class ServerListener implements ServletContextListener {
     	
     	
     	public void contextDestroyed(ServletContextEvent event) {
-	    ModemMessage.getInstance().stopService();	    
 	    logger.debug("[contextDestroyed]停止短信猫服务。");
 	    
 	    /**
