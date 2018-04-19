@@ -1,33 +1,29 @@
 package com.hotent.core.web.controller;
 
-import com.hotent.core.json.SmartDateEditor;
-import com.hotent.core.page.PageList;
-import com.hotent.core.util.ConfigUtil;
-import com.hotent.core.web.ResultMessage;
-import com.hotent.core.web.controller.GenericController;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
-import javax.annotation.Resource;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.propertyeditors.CustomNumberEditor;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.ServletRequestDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.multipart.support.ByteArrayMultipartFileEditor;
 import org.springframework.web.servlet.ModelAndView;
-import org.springmodules.validation.commons.ConfigurableBeanValidator;
+
+import com.hotent.core.json.SmartDateEditor;
+import com.hotent.core.page.PageList;
+import com.hotent.core.util.ConfigUtil;
+import com.hotent.core.web.ResultMessage;
 
 public class BaseController extends GenericController {
 	public static final String Message = "message";
-	@Resource
-	protected ConfigurableBeanValidator confValidator;
+//	@Resource
+//	protected ConfigurableBeanValidator confValidator;
 
 	public void addMessage(ResultMessage message, HttpServletRequest request) {
 		HttpSession session = request.getSession();
@@ -47,26 +43,26 @@ public class BaseController extends GenericController {
 		binder.registerCustomEditor(Date.class, new SmartDateEditor());
 	}
 
-	protected ResultMessage validForm(String form, Object obj, BindingResult result, HttpServletRequest request) {
-		ResultMessage resObj = new ResultMessage(1, "");
-		this.confValidator.setFormName(form);
-		this.confValidator.validate(obj, result);
-		if (result.hasErrors()) {
-			resObj.setResult(0);
-			List list = result.getFieldErrors();
-			String errMsg = "";
-
-			String msg;
-			for (Iterator i$ = list.iterator(); i$.hasNext(); errMsg = errMsg + msg + "\r\n") {
-				FieldError err = (FieldError) i$.next();
-				msg = this.getText(err.getDefaultMessage(), err.getArguments(), request);
-			}
-
-			resObj.setMessage(errMsg);
-		}
-
-		return resObj;
-	}
+//	protected ResultMessage validForm(String form, Object obj, BindingResult result, HttpServletRequest request) {
+//		ResultMessage resObj = new ResultMessage(1, "");
+//		this.confValidator.setFormName(form);
+//		this.confValidator.validate(obj, result);
+//		if (result.hasErrors()) {
+//			resObj.setResult(0);
+//			List list = result.getFieldErrors();
+//			String errMsg = "";
+//
+//			String msg;
+//			for (Iterator i$ = list.iterator(); i$.hasNext(); errMsg = errMsg + msg + "\r\n") {
+//				FieldError err = (FieldError) i$.next();
+//				msg = this.getText(err.getDefaultMessage(), err.getArguments(), request);
+//			}
+//
+//			resObj.setMessage(errMsg);
+//		}
+//
+//		return resObj;
+//	}
 
 	public ModelAndView getView(String category, String id) {
 		String view = ConfigUtil.getVal(category, id);
