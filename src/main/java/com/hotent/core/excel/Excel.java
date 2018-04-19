@@ -1,23 +1,12 @@
 package com.hotent.core.excel;
 
-import com.hotent.core.excel.DefaultExcelStyle;
-import com.hotent.core.excel.ExcelContext;
-import com.hotent.core.excel.editor.CellEditor;
-import com.hotent.core.excel.editor.ColumnEditor;
-import com.hotent.core.excel.editor.RegionEditor;
-import com.hotent.core.excel.editor.RowEditor;
-import com.hotent.core.excel.editor.SheetEditor;
-import com.hotent.core.excel.style.Align;
-import com.hotent.core.excel.style.BorderStyle;
-import com.hotent.core.excel.style.Color;
-import com.hotent.core.excel.util.ExcelUtil;
 import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.Date;
+
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFFont;
@@ -27,6 +16,13 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 import org.apache.poi.ss.usermodel.Name;
 import org.apache.poi.ss.util.CellRangeAddress;
+
+import com.hotent.core.excel.editor.CellEditor;
+import com.hotent.core.excel.editor.ColumnEditor;
+import com.hotent.core.excel.editor.RegionEditor;
+import com.hotent.core.excel.editor.RowEditor;
+import com.hotent.core.excel.editor.SheetEditor;
+import com.hotent.core.excel.util.ExcelUtil;
 
 public class Excel {
 	private ExcelContext ctx;

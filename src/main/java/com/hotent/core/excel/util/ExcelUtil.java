@@ -1,24 +1,29 @@
 package com.hotent.core.excel.util;
 
-import com.hotent.core.excel.Excel;
-import com.hotent.core.excel.style.Align;
-import com.hotent.core.excel.style.BorderStyle;
-import com.hotent.core.excel.style.Color;
-import com.hotent.core.excel.util.ExcelUtil.1;
-import com.hotent.core.util.DateFormatUtil;
 import java.io.IOException;
 import java.net.URLEncoder;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
+
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFDateUtil;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+
+import com.hotent.core.excel.Excel;
+import com.hotent.core.excel.editor.IFontEditor;
+import com.hotent.core.excel.style.Align;
+import com.hotent.core.excel.style.BorderStyle;
+import com.hotent.core.excel.style.Color;
+import com.hotent.core.excel.style.font.BoldWeight;
+import com.hotent.core.excel.style.font.Font;
+import com.hotent.core.util.DateFormatUtil;
 
 public class ExcelUtil {
 	public static int getLastRowNum(HSSFSheet sheet) {
@@ -149,7 +154,12 @@ public class ExcelUtil {
 
          for(Iterator rows = fieldMap.values().iterator(); rows.hasNext(); ++i) {
             String i$ = (String)rows.next();
-            excel.cell(0, i).value(i$).align(Align.CENTER).bgColor(Color.GREY_25_PERCENT).fontHeightInPoint(14).width(12800).border(BorderStyle.THIN, Color.BLACK).font(new 1());
+            excel.cell(0, i).value(i$).align(Align.CENTER).bgColor(Color.GREY_25_PERCENT).fontHeightInPoint(14).width(12800).border(BorderStyle.THIN, Color.BLACK).font(new IFontEditor() {
+            	public void updateFont(Font font) {
+                    font.boldweight(BoldWeight.BOLD);
+                    font.color(Color.BLACK);
+                }
+            });
          }
 
          int arg15 = 1;
