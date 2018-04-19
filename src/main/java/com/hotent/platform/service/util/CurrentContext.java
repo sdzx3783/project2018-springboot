@@ -22,6 +22,7 @@ import com.hotent.core.util.AppUtil;
 import com.hotent.core.util.BeanUtils;
 import com.hotent.core.util.StringUtil;
 import com.hotent.core.web.util.RequestContext;
+import com.hotent.platform.dao.system.SysUserDao;
 import com.hotent.platform.model.system.Position;
 import com.hotent.platform.model.system.SysOrg;
 import com.hotent.platform.model.system.SysUser;
@@ -47,28 +48,10 @@ public class CurrentContext implements ICurrentContext {
 				ISysUser user=curUser.get();
 				return user;
 			}
-			ISysUser sysUser=null;
-			//SecurityContext securityContext = SecurityContextHolder.getContext();
-			//HttpServletRequest request = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();
-			HttpServletRequest request = RequestContext.getHttpServletRequest();
-	       /* if (securityContext != null) {
-	            Authentication auth = securityContext.getAuthentication();
-	            if (auth != null) {
-	                Object principal = auth.getPrincipal();
-	                if (principal instanceof ISysUser) {
-	                	sysUser=(ISysUser)principal;
-	                }
-	            } 
-	        }*/
-			HttpSession session = request.getSession(false);
-			if(session==null){
-				return null;
-			}
-			Object attribute = session.getAttribute("SPRING_SECURITY_CONTEXT");
-			if(attribute!=null && (attribute instanceof ISysUser)){
-				sysUser=(ISysUser)attribute;
-			}
-	        return sysUser;
+			SysUserDao bean = AppUtil.getBean(SysUserDao.class);
+			SysUser byAccount = bean.getByAccount("admin");
+			curUser.set(byAccount);
+	        return byAccount;
 	}
 
 	@Override

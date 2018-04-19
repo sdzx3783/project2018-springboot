@@ -130,7 +130,8 @@ public class MainController extends BaseController {
 			
 			currentSystem.setLogo(logo);
 		}
-		
+		String property = configproperties.getProperty("genId.adjust");
+		System.out.println(property);
 		return this.getView("console",mainViewName)
 			.addObject("skinStyle",skinStyle)
 			.addObject("currentSystem", currentSystem)

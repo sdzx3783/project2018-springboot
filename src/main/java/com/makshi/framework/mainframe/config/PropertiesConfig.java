@@ -1,16 +1,17 @@
 package com.makshi.framework.mainframe.config;
 
-import org.springframework.beans.factory.config.PropertiesFactoryBean;
-import org.springframework.context.annotation.Bean;
-import org.springframework.core.io.Resource;
+import java.util.Properties;
 
+import org.springframework.beans.factory.FactoryBean;
+import org.springframework.beans.factory.config.YamlPropertiesFactoryBean;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+@Configuration
 public class PropertiesConfig {
 	@Bean(value = "configproperties")
-    public PropertiesFactoryBean getConfigproperties()
+    public FactoryBean<Properties> getConfigproperties()
     {
-        PropertiesFactoryBean propertiesFactoryBean = new PropertiesFactoryBean();
-        Resource location=new Resource[]{};
-		propertiesFactoryBean.setLocation(location);
+        YamlPropertiesFactoryBean propertiesFactoryBean = new YamlPropertiesFactoryBean();
         
 		return propertiesFactoryBean;
     }
