@@ -34,7 +34,7 @@ public class JSONObjectUtil {
 					.addSerializationExclusionStrategy(new SuperclassExclusionStrategy());
 			Gson gson = e.create();
 			Object o = gson.fromJson(jsonStr, cls);
-			return o;
+			return (C) o;
 		} catch (Exception arg4) {
 			return null;
 		}
@@ -66,7 +66,7 @@ public class JSONObjectUtil {
 				method.invoke(main1, new Object[]{subList});
 			}
 
-			return main1;
+			return (C) main1;
 		} catch (Exception arg10) {
 			return null;
 		}

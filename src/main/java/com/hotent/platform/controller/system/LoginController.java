@@ -38,7 +38,6 @@ import com.hotent.core.encrypt.EncryptUtil;
 import com.hotent.core.log.SysAuditThreadLocalHolder;
 import com.hotent.core.web.controller.BaseController;
 import com.hotent.core.web.filter.HtSwitchUserFilter;
-import com.hotent.core.web.servlet.ValidCode;
 import com.hotent.core.web.util.CookieUitl;
 import com.hotent.core.web.util.RequestUtil;
 import com.hotent.platform.annotion.Action;
@@ -119,20 +118,7 @@ public class LoginController extends BaseController {
 		try {
 			//如果有验证码
 			if (validCodeEnabled != null && "true".equals(validCodeEnabled)) {
-				String validCode = (String) request.getSession().getAttribute(ValidCode.SessionName_Randcode);
-				String code = request.getParameter("validCode");
-				if (validCode == null || StringUtils.isEmpty(code) || !validCode.equals(code)) {
-					error = true;
-
-					String msg = "验证码不正确";
-					//记录登录信息
-					loginLog.setStatus(LoginLog.Status.VCODE_ERR);
-					loginLog.setDesc(msg);
-
-					request.getSession().setAttribute(WebAttributes.AUTHENTICATION_EXCEPTION, msg);
-					request.getSession().setAttribute("validCodeEnabled", "true");//还是需要验证码
-					throw new AccessDeniedException(msg);
-				}
+				
 			} else {//没有验证码就验证一下是不是需要验证码
 				if (pwdStrategyService.checkUserVcodeEnabled(username)) {
 					//显示验证码
