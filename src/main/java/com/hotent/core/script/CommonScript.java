@@ -16,7 +16,7 @@ public class CommonScript implements IScript {
 	}
 
 	public short parseShort(String str) {
-		return this.parseShort(str, 0);
+		return this.parseShort(str, (short)0);
 	}
 
 	public short parseShort(String str, short defaultValue) {
