@@ -22,10 +22,10 @@ public class FreemarkerConfig {
     
     
     @Bean(value = "freemarkEngine")
-    public FreemarkEngine getFreemarkEngine(@Qualifier("freemarkerConfiguration") FreeMarkerConfigurationFactoryBean freemarkerConfiguration)
+    public FreemarkEngine getFreemarkEngine(@Qualifier("freemarkerConfiguration")freemarker.template.Configuration freemarker)
     {
     	FreemarkEngine freemarkEngine= new FreemarkEngine();
-    	freemarkEngine.setConfiguration();
+    	freemarkEngine.setConfiguration(freemarker);
     	
         return freemarkEngine;
     }
