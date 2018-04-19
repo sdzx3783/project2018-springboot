@@ -4,8 +4,8 @@ import com.hotent.core.excel.reader.DataEntity;
 import java.util.List;
 
 public class TableEntity {
-	public static final Short IS_MAIN = Short.valueOf(1);
-	public static final Short NOT_MAIN = Short.valueOf(0);
+	public static final Short IS_MAIN = Short.valueOf((short) 1);
+	public static final Short NOT_MAIN = Short.valueOf((short) 0);
 	private String name;
 	private Short isMain;
 	private List<DataEntity> dataEntityList;

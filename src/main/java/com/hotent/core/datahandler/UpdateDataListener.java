@@ -7,15 +7,17 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import javax.annotation.Resource;
+
+import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-public class UpdateDataListener implements ApplicationListener<UpdDataEvent> {
+public class UpdateDataListener implements ApplicationListener {
 	@Resource(name = "jdbcTemplate")
 	JdbcTemplate jdbcTemplate;
 	private Map<String, List<String>> sqlMap = new HashMap();
 
-	public void onApplicationEvent(UpdDataEvent event) {
+	public void onApplicationEvent(ApplicationEvent event) {
 		DataModel dataModel = (DataModel) event.getSource();
 		String id = dataModel.getPk();
 		String tableName = dataModel.getTableName().toLowerCase();
@@ -38,4 +40,5 @@ public class UpdateDataListener implements ApplicationListener<UpdDataEvent> {
 		}
 
 	}
+
 }

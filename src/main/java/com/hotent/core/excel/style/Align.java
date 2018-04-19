@@ -1,7 +1,7 @@
 package com.hotent.core.excel.style;
 
 public enum Align {
-	GENERAL(0), LEFT(1), CENTER(2), RIGHT(3), FILL(4), JUSTIFY(5), CENTER_SELECTION(6);
+	GENERAL((short) 0), LEFT((short) 1), CENTER((short) 2), RIGHT((short) 3), FILL((short) 4), JUSTIFY((short) 5), CENTER_SELECTION((short) 6);
 
 	private short alignment;
 

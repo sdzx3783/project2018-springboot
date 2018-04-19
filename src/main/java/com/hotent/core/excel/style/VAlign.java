@@ -1,7 +1,7 @@
 package com.hotent.core.excel.style;
 
 public enum VAlign {
-	TOP(0), CENTER(1), BOTTOM(2), JUSTIFY(3);
+	TOP((short)0), CENTER((short)1), BOTTOM((short)2), JUSTIFY((short)3);
 
 	private short alignment;
 

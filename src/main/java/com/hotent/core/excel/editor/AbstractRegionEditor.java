@@ -35,138 +35,138 @@ public abstract class AbstractRegionEditor<T> extends AbstractEditor {
 		this.borderLeft(borderStyle, borderColor);
 		this.borderRight(borderStyle, borderColor);
 		this.borderTop(borderStyle, borderColor);
-		return this;
+		return (T) this;
 	}
 
 	public T borderFull(BorderStyle borderStyle, Color borderColor) {
 		CellEditor cellEditor = this.newCellEditor();
 		cellEditor.border(borderStyle, borderColor);
-		return this;
+		return (T) this;
 	}
 
 	public T borderLeft(BorderStyle borderStyle, Color borderColor) {
 		CellEditor cellEditorLeft = this.newLeftCellEditor();
 		cellEditorLeft.borderLeft(borderStyle, borderColor);
-		return this;
+		return (T) this;
 	}
 
 	public T borderRight(BorderStyle borderStyle, Color borderColor) {
 		CellEditor cellEditorRight = this.newRightCellEditor();
 		cellEditorRight.borderRight(borderStyle, borderColor);
-		return this;
+		return (T) this;
 	}
 
 	public T borderTop(BorderStyle borderStyle, Color borderColor) {
 		CellEditor cellEditorTop = this.newTopCellEditor();
 		cellEditorTop.borderTop(borderStyle, borderColor);
-		return this;
+		return (T) this;
 	}
 
 	public T borderBottom(BorderStyle borderStyle, Color borderColor) {
 		CellEditor cellEditorBottom = this.newBottomCellEditor();
 		cellEditorBottom.borderBottom(borderStyle, borderColor);
-		return this;
+		return (T) this;
 	}
 
 	public T font(IFontEditor fontEditor) {
 		CellEditor cellEditor = this.newCellEditor();
 		cellEditor.font(fontEditor);
-		return this;
+		return (T) this;
 	}
 
 	public T bgColor(Color bg) {
 		CellEditor cellEditor = this.newCellEditor();
 		cellEditor.bgColor(bg);
-		return this;
+		return (T) this;
 	}
 
 	public T bgColor(Color bg, FillPattern fillPattern) {
 		CellEditor cellEditor = this.newCellEditor();
 		cellEditor.bgColor(bg, fillPattern);
-		return this;
+		return (T) this;
 	}
 
 	public T align(Align align) {
 		CellEditor cellEditor = this.newCellEditor();
 		cellEditor.align(align);
-		return this;
+		return (T) this;
 	}
 
 	public T vAlign(VAlign align) {
 		CellEditor cellEditor = this.newCellEditor();
 		cellEditor.vAlign(align);
-		return this;
+		return (T) this;
 	}
 
 	public T warpText(boolean autoWarp) {
 		CellEditor cellEditor = this.newCellEditor();
 		cellEditor.warpText(autoWarp);
-		return this;
+		return (T) this;
 	}
 
 	public T merge() {
 		this.workingSheet.addMergedRegion(this.getCellRange());
-		return this;
+		return (T) this;
 	}
 
 	public T style(HSSFCellStyle style) {
 		CellEditor cellEditor = this.newCellEditor();
 		cellEditor.style(style);
-		return this;
+		return (T) this;
 	}
 
 	public T hidden(boolean hidden) {
 		CellEditor cellEditor = this.newCellEditor();
 		cellEditor.hidden(hidden);
-		return this;
+		return (T) this;
 	}
 
 	public T indent(int indent) {
 		CellEditor cellEditor = this.newCellEditor();
 		cellEditor.indent(indent);
-		return this;
+		return (T) this;
 	}
 
 	public T lock(boolean locked) {
 		CellEditor cellEditor = this.newCellEditor();
 		cellEditor.lock(locked);
-		return this;
+		return (T) this;
 	}
 
 	public T rotate(int rotation) {
 		CellEditor cellEditor = this.newCellEditor();
 		cellEditor.rotate(rotation);
-		return this;
+		return (T) this;
 	}
 
 	public T width(int width) {
 		CellEditor cellEditor = this.newTopCellEditor();
 		cellEditor.width(width);
-		return this;
+		return (T) this;
 	}
 
 	public T addWidth(int width) {
 		CellEditor cellEditor = this.newTopCellEditor();
 		cellEditor.addWidth(width);
-		return this;
+		return (T) this;
 	}
 
 	public T height(float height) {
 		CellEditor cellEditor = this.newLeftCellEditor();
 		cellEditor.height(height);
-		return this;
+		return (T) this;
 	}
 
 	public T addHeight(float height) {
 		CellEditor cellEditor = this.newLeftCellEditor();
 		cellEditor.addHeight(height);
-		return this;
+		return (T) this;
 	}
 
 	public T dataFormat(String format) {
 		CellEditor cellEditor = this.newLeftCellEditor();
 		cellEditor.dataFormat(format);
-		return this;
+		return (T) this;
 	}
 
 	public Object[] value() {
@@ -184,19 +184,19 @@ public abstract class AbstractRegionEditor<T> extends AbstractEditor {
 	public T bold() {
 		CellEditor cellEditor = this.newCellEditor();
 		cellEditor.bold();
-		return this;
+		return (T) this;
 	}
 
 	public T color(Color color) {
 		CellEditor cellEditor = this.newCellEditor();
 		cellEditor.color(color);
-		return this;
+		return (T) this;
 	}
 
 	public T italic() {
 		CellEditor cellEditor = this.newCellEditor();
 		cellEditor.italic();
-		return this;
+		return (T) this;
 	}
 
 	public T addValidationData(String[] explicitListValues) {
@@ -205,6 +205,6 @@ public abstract class AbstractRegionEditor<T> extends AbstractEditor {
 		CellRangeAddressList regions = new CellRangeAddressList(cellRange.getFirstRow(), cellRange.getLastRow(),
 				cellRange.getFirstColumn(), cellRange.getLastColumn());
 		cellEditor.addValidationData(regions, explicitListValues);
-		return this;
+		return (T) this;
 	}
 }

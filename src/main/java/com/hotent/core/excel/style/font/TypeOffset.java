@@ -1,7 +1,7 @@
 package com.hotent.core.excel.style.font;
 
 public enum TypeOffset {
-	NONE(0), SUPER(1), SUB(2);
+	NONE((short)0), SUPER((short)1), SUB((short)2);
 
 	private short offset;
 

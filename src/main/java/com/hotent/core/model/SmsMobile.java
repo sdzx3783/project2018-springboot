@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class SmsMobile implements Serializable {
-	public static final Short STATUS_SENDED = Short.valueOf(1);
-	public static final Short STATUS_NOT_SENDED = Short.valueOf(0);
+	public static final Short STATUS_SENDED = Short.valueOf((short) 1);
+	public static final Short STATUS_NOT_SENDED = Short.valueOf((short) 0);
 	protected Long smsId;
 	protected Date sendTime;
 	protected String recipients;

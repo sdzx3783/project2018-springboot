@@ -1,7 +1,7 @@
 package com.hotent.core.excel.style.font;
 
 public enum CharSet {
-	ANSI(0), DEFAULT(1), SYMBOL(2);
+	ANSI((byte)0), DEFAULT((byte)1), SYMBOL((byte)2);
 
 	private byte charset;
 

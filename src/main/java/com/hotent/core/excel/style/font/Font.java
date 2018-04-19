@@ -34,7 +34,7 @@ public class Font {
 
 	public Font color(Color color) {
 		if (color.equals(Color.AUTOMATIC)) {
-			this.font.setColor(32767);
+			this.font.setColor((short) 32767);
 		} else {
 			this.font.setColor(color.getIndex());
 		}

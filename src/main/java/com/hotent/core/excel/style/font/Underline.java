@@ -1,7 +1,7 @@
 package com.hotent.core.excel.style.font;
 
 public enum Underline {
-	NONE(0), SINGLE(1), DOUBLE(2), SINGLE_ACCOUNTING(33), DOUBLE_ACCOUNTING(34);
+	NONE((byte)0), SINGLE((byte)1), DOUBLE((byte)2), SINGLE_ACCOUNTING((byte)33), DOUBLE_ACCOUNTING((byte)34);
 
 	private byte line;
 

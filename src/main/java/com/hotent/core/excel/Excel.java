@@ -2,7 +2,6 @@ package com.hotent.core.excel;
 
 import com.hotent.core.excel.DefaultExcelStyle;
 import com.hotent.core.excel.ExcelContext;
-import com.hotent.core.excel.Excel.1;
 import com.hotent.core.excel.editor.CellEditor;
 import com.hotent.core.excel.editor.ColumnEditor;
 import com.hotent.core.excel.editor.RegionEditor;
@@ -231,25 +230,5 @@ public class Excel {
 		return refersName;
 	}
 
-	public static void main(String[] args) {
-      Object[] val = new Object[]{"插入一行数据", Integer.valueOf(123), Character.valueOf('A'), Double.valueOf(3.141592653589793D), new Date(), "hello"};
-      Excel excel = new Excel();
-      excel.cell(0, 0).value("Hello World!").align(Align.CENTER).bgColor(Color.LIGHT_YELLOW).height(30.0F).font(new 1());
-      excel.region(0, 0, 0, 10).merge();
-      excel.region("$A$2:$K$2").merge();
-      ((RowEditor)excel.row(2).value(val).addWidth(2000)).borderOuter(BorderStyle.DASH_DOT_DOT, Color.CORAL);
-      excel.row(4, 1).value(val).borderFull(BorderStyle.DASH_DOT, Color.RED);
-      excel.row(6).value(val, 2).borderTop(BorderStyle.THIN, Color.BLUE);
-      ((ColumnEditor)((ColumnEditor)excel.column(11).value(val).align(Align.CENTER)).borderFull(BorderStyle.THICK, Color.CORNFLOWER_BLUE)).autoWidth();
-      excel.cell(7, 0).value("=IF(B3=123,\"等于\",\"不等于\")");
-      excel.cell(7, 1).value(Double.valueOf(0.578923D)).dataFormat("0.00%");
-      excel.cell(7, 2).value(Double.valueOf(0.578923D), "0.00%");
-      excel.region(8, 0, 10, 1).image("http://www.jee-soft.cn/htsite/template/ht/images/index_r1_c3.jpg");
-      excel.sheet().freeze(1, 0).sheetName("这是第一个表");
-      excel.cell(8, 5).value("这个单元格设置了备注").comment("这是一条备注");
-      excel.setWorkingSheet(1).sheetName("第二个表");
-      excel.row(0).value(val);
-      excel.sheet().groupColumn(0, 3);
-      excel.saveExcel("D:/helloworld.xls");
-   }
+	
 }

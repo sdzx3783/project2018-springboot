@@ -1,8 +1,8 @@
 package com.hotent.core.excel.reader;
 
 public class FieldEntity {
-	public static final Short IS_KEY = Short.valueOf(1);
-	public static final Short NOT_KEY = Short.valueOf(0);
+	public static final Short IS_KEY = Short.valueOf((short) 1);
+	public static final Short NOT_KEY = Short.valueOf((short) 0);
 	private String name;
 	private String value;
 	private Short isKey;

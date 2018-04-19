@@ -144,7 +144,7 @@ public class SchedulerService {
 			return new ArrayList();
 		} else {
 			JobKey key = new JobKey(jobName, "group1");
-			return this.scheduler.getTriggersOfJob(key);
+			return (List<Trigger>) this.scheduler.getTriggersOfJob(key);
 		}
 	}
 

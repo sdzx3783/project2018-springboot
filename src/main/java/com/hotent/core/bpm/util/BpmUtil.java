@@ -1,51 +1,43 @@
 package com.hotent.core.bpm.util;
 
-import com.hotent.core.api.bpm.IBpmDefinitionService;
-import com.hotent.core.api.bpm.model.IBpmDefinition;
-import com.hotent.core.bpm.graph.DivShape;
-import com.hotent.core.bpm.graph.Point;
-import com.hotent.core.bpm.graph.ShapeMeta;
-import com.hotent.core.bpm.graph.activiti.ProcessDiagramGenerator;
-import com.hotent.core.bpm.model.ForkNode;
-import com.hotent.core.bpm.model.NodeCondition;
-import com.hotent.core.bpm.model.ProcessCmd;
-import com.hotent.core.model.TaskExecutor;
-import com.hotent.core.util.AppUtil;
-import com.hotent.core.util.BeanUtils;
-import com.hotent.core.util.ClassLoadUtil;
-import com.hotent.core.util.Dom4jUtil;
-import com.hotent.core.util.StringUtil;
-import com.hotent.core.web.util.RequestUtil;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
-import java.awt.geom.Point2D.Double;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import javax.servlet.http.HttpServletRequest;
+
 import javax.xml.transform.TransformerFactoryConfigurationError;
+
 import org.activiti.engine.delegate.DelegateTask;
 import org.activiti.engine.delegate.TaskListener;
 import org.activiti.engine.impl.persistence.entity.ExecutionEntity;
 import org.activiti.engine.impl.pvm.delegate.ActivityExecution;
-import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.time.DateUtils;
 import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.Node;
+
+import com.hotent.core.bpm.graph.Point;
+import com.hotent.core.bpm.model.ForkNode;
+import com.hotent.core.bpm.model.NodeCondition;
+import com.hotent.core.model.TaskExecutor;
+import com.hotent.core.util.AppUtil;
+import com.hotent.core.util.BeanUtils;
+import com.hotent.core.util.ClassLoadUtil;
+import com.hotent.core.util.Dom4jUtil;
+import com.hotent.core.util.StringUtil;
 
 public class BpmUtil {
 	private static final String VAR_PRE_NAME = "v_";
@@ -193,100 +185,6 @@ public class BpmUtil {
 	public static String transform(String id, String name, String xml)
 			throws TransformerFactoryConfigurationError, Exception {
 		return ClassLoadUtil.transform(id, name, xml);
-	}
-
-	public static ShapeMeta transGraph(String xml) throws Exception {
-		List shaps = ProcessDiagramGenerator.extractBPMNShap(xml);
-		List edges = ProcessDiagramGenerator.extractBPMNEdge(xml);
-		Double[] points = ProcessDiagramGenerator.caculateCanvasSize(shaps, edges);
-		double shiftX = points[0].getX() < 0.0D ? points[0].getX() : 0.0D;
-		double shiftY = points[0].getY() < 0.0D ? points[0].getY() : 0.0D;
-		int width = (int) Math.round(points[1].getX() + 10.0D - shiftX);
-		int height = (int) Math.round(points[1].getY() + 10.0D - shiftY);
-		int minX = (int) Math.round(points[0].getX() - shiftX);
-		int minY = (int) Math.round(points[0].getY() - shiftY);
-		minX = minX <= 5 ? 5 : minX;
-		minY = minY <= 5 ? 5 : minY;
-		xml = xml.replace("xmlns=\"http://www.omg.org/spec/BPMN/20100524/MODEL\"", "");
-		Document doc = Dom4jUtil.loadXml(xml);
-		Element root = doc.getRootElement();
-		List sequenceFlows = root.selectNodes("//sequenceFlow");
-		HashMap seqIdandName = new HashMap();
-		StringBuffer sb = new StringBuffer();
-		Iterator list = sequenceFlows.iterator();
-
-		while (list.hasNext()) {
-			Object subProcessNum = list.next();
-			String parentZIndexes = ((Element) subProcessNum).attributeValue("id");
-			String shapeMeta = ((Element) subProcessNum).attributeValue("name");
-			seqIdandName.put(parentZIndexes, shapeMeta);
-		}
-
-		List arg35 = root.selectNodes("//bpmndi:BPMNShape");
-		int arg36 = 1;
-		HashMap arg37 = new HashMap();
-
-		for (int arg38 = 0; arg38 < arg35.size(); ++arg38) {
-			Element el = (Element) arg35.get(arg38);
-			String id = el.attributeValue("bpmnElement");
-			Element component = (Element) root.selectSingleNode("//*[@id=\'" + id + "\']");
-			if (component != null && !component.getName().equalsIgnoreCase("participant")
-					&& !component.getName().equalsIgnoreCase("lane")) {
-				Element tmp = (Element) el.selectSingleNode("omgdc:Bounds");
-				int x = (int) Float.parseFloat(tmp.attributeValue("x"));
-				int y = (int) Float.parseFloat(tmp.attributeValue("y"));
-				int w = (int) Float.parseFloat(tmp.attributeValue("width"));
-				int h = (int) Float.parseFloat(tmp.attributeValue("height"));
-				x = (int) ((double) (x - minX + 5) - shiftX);
-				y = (int) ((double) (y - minY + 5) - shiftY);
-				Element procEl = (Element) root.selectSingleNode("//process/descendant::*[@id=\'" + id + "\']");
-				if (procEl != null) {
-					String type = procEl.getName();
-					Element parent;
-					if (type.equals("serviceTask")) {
-						parent = procEl.element("extensionElements");
-						Element name = parent.element("serviceType");
-						type = name.attributeValue("value");
-					}
-
-					if (!"subProcess".equals(type) && !"callActivity".equals(type)) {
-						parent = procEl.element("multiInstanceLoopCharacteristics");
-						if (parent != null && !"subProcess".equals(type)) {
-							type = "multiUserTask";
-						}
-					}
-
-					parent = procEl.getParent();
-					String arg40 = procEl.attributeValue("name");
-					int zIndex = 10;
-					String parentName = parent.getName();
-					if (parentName.equals("subProcess")) {
-						if (parent.getParent().getName().equals("subProcess")) {
-							++arg36;
-						}
-
-						if (type.equalsIgnoreCase("subProcess")) {
-							zIndex = ((Integer) arg37.get(parent.attributeValue("id"))).intValue() + 1;
-							arg37.put(id, Integer.valueOf(zIndex));
-						} else if (type.equalsIgnoreCase("startEvent")) {
-							type = "subStartEvent";
-						} else if (type.equalsIgnoreCase("endEvent")) {
-							type = "subEndEvent";
-						} else {
-							zIndex = 10 + arg36;
-						}
-					} else if (type.equalsIgnoreCase("subProcess")) {
-						arg37.put(id, Integer.valueOf(zIndex));
-					}
-
-					DivShape shape = new DivShape(arg40, (float) x, (float) y, (float) w, (float) h, zIndex, id, type);
-					sb.append(shape);
-				}
-			}
-		}
-
-		ShapeMeta arg39 = new ShapeMeta(width, height, sb.toString());
-		return arg39;
 	}
 
 	private static Map<String, Integer> caculateCenterPosition(List<Integer> waypoints) {
@@ -496,130 +394,7 @@ public class BpmUtil {
 		return outXml1;
 	}
 
-	public static ProcessCmd getProcessCmd(HttpServletRequest request) throws Exception {
-		ProcessCmd cmd = new ProcessCmd();
-		String temp = request.getParameter("taskId");
-		if (StringUtil.isNotEmpty(temp)) {
-			cmd.setTaskId(temp);
-		}
-
-		temp = request.getParameter("formData");
-		if (StringUtil.isNotEmpty(temp)) {
-			cmd.setFormData(temp);
-		}
-
-		Map paraMap = RequestUtil.getParameterValueMap(request, false, false);
-		cmd.setFormDataMap(paraMap);
-		IBpmDefinitionService bpmDefinitionService = (IBpmDefinitionService) AppUtil
-				.getBean(IBpmDefinitionService.class);
-		IBpmDefinition bpmDefinition = null;
-		temp = request.getParameter("actDefId");
-		if (StringUtil.isNotEmpty(temp)) {
-			cmd.setActDefId(temp);
-			bpmDefinition = bpmDefinitionService.getByActDefId(temp);
-		} else {
-			temp = request.getParameter("flowKey");
-			if (StringUtil.isNotEmpty(temp)) {
-				cmd.setFlowKey(temp);
-				bpmDefinition = bpmDefinitionService.getMainDefByActDefKey(temp);
-			}
-		}
-
-		cmd.addTransientVar("bpm_definition", bpmDefinition);
-		if (BeanUtils.isNotEmpty(bpmDefinition)) {
-			String destTaskIds = "";
-			destTaskIds = bpmDefinition.getInformType();
-			cmd.setInformType(destTaskIds);
-		}
-
-		temp = request.getParameter("destTask");
-		if (StringUtil.isNotEmpty(temp)) {
-			cmd.setDestTask(temp);
-		}
-
-		temp = request.getParameter("businessKey");
-		if (StringUtil.isNotEmpty(temp)) {
-			cmd.setBusinessKey(temp);
-		}
-
-		String[] arg12 = RequestUtil.getStringAryByStr(request, "lastDestTaskId");
-		if (arg12 != null) {
-			cmd.setLastDestTaskIds(arg12);
-			String[] paramEnums = new String[arg12.length];
-
-			for (int relRunId = 0; relRunId < arg12.length; ++relRunId) {
-				String vnames = request.getParameter(arg12[relRunId] + "_userId");
-				if (StringUtil.isNotEmpty(vnames)) {
-					vnames = vnames.replace(",", "#");
-				} else {
-					vnames = "";
-				}
-
-				paramEnums[relRunId] = vnames;
-			}
-
-			cmd.setLastDestTaskUids(paramEnums);
-		}
-
-		temp = request.getParameter("back");
-		if (StringUtil.isNotEmpty(temp)) {
-			Integer arg13 = Integer.valueOf(Integer.parseInt(temp));
-			cmd.setBack(arg13);
-		}
-
-		cmd.setVoteContent(request.getParameter("voteContent"));
-		temp = request.getParameter("stackId");
-		if (StringUtils.isNotEmpty(temp)) {
-			cmd.setStackId(new Long(temp));
-		}
-
-		temp = request.getParameter("voteAgree");
-		if (StringUtil.isNotEmpty(temp)) {
-			cmd.setVoteAgree(new Short(temp));
-		}
-
-		Enumeration arg14 = request.getParameterNames();
-
-		while (arg14.hasMoreElements()) {
-			String arg15 = (String) arg14.nextElement();
-			if (arg15.startsWith("v_")) {
-				String[] arg18 = arg15.split("[_]");
-				if (arg18 != null && arg18.length == 3) {
-					String varName = arg18[1];
-					String val = request.getParameter(arg15);
-					if (!val.isEmpty()) {
-						Object valObj = getValue(arg18[2], val);
-						cmd.getVariables().put(varName, valObj);
-					}
-				}
-			}
-		}
-
-		temp = request.getParameter("isManage");
-		if (StringUtil.isNotEmpty(temp)) {
-			cmd.setIsManage(new Short(temp));
-		}
-
-		temp = request.getParameter("_executors_");
-		if (StringUtil.isNotEmpty(temp)) {
-			List arg16 = getTaskExecutors(temp);
-			cmd.setTaskExecutors(arg16);
-		}
-
-		temp = request.getParameter("startNode");
-		if (StringUtil.isNotEmpty(temp)) {
-			cmd.setStartNode(temp);
-		}
-
-		Long arg17 = Long.valueOf(RequestUtil.getLong(request, "relRunId", 0L));
-		cmd.setRelRunId(arg17);
-		temp = request.getParameter("fromMobile");
-		if (StringUtil.isNotEmpty(temp) && "1".equals(temp)) {
-			cmd.setFromMobile(true);
-		}
-
-		return cmd;
-	}
+	
 
 	public static Object getValue(String type, String paramValue) {
 		Object value = null;
@@ -781,37 +556,5 @@ public class BpmUtil {
 		}
 	}
 
-	public static int isHandlerValid(String handler) {
-		if (handler.indexOf(".") == -1) {
-			return -1;
-		} else {
-			String[] aryHandler = handler.split("[.]");
-			if (aryHandler.length != 2) {
-				return -1;
-			} else {
-				String beanId = aryHandler[0];
-				String method = aryHandler[1];
-				Object serviceBean = null;
-
-				try {
-					serviceBean = AppUtil.getBean(beanId);
-				} catch (Exception arg7) {
-					return -2;
-				}
-
-				if (serviceBean == null) {
-					return -2;
-				} else {
-					try {
-						serviceBean.getClass().getMethod(method, new Class[]{ProcessCmd.class});
-						return 0;
-					} catch (NoSuchMethodException arg5) {
-						return -3;
-					} catch (Exception arg6) {
-						return -4;
-					}
-				}
-			}
-		}
-	}
+	
 }

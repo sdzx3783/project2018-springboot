@@ -182,6 +182,78 @@
 	    <artifactId>commons-fileupload</artifactId>
 	    <version>1.2.2</version>
 	</dependency>
+	<dependency>
+	    <groupId>org.apache.activemq</groupId>
+	    <artifactId>activemq-all</artifactId>
+	    <version>5.8.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.activemq</groupId>
+	    <artifactId>activemq-pool</artifactId>
+	    <version>5.8.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.activemq</groupId>
+	    <artifactId>activemq-client</artifactId>
+	    <version>5.8.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.activemq</groupId>
+	    <artifactId>activemq-broker</artifactId>
+	    <version>5.8.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.activemq</groupId>
+	    <artifactId>activemq-web</artifactId>
+	    <version>5.8.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.activiti</groupId>
+	    <artifactId>activiti-engine</artifactId>
+	    <version>5.15.1</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.activiti</groupId>
+	    <artifactId>activiti-bpmn-model</artifactId>
+	    <version>5.15.1</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.activiti</groupId>
+	    <artifactId>activiti-bpmn-converter</artifactId>
+	    <version>5.15.1</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.activiti</groupId>
+	    <artifactId>activiti-process-validation</artifactId>
+	    <version>5.15.1</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework.security</groupId>
+	    <artifactId>spring-security-core</artifactId>
+	    <version>3.1.2.RELEASE</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.pdfbox</groupId>
+	    <artifactId>pdfbox</artifactId>
+	    <version>1.6.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.poi</groupId>
+	    <artifactId>poi-scratchpad</artifactId>
+	    <version>3.9</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.quartz-scheduler</groupId>
+	    <artifactId>quartz</artifactId>
+	    <version>2.2.1</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.quartz-scheduler</groupId>
+	    <artifactId>quartz-jobs</artifactId>
+	    <version>2.2.1</version>
+	</dependency>
+	
+	
   </dependencies>
 
   <dependencyManagement>

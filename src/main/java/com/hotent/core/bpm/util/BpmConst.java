@@ -29,8 +29,8 @@ public class BpmConst {
 	public static final String NODE_APPROVAL_CONTENT = "approvalContent";
 	public static final Integer TASK_BACK = Integer.valueOf(1);
 	public static final Integer TASK_BACK_TOSTART = Integer.valueOf(2);
-	public static final Short OnLineForm = Short.valueOf(0);
-	public static final Short UrlForm = Short.valueOf(1);
+	public static final Short OnLineForm = Short.valueOf((short) 0);
+	public static final Short UrlForm = Short.valueOf((short) 1);
 	public static final String FORM_PK_REGEX = "\\{pk\\}";
 	public static final String FLOW_BUSINESSKEY = "businessKey";
 	public static final String FLOW_RUNID = "flowRunId";

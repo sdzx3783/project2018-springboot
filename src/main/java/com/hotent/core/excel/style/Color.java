@@ -1,16 +1,16 @@
 package com.hotent.core.excel.style;
 
 public enum Color {
-	AUTOMATIC(64), AQUA(49), BLACK(8), BLUE(12), BLUE_GREY(54), BRIGHT_GREEN(11), BROWN(60), CORAL(29), CORNFLOWER_BLUE(
-			24), DARK_BLUE(18), DARK_GREEN(58), DARK_RED(16), DARK_TEAL(56), DARK_YELLOW(19), GOLD(
-					51), GREEN(17), GREY_25_PERCENT(22), GREY_40_PERCENT(55), GREY_50_PERCENT(23), GREY_80_PERCENT(
-							63), INDIGO(62), LAVENDER(46), LEMON_CHIFFON(26), LIGHT_BLUE(48), LIGHT_CORNFLOWER_BLUE(
-									31), LIGHT_GREEN(42), LIGHT_ORANGE(52), LIGHT_TURQUOISE(41), LIGHT_YELLOW(43), LIME(
-											50), MAROON(25), OLIVE_GREEN(59), ORANGE(53), ORCHID(28), PALE_BLUE(
-													44), PINK(14), PLUM(61), RED(10), ROSE(45), ROYAL_BLUE(
-															30), SEA_GREEN(57), SKY_BLUE(40), TAN(
-																	47), TEAL(21), TURQUOISE(
-																			15), VIOLET(20), WHITE(9), YELLOW(13);
+	AUTOMATIC((short)64), AQUA((short)49), BLACK((short)8), BLUE((short)12), BLUE_GREY((short)54), BRIGHT_GREEN((short)11), BROWN((short)60), CORAL((short)29), CORNFLOWER_BLUE(
+			(short)24), DARK_BLUE((short)18), DARK_GREEN((short)58), DARK_RED((short)16), DARK_TEAL((short)56), DARK_YELLOW((short)19), GOLD(
+					(short)51), GREEN((short)17), GREY_25_PERCENT((short)22), GREY_40_PERCENT((short)55), GREY_50_PERCENT((short)23), GREY_80_PERCENT(
+							(short)63), INDIGO((short)62), LAVENDER((short)46), LEMON_CHIFFON((short)26), LIGHT_BLUE((short)48), LIGHT_CORNFLOWER_BLUE(
+									(short)31), LIGHT_GREEN((short)42), LIGHT_ORANGE((short)52), LIGHT_TURQUOISE((short)41), LIGHT_YELLOW((short)43), LIME(
+											(short)50), MAROON((short)25), OLIVE_GREEN((short)59), ORANGE((short)53), ORCHID((short)28), PALE_BLUE(
+													(short)44), PINK((short)14), PLUM((short)61), RED((short)10), ROSE((short)45), ROYAL_BLUE(
+															(short)30), SEA_GREEN((short)57), SKY_BLUE((short)40), TAN(
+																	(short)47), TEAL((short)21), TURQUOISE(
+																			(short)15), VIOLET((short)20), WHITE((short)9), YELLOW((short)13);
 
 	private short index;
 

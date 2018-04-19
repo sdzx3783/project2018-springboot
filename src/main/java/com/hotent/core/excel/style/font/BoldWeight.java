@@ -1,7 +1,7 @@
 package com.hotent.core.excel.style.font;
 
 public enum BoldWeight {
-	NORMAL(400), BOLD(700);
+	NORMAL((short)400), BOLD((short)700);
 
 	private short weight;
 

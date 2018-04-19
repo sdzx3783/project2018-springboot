@@ -84,7 +84,7 @@ public class QueuesService {
 	}
 
 	public void purgeDestination(String JMSDestination) throws Exception {
-		this.getBrokerFacade().purgeQueue(ActiveMQDestination.createDestination(JMSDestination, 1));
+		this.getBrokerFacade().purgeQueue(ActiveMQDestination.createDestination(JMSDestination, (byte) 1));
 	}
 
 	public void removeMessage(String JMSDestination, String messageId) throws Exception {
