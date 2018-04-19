@@ -9,7 +9,7 @@ import com.hotent.core.mybatis.dialect.OracleDialect;
 import com.hotent.core.mybatis.dialect.SQLServer2005Dialect;
 import org.springframework.beans.factory.FactoryBean;
 
-public class DialectFactoryBean implements FactoryBean<Dialect> {
+public class DialectFactoryBean implements FactoryBean {
 	private Dialect dialect;
 	private String dbType = "mysql";
 
@@ -17,7 +17,8 @@ public class DialectFactoryBean implements FactoryBean<Dialect> {
 		this.dbType = dbType;
 	}
 
-	public Dialect getObject() throws Exception {
+	@Override
+	public Object getObject() throws Exception {
 		this.dialect = getDialect(this.dbType);
 		return this.dialect;
 	}
@@ -68,10 +69,12 @@ public class DialectFactoryBean implements FactoryBean<Dialect> {
 		return (Dialect) dialect;
 	}
 
+	@Override
 	public Class<?> getObjectType() {
 		return Dialect.class;
 	}
 
+	@Override
 	public boolean isSingleton() {
 		return true;
 	}

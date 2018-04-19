@@ -4,11 +4,12 @@ import com.hotent.core.table.BaseTableMeta;
 import com.hotent.core.table.impl.TableMetaFactory;
 import org.springframework.beans.factory.FactoryBean;
 
-public class TableMetaFactoryBean implements FactoryBean<BaseTableMeta> {
+public class TableMetaFactoryBean implements FactoryBean {
 	private BaseTableMeta tableMeta;
 	private String dbType = "mysql";
 
-	public BaseTableMeta getObject() throws Exception {
+	@Override
+	public Object getObject() throws Exception {
 		this.tableMeta = TableMetaFactory.getMetaData("dataSource_Default");
 		return this.tableMeta;
 	}
@@ -17,10 +18,12 @@ public class TableMetaFactoryBean implements FactoryBean<BaseTableMeta> {
 		this.dbType = dbType;
 	}
 
+	@Override
 	public Class<?> getObjectType() {
 		return BaseTableMeta.class;
 	}
 
+	@Override
 	public boolean isSingleton() {
 		return true;
 	}
