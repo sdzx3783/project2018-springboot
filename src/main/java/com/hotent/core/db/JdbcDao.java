@@ -1,14 +1,16 @@
 package com.hotent.core.db;
 
-import com.hotent.core.mybatis.Dialect;
-import com.hotent.core.page.PageBean;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+
+import com.hotent.core.mybatis.Dialect;
+import com.hotent.core.page.PageBean;
 
 public class JdbcDao {
 	private JdbcTemplate jdbcTemplate;
@@ -67,7 +69,7 @@ public class JdbcDao {
 
 	public int queryForInt(String sql, Map parameter) {
 		NamedParameterJdbcTemplate template = new NamedParameterJdbcTemplate(this.jdbcTemplate.getDataSource());
-		return template.queryForObject(sql, parameter,Integer.class);
+		return (Integer)template.queryForObject(sql, parameter,Integer.class);
 	}
 
 	public int upd(String sql) {

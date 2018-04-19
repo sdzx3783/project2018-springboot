@@ -59,7 +59,7 @@ public class JdbcTemplateUtil {
 		NamedParameterJdbcTemplate namedParameterJdbcTemplate = null;
 		namedParameterJdbcTemplate = getNamedParameterJdbcTemplate(alias);
 		List list = namedParameterJdbcTemplate.query(pageSql, map, rowMap);
-		int total = namedParameterJdbcTemplate.queryForObject(totalSql, map,Integer.class);
+		Integer total = namedParameterJdbcTemplate.queryForObject(totalSql, map,Integer.class);
 		pageBean.setTotalCount(total);
 		PageList pageList = new PageList();
 		pageList.setPageBean(pageBean);
@@ -110,7 +110,7 @@ public class JdbcTemplateUtil {
 		NamedParameterJdbcTemplate namedParameterJdbcTemplate = null;
 		namedParameterJdbcTemplate = getNamedParameterJdbcTemplate(alias);
 		List list = namedParameterJdbcTemplate.queryForList(pageSql, paraMap);
-		int total = namedParameterJdbcTemplate.queryForObject(totalSql, paraMap,Integer.class);
+		Integer total = namedParameterJdbcTemplate.queryForObject(totalSql, paraMap,Integer.class);
 		PageBean pageBean = new PageBean(currentPage, pageSize);
 		pageBean.setTotalCount(total);
 		PageList pageList = new PageList();

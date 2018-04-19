@@ -35,7 +35,7 @@ public abstract class BaseTableMeta {
 			String pageSql = dialect.getLimitString(sql, offset, pageSize);
 			String totalSql = dialect.getCountSql(sql);
 			List list = this.jdbcTemplate.query(pageSql, rowMapper);
-			int total = this.jdbcTemplate.queryForInt(totalSql);
+			int total = this.jdbcTemplate.queryForObject(totalSql,Integer.class);
 			pageBean.setTotalCount(total);
 			return list;
 		} else {
