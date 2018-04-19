@@ -21,7 +21,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.hotent.core.api.util.ContextUtil;
 import com.hotent.core.api.util.PropertyUtil;
-import com.hotent.core.bpm.setting.ISkipCondition;
 import com.hotent.core.bpm.util.BpmConst;
 import com.hotent.core.db.datasource.DataSourceUtil;
 import com.hotent.core.engine.GroovyScriptEngine;
@@ -680,9 +679,9 @@ public class ServiceUtil {
 	 * 获取跳过条件map集合。
 	 * @return
 	 */
-	public static Map<String,ISkipCondition> getSkipConditionMap(){
-		return (Map<String, ISkipCondition>) AppUtil.getBean("skipConditionMap");
-	}
+//	public static Map<String,ISkipCondition> getSkipConditionMap(){
+//		return (Map<String, ISkipCondition>) AppUtil.getBean("skipConditionMap");
+//	}
 	
 	
 	/**

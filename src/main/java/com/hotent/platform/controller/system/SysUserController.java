@@ -4,7 +4,6 @@ import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -21,8 +20,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
-import org.springframework.ldap.core.DistinguishedName;
-import org.springframework.ldap.core.LdapTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -36,9 +33,7 @@ import com.hotent.core.engine.GroovyScriptEngine;
 import com.hotent.core.log.SysAuditThreadLocalHolder;
 import com.hotent.core.model.OnlineUser;
 import com.hotent.core.model.TaskExecutor;
-import com.hotent.core.util.AppUtil;
 import com.hotent.core.util.BeanUtils;
-import com.hotent.core.util.DateUtil;
 import com.hotent.core.util.ExceptionUtil;
 import com.hotent.core.util.StringUtil;
 import com.hotent.core.web.ResultMessage;
@@ -80,7 +75,6 @@ import com.hotent.platform.service.system.SysUserParamService;
 import com.hotent.platform.service.system.SysUserService;
 import com.hotent.platform.service.system.UserPositionService;
 import com.hotent.platform.service.system.UserRoleService;
-import com.hotent.platform.service.system.UserSyncService;
 import com.hotent.platform.service.system.UserUnderService;
 import com.hotent.platform.service.system.impl.OrgServiceImpl;
 import com.hotent.platform.service.util.MessageUtil;
@@ -116,8 +110,6 @@ public class SysUserController extends BaseController {
 	private UserRoleService userRoleService;
 	@Resource
 	private UserPositionService userPositionService;
-	@Resource
-	private UserSyncService userSyncService;
 	@Resource
 	private OrgAuthService orgAuthService;
 	@Resource

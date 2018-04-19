@@ -1,7 +1,5 @@
 package com.hotent.platform.service.form;
 
-import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -9,8 +7,6 @@ import java.util.Map;
 import javax.annotation.Resource;
 
 import org.apache.commons.lang.StringUtils;
-import org.dom4j.Document;
-import org.dom4j.Element;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
@@ -27,10 +23,7 @@ import com.hotent.core.table.IDbView;
 import com.hotent.core.table.TableModel;
 import com.hotent.core.table.impl.TableMetaFactory;
 import com.hotent.core.util.BeanUtils;
-import com.hotent.core.util.Dom4jUtil;
 import com.hotent.core.util.StringUtil;
-import com.hotent.core.util.UniqueIdUtil;
-import com.hotent.core.util.XmlBeanUtil;
 import com.hotent.platform.dao.form.BpmFormDialogDao;
 import com.hotent.platform.model.form.BpmFormDialog;
 import com.hotent.platform.model.form.DialogField;
@@ -39,8 +32,6 @@ import com.hotent.platform.model.system.SysRole;
 import com.hotent.platform.service.system.SysOrgService;
 import com.hotent.platform.service.system.SysRoleService;
 import com.hotent.platform.service.util.ServiceUtil;
-import com.hotent.platform.xml.util.MsgUtil;
-import com.hotent.platform.xml.util.XmlUtil;
 
 import net.sf.json.JSONObject;
 

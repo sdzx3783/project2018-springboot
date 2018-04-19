@@ -1,8 +1,5 @@
 package com.hotent.core.util;
 
-import com.hotent.core.util.AppConfigUtil;
-import com.hotent.core.util.BeanUtils;
-import com.hotent.core.util.DateFormatUtil;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.lang.Character.UnicodeBlock;
@@ -15,11 +12,9 @@ import java.util.Map;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import org.apache.commons.codec.binary.Base64;
-import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.jsoup.Jsoup;
-import org.jsoup.safety.Whitelist;
 
 public class StringUtil {
 	public static final char UNDERLINE = '_';
@@ -943,15 +938,15 @@ public class StringUtil {
 		return str;
 	}
 
-	public static String removeHTMLTag(String htmlStr) {
-		if (isEmpty(htmlStr)) {
-			return "";
-		} else {
-			htmlStr = Jsoup.clean(htmlStr, Whitelist.none());
-			htmlStr = htmlEntityToString(htmlStr);
-			return htmlStr.trim();
-		}
-	}
+//	public static String removeHTMLTag(String htmlStr) {
+//		if (isEmpty(htmlStr)) {
+//			return "";
+//		} else {
+//			htmlStr = Jsoup.clean(htmlStr, Whitelist.none());
+//			htmlStr = htmlEntityToString(htmlStr);
+//			return htmlStr.trim();
+//		}
+//	}
 
 	public static boolean contain(String str, String searchStr) {
 		return contain(str, searchStr, ",", true);
