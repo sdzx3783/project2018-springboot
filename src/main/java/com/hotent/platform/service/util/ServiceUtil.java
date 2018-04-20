@@ -529,7 +529,13 @@ public class ServiceUtil {
 	 * @return
 	 */
 	public static String getBaseUrl(){
-		String baseUrl= ContextLoader.getCurrentWebApplicationContext().getServletContext().getContextPath();
+		//String baseUrl= ContextLoader.getCurrentWebApplicationContext().getServletContext().getContextPath();
+		String baseUrl = null;
+		try {
+			baseUrl = AppUtil.getServletContext().getContextPath();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		return baseUrl;
 	}
 	/**

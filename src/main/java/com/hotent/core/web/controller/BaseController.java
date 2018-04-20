@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.propertyeditors.CustomNumberEditor;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.ServletRequestDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.multipart.support.ByteArrayMultipartFileEditor;
@@ -43,8 +44,8 @@ public class BaseController extends GenericController {
 		binder.registerCustomEditor(Date.class, new SmartDateEditor());
 	}
 
-//	protected ResultMessage validForm(String form, Object obj, BindingResult result, HttpServletRequest request) {
-//		ResultMessage resObj = new ResultMessage(1, "");
+	protected ResultMessage validForm(String form, Object obj, BindingResult result, HttpServletRequest request) {
+		ResultMessage resObj = new ResultMessage(1, "");
 //		this.confValidator.setFormName(form);
 //		this.confValidator.validate(obj, result);
 //		if (result.hasErrors()) {
@@ -60,9 +61,9 @@ public class BaseController extends GenericController {
 //
 //			resObj.setMessage(errMsg);
 //		}
-//
-//		return resObj;
-//	}
+
+		return resObj;
+	}
 
 	public ModelAndView getView(String category, String id) {
 		String view = ConfigUtil.getVal(category, id);

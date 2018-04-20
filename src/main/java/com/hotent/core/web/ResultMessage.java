@@ -2,8 +2,8 @@ package com.hotent.core.web;
 
 import java.io.Serializable;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.alibaba.fastjson.JSONException;
+import com.alibaba.fastjson.JSONObject;
 
 public class ResultMessage implements Serializable {
 	private static final long serialVersionUID = -7102370526170507252L;

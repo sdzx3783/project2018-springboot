@@ -8,6 +8,21 @@
 	<!-- 定时器服务类 -->
 	<bean id="schedulerService" class="com.hotent.core.scheduler.SchedulerService"></bean>
 
+	<!-- 
+	<bean id="confValidator"
+		class="org.springmodules.validation.commons.ConfigurableBeanValidator">
+		<property name="validatorFactory" ref="validatorFactory" />
+	</bean>
+	<bean id="validatorFactory"
+		class="org.springmodules.validation.commons.DefaultValidatorFactory">
+		<property name="validationConfigLocations">
+			<list>
+				<value>classpath*:/conf/valid/*.xml</value>
+			</list>
+		</property>
+	</bean>
+	 -->
+
 	<bean id="scriptEngine" class="com.hotent.core.engine.GroovyScriptEngine"></bean>
 	<bean id="orgServiceImpl" class="com.hotent.platform.service.system.impl.OrgServiceImpl">
 	    <property name="handMap">

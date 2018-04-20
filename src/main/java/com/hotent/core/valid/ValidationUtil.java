@@ -8,7 +8,6 @@ import com.hotent.core.valid.Rule;
 import com.hotent.core.valid.ValidEnum;
 import com.hotent.core.valid.ValidField;
 import com.hotent.core.valid.ValidForm;
-import com.hotent.core.valid.ValidationUtil.1;
 import freemarker.template.TemplateException;
 import java.io.IOException;
 import java.util.EnumSet;
@@ -23,7 +22,6 @@ import org.apache.commons.validator.Form;
 import org.apache.commons.validator.ValidatorResources;
 import org.springframework.beans.factory.BeanFactoryUtils;
 import org.springframework.context.ApplicationContext;
-import org.springmodules.validation.commons.ValidatorFactory;
 
 public class ValidationUtil {
 	private static Map<String, ValidEnum> map = new HashMap();
@@ -32,29 +30,29 @@ public class ValidationUtil {
 		ValidForm form = new ValidForm();
 		form.setFormName(formName);
 		ApplicationContext ctx = AppUtil.getContext();
-		ValidatorFactory factory = (ValidatorFactory) BeanFactoryUtils.beanOfTypeIncludingAncestors(ctx,
-				ValidatorFactory.class, true, true);
-		ValidatorResources resources = factory.getValidatorResources();
-		Form frm = resources.getForm(local, formName);
-		if (frm == null) {
-			return null;
-		} else {
-			List list = frm.getFields();
-			Iterator i$ = list.iterator();
-
-			while (i$.hasNext()) {
-				Field fld = (Field) i$.next();
-				Arg arg = fld.getArg(0);
-				String displayName = ResourceUtil.getText(arg.getKey(), (Object[]) null, local);
-				ValidField vFld = new ValidField();
-				vFld.setDisplayName(displayName);
-				vFld.setFormName(fld.getProperty());
-				getRuleByField(fld, vFld, local);
-				form.addField(vFld);
-			}
+//		ValidatorFactory factory = (ValidatorFactory) BeanFactoryUtils.beanOfTypeIncludingAncestors(ctx,
+//				ValidatorFactory.class, true, true);
+//		ValidatorResources resources = factory.getValidatorResources();
+//		Form frm = resources.getForm(local, formName);
+//		if (frm == null) {
+//			return null;
+//		} else {
+//			List list = frm.getFields();
+//			Iterator i$ = list.iterator();
+//
+//			while (i$.hasNext()) {
+//				Field fld = (Field) i$.next();
+//				Arg arg = fld.getArg(0);
+//				String displayName = ResourceUtil.getText(arg.getKey(), (Object[]) null, local);
+//				ValidField vFld = new ValidField();
+//				vFld.setDisplayName(displayName);
+//				vFld.setFormName(fld.getProperty());
+//				getRuleByField(fld, vFld, local);
+//				form.addField(vFld);
+//			}
 
 			return form;
-		}
+//		}
 	}
 
 	private static void getRuleByField(Field field, ValidField vFld, Locale local) {
@@ -80,7 +78,7 @@ public class ValidationUtil {
       String tipInfo = "";
       Arg argE;
       String keyE;
-      switch(1.$SwitchMap$com$hotent$core$valid$ValidEnum[e.ordinal()]) {
+      switch(e.ordinal()) {
       case 1:
          tipInfo = ResourceUtil.getText("必填", displayName, local);
          String value = field.getVarValue(ruleName);
