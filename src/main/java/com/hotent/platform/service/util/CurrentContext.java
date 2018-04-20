@@ -44,14 +44,23 @@ public class CurrentContext implements ICurrentContext {
 	@Override
 	public ISysUser getCurrentUser() {
 		//通过setCurrentUserAccount设置的用户。
-			if(curUser.get()!=null){
-				ISysUser user=curUser.get();
-				return user;
+		ISysUser sysUser=null;
+		HttpServletRequest request = RequestContext.getHttpServletRequest();
+		if(curUser.get()!=null){
+			sysUser=curUser.get();
+		}else{
+			HttpSession session = request.getSession(true);
+			Object attribute = session.getAttribute("SPRING_SECURITY_CONTEXT");
+			if(attribute!=null && (attribute instanceof ISysUser)){
+				sysUser=(ISysUser)attribute;
 			}
-			SysUserDao bean = AppUtil.getBean(SysUserDao.class);
-			SysUser byAccount = bean.getByAccount("admin");
-			curUser.set(byAccount);
-	        return byAccount;
+			if(sysUser==null){
+				SysUserDao bean = AppUtil.getBean(SysUserDao.class);
+				sysUser = bean.getByAccount("admin");
+			}
+		}
+		request.getSession().setAttribute("SPRING_SECURITY_CONTEXT", sysUser);
+        return sysUser;
 	}
 
 	@Override

@@ -1,6 +1,5 @@
 <%@page pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
 <%@page import="com.hotent.core.api.org.model.ISysUser"%>
 <f:link href="jquery/plugins/jquery.chosen.css"></f:link>
 <script type="text/javascript" src="${ctx}/js/jquery/plugins/jquery.chosen.js""></script>
@@ -270,7 +269,10 @@ a.menuItem{
             <input type="hidden" id="account" value="<security:authentication property="principal.account" />">
         </div> --%>
 		<div class="welcome-cell welcome-title">
-            欢迎您，<%=((ISysUser)session.getAttribute("SPRING_SECURITY_CONTEXT")).getFullname() %>
+            欢迎您，<% if(session.getAttribute("SPRING_SECURITY_CONTEXT")!=null)
+            { %>
+            <%= ((ISysUser) session.getAttribute("SPRING_SECURITY_CONTEXT")).getFullname() %>
+         <% } %>
             <input type="hidden" id="account" value="<%=((ISysUser)session.getAttribute("SPRING_SECURITY_CONTEXT")).getAccount() %>">
         </div>
         <!-- 设置操作 -->

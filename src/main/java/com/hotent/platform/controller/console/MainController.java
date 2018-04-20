@@ -24,6 +24,7 @@ import com.hotent.core.util.AppUtil;
 import com.hotent.core.util.StringUtil;
 import com.hotent.core.web.controller.BaseController;
 import com.hotent.core.web.util.RequestUtil;
+import com.hotent.platform.dao.system.SysUserDao;
 import com.hotent.platform.model.system.Position;
 import com.hotent.platform.model.system.Resources;
 import com.hotent.platform.model.system.SubSystem;
@@ -53,10 +54,6 @@ public class MainController extends BaseController {
 	private UserPositionService userPositionService;
 	@Resource
 	private PositionService positionService;
-/*	@Resource
-	private DocService docService;
-	@Resource
-	private ClassifyLibraryService classifyLibraryService;*/
 	@Resource
 	private SysRoleService sysRoleService;
 	
@@ -89,6 +86,7 @@ public class MainController extends BaseController {
 			HttpServletResponse response) throws Exception {
 		//当前用户
 		SysUser curUser = (SysUser) ContextUtil.getCurrentUser();
+		
 		Long curUserId = curUser.getUserId();
 		//当前有权限的子系统
 		List<SubSystem> subSystemList = subSystemService.getByUser(curUser);
@@ -130,8 +128,6 @@ public class MainController extends BaseController {
 			
 			currentSystem.setLogo(logo);
 		}
-		String property = configproperties.getProperty("genId.adjust");
-		System.out.println(property);
 		return this.getView("console",mainViewName)
 			.addObject("skinStyle",skinStyle)
 			.addObject("currentSystem", currentSystem)
