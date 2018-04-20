@@ -85,14 +85,6 @@
 	
 	</script>
 </head>
-<script type="text/javascript">
-	$(function(){
-		setTimeout(function(){
-			$("body").attr("style","overflow-y:auto !important");
-		}, 100);
-		
-	})
-</script>
 
 <body>
 <c:set var="SysUser_EXPIRED" value="<%=SysUser.EXPIRED %>" />
