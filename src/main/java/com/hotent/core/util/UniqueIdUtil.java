@@ -2,14 +2,19 @@ package com.hotent.core.util;
 
 import com.hotent.core.util.AppUtil;
 import com.hotent.core.util.FileUtil;
+import com.makshi.framework.mainframe.config.properties.GenIdProperties;
+
 import java.io.File;
 import java.util.Map;
+import java.util.Properties;
 import java.util.UUID;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.config.PropertiesFactoryBean;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.util.ResourceUtils;
 
 public class UniqueIdUtil {
 	private static long adjust = 1L;
@@ -22,14 +27,9 @@ public class UniqueIdUtil {
 	private static void init() {
 		try {
 			jdbcTemplate = (JdbcTemplate) AppUtil.getBean("jdbcTemplateSn");
-			String ex = "";
-			if (!StringUtils.isEmpty(getEnvir())) {
-				ex = "-" + getEnvir();
-			}
-
-			String path = FileUtil.getClassesPath() + "conf/application" + ex
-					+ ".properties".replace("/", File.separator);
-			String strAdjust = FileUtil.readFromProperties(path, "genId.adjust");
+			GenIdProperties configproperties = (GenIdProperties) AppUtil.getBean("genIdProperties");
+			
+			String strAdjust = configproperties.getAdjust();
 			if (strAdjust != null) {
 				adjust = (long) Integer.parseInt(strAdjust);
 			}

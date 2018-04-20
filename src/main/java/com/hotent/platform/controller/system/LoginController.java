@@ -96,8 +96,6 @@ public class LoginController extends BaseController {
 		//因为页面jsp也用到validCodeEnabled这个写死的变量
 		String validCodeEnabled = RequestUtil.getString(request, "validCodeEnabled", "false");
 
-		SecurityContextHolder.clearContext();
-
 		//添加系统日志信息 -B
 		try {
 			SysAuditThreadLocalHolder.putParamerter("success", false);

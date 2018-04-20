@@ -5,3 +5,5 @@ param:
   db-name: webframe
   db-username: root
   db-password:
+genId.adjust: 4
+jdbc.dbType: mysql

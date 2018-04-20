@@ -48,8 +48,8 @@ spring:
     active: ${RUN_ENV}
   mvc:
     view:
-      prefix: /view/
-      suffix: .jsp
+      prefix: /WEB-INF/view/
+      suffix: 
   thymeleaf:
     cache: false
     enabled: false
