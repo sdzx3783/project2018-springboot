@@ -33,11 +33,12 @@
       <artifactId>spring-boot-starter-thymeleaf</artifactId>
     </dependency> -->
 
-    <!--SPRING SESSION-->
+    <!--SPRING SESSION
     <dependency>
       <groupId>org.springframework.session</groupId>
       <artifactId>spring-session-jdbc</artifactId>
     </dependency>
+    -->
 
     <!--MYBATIS -->
     <dependency>
