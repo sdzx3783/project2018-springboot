@@ -16,6 +16,8 @@ import java.util.regex.Pattern;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.lang3.StringUtils;
 
+import com.makshi.framework.mainframe.config.properties.HotentCoreProperties;
+
 public class StringUtil {
 	public static final char UNDERLINE = '_';
 
@@ -186,7 +188,8 @@ public class StringUtil {
 
 	public static String subString(String str) {
 		int len = 25;
-		String tmp = AppConfigUtil.get("titleLen");
+		HotentCoreProperties bean = AppUtil.getBean(HotentCoreProperties.class);
+		String tmp = bean.getTitleLen();
 		String regex = "<(?:(?:/([^>]+)>)|(?:!--([\\S|\\s]*?)-->)|(?:([^\\s/>]+)\\s*((?:(?:\"[^\"]*\")|(?:\'[^\']*\')|[^\"\'<>])*)/?>))";
 		Pattern pattern = Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(str);

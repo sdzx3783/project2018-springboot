@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+         http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-autowire="byName" default-lazy-init="false">
+
+	<!-- 定时器服务类 -->
+	<bean id="schedulerService" class="com.hotent.core.scheduler.SchedulerService"></bean>
+
+	<bean id="scriptEngine" class="com.hotent.core.engine.GroovyScriptEngine"></bean>
+	<bean id="orgServiceImpl" class="com.hotent.platform.service.system.impl.OrgServiceImpl">
+	    <property name="handMap">
+	        <map>
+				<!-- 发起人 -->
+				<entry key="all"   value-ref="orgHandlerAll" />
+				<entry key="self"   value-ref="orgHandlerSelf" />
+				<entry key="grade"   value-ref="orgHandlerGrade"/>
+				<entry key="company"   value-ref="orgHandlerGrade"/>
+				<entry key="department"   value-ref="orgHandlerGrade"/>
+				<entry key="group"   value-ref="orgHandlerGrade"/>
+				<entry key="other"   value-ref="orgHandlerGrade"/>
+				<entry key="up"   value-ref="orgHandlerUp"/>
+			</map>
+	    </property>
+	</bean>
+	<bean id="orgHandlerAll" class="com.hotent.platform.service.system.impl.handler.OrgHandlerAll"></bean>
+	<bean id="orgHandlerSelf" class="com.hotent.platform.service.system.impl.handler.OrgHandlerSelf"></bean>
+	<bean id="orgHandlerUp" class="com.hotent.platform.service.system.impl.handler.OrgHandlerUp"></bean>
+	
+	<bean id="orgHandlerGrade" class="com.hotent.platform.service.system.impl.handler.GradeOrgHandler">
+	    <property name="aliasMap">
+	        <map>
+				<!-- 发起人 -->
+				<entry key="grade"   value="1"/>
+				<entry key="company"   value="2"/>
+				<entry key="department"   value="3"/>
+				<entry key="group"   value="4"/>
+				<entry key="other"   value="5"/>
+			</map>
+	    </property>
+	</bean>
+	
+	
+</beans>

@@ -344,7 +344,7 @@ public class SysFileController extends BaseController {
 					/*if("pictureShow".equals(uploadType)){            //pictureShow控件要做多一个文件压缩图
 						//filePath =filePath.replaceAll(fileName, fileId + "_small");
 						 压缩后的文件路径      如D:/1234.jpg 变成 D:/1234_small.jpg 
-						int width = Integer.parseInt(configproperties.getProperty("compression.width"));
+						int width = Integer.parseInt(getProperty("compression.width"));
 						String filePrex = filePath.substring(0, filePath.lastIndexOf("."));  
 						filePath = filePrex + "_small" + filePath.substring(filePrex.length());            
 						String reutrnStr = ImageUtil.doCompressByByte(f.getBytes(), filePath, width, 40, 1, true);

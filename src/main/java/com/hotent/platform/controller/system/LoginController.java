@@ -63,8 +63,6 @@ import com.hotent.platform.service.system.SysUserService;
 public class LoginController extends BaseController {
 	@Resource
 	private SysUserService sysUserService;
-	@Resource
-	private Properties configproperties;
 	/*@Resource
 	private SessionLocaleResolver sessionLocaleResolver;*/
 	@Resource

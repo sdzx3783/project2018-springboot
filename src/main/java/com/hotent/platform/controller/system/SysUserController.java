@@ -119,8 +119,6 @@ public class SysUserController extends BaseController {
 	@Resource
 	private PwdStrategyService pwdStrategyService;
 	@Resource
-	private Properties configproperties;
-	@Resource
 	private UserInfomationService userInfomationService;
 	@Resource
 	private IdentityService identityService;

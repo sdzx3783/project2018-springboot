@@ -2,9 +2,9 @@ package com.hotent.core.db.datasource;
 
 import com.hotent.core.api.system.ISysDataSourceService;
 import com.hotent.core.api.system.model.ISysDataSource;
-import com.hotent.core.util.AppConfigUtil;
 import com.hotent.core.util.AppUtil;
 import com.hotent.core.util.StringUtil;
+import com.makshi.framework.mainframe.config.properties.HotentCoreProperties;
 
 public class DbContextHolder {
 	
@@ -17,7 +17,8 @@ public class DbContextHolder {
 	}
 
 	public static void setDefaultDataSource() {
-		String dbType = AppConfigUtil.get("jdbc.dbType");
+		HotentCoreProperties bean = AppUtil.getBean(HotentCoreProperties.class);
+		String dbType =bean.getJdbc().getDbType();
 		contextHolderAlias.set("dataSource_Default");
 		contextHolderDbType.set(dbType);
 	}

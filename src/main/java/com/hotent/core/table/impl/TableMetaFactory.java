@@ -9,8 +9,8 @@ import com.hotent.core.table.impl.DmDbView;
 import com.hotent.core.table.impl.DmTableMeta;
 import com.hotent.core.table.impl.MySqlTableMeta;
 import com.hotent.core.table.impl.MysqlDbView;
-import com.hotent.core.util.AppConfigUtil;
 import com.hotent.core.util.AppUtil;
+import com.makshi.framework.mainframe.config.properties.HotentCoreProperties;
 
 public class TableMetaFactory {
 	public static BaseTableMeta getMetaData(String dsName) throws Exception {
@@ -52,7 +52,8 @@ public class TableMetaFactory {
 		ISysDataSourceService sysDataSourceService = (ISysDataSourceService) AppUtil
 				.getBean(ISysDataSourceService.class);
 		sysDataSource = sysDataSourceService.getByAlias(alias);
-		String dbType = AppConfigUtil.get("jdbc.dbType");
+		HotentCoreProperties bean = AppUtil.getBean(HotentCoreProperties.class);
+		String dbType = bean.getJdbc().getDbType();
 		if (sysDataSource != null) {
 			dbType = sysDataSource.getDbType();
 		}

@@ -57,8 +57,6 @@ public class SysOrgController extends BaseController {
 	@Resource
 	private DemensionService demensionService;
 	@Resource
-	Properties configproperties;
-	@Resource
 	private SysUserOrgService sysUserOrgService;
 
 	@Resource
@@ -654,7 +652,7 @@ public class SysOrgController extends BaseController {
 			}
 			onlineList.add(onlineUser);
 		}
-		String depTreeRootId = configproperties.getProperty("depTreeRootId");
+		String depTreeRootId = "";
 		Long demId = RequestUtil.getLong(request, "demId", 0);
 		Demension demension = demensionService.getById(demId);
 		Map<Long, SysOrg> orgMap = sysOrgService.getOrgMapByDemId(demId);

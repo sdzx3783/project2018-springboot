@@ -6,8 +6,8 @@ import com.hotent.core.db.datasource.DbContextHolder;
 import com.hotent.core.mybatis.Dialect;
 import com.hotent.core.mybatis.dialect.DmDialect;
 import com.hotent.core.mybatis.dialect.MySQLDialect;
-import com.hotent.core.util.AppConfigUtil;
 import com.hotent.core.util.AppUtil;
+import com.makshi.framework.mainframe.config.properties.HotentCoreProperties;
 
 public class DialectUtil {
 	public static Dialect getDialect(String dbType) throws Exception {
@@ -37,6 +37,7 @@ public class DialectUtil {
 		ISysDataSourceService sysDataSourceService = (ISysDataSourceService) AppUtil
 				.getBean(ISysDataSourceService.class);
 		ISysDataSource sysDataSource = sysDataSourceService.getByAlias(alias);
-		return sysDataSource == null ? getDialect(AppConfigUtil.get("jdbc.dbType")) : getDialect(sysDataSource);
+		HotentCoreProperties bean = AppUtil.getBean(HotentCoreProperties.class);
+		return sysDataSource == null ? getDialect(bean.getJdbc().getDbType()) : getDialect(sysDataSource);
 	}
 }

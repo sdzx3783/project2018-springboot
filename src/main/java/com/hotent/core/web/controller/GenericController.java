@@ -31,8 +31,6 @@ public class GenericController {
 	public static final String STEP2 = "2";
 	public static final String MESSAGES_KEY = "successMessages";
 	public static final String ERRORS = "errors";
-	@Resource
-	protected Properties configproperties;
 
 	public ModelAndView getAutoView() throws Exception {
 		HttpServletRequest request = RequestContext.getHttpServletRequest();

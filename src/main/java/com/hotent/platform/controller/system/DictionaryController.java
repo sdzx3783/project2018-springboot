@@ -108,7 +108,10 @@ public class DictionaryController extends BaseController {
 		List<Dictionary> list = dictionaryService.getByParentId(parentId);
 		return getAutoView().addObject("dictionaryList", list);
 	}
-
+	@RequestMapping("tree")
+	public ModelAndView tree(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		return getAutoView();
+	}
 	/**
 	 * 排序数据字典
 	 * 

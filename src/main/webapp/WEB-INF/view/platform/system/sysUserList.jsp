@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="com.hotent.platform.model.system.SysUser"%>
-<%@include file="/commons/include/html_doctype.html" %>
+<%-- <%@include file="/commons/include/html_doctype.html" %> --%>
 <html>
 <head>
 	<title>用户表管理</title>
@@ -85,6 +85,15 @@
 	
 	</script>
 </head>
+<script type="text/javascript">
+	$(function(){
+		setTimeout(function(){
+			$("body").attr("style","overflow-y:auto !important");
+		}, 100);
+		
+	})
+</script>
+
 <body>
 <c:set var="SysUser_EXPIRED" value="<%=SysUser.EXPIRED %>" />
 <c:set var="SysUser_UN_EXPIRED" value="<%=SysUser.UN_EXPIRED %>"  />

@@ -13,6 +13,7 @@ import javax.servlet.jsp.tagext.TagSupport;
 
 import org.dom4j.Document;
 import org.dom4j.Element;
+import org.springframework.util.ResourceUtils;
 
 import com.hotent.core.util.Dom4jUtil;
 import com.hotent.core.util.FileUtil;
@@ -66,8 +67,11 @@ public class TabTag extends TagSupport {
 
 	@SuppressWarnings("unchecked")
 	private String getTabHtml() throws IOException {
-		String path = FileUtil.getClassesPath() + "conf" + File.separator
-				+ "tabConfig.xml";
+		/*String path = FileUtil.getClassesPath() + "conf" + File.separator
+				+ "tabConfig.xml";*/
+		String path =StringUtil.trimSufffix(StringUtil.trimSufffix(ResourceUtils.getURL("classpath:").getPath(),"\\"),"/")+File.separator+"conf"+File.separator
+			+"tabConfig.xml";
+		path=path.replaceAll("\\\\", "/");
 		InputStream stream = new BufferedInputStream(new FileInputStream(path));
 
 	

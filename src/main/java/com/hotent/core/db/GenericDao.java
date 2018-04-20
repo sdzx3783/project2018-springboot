@@ -10,6 +10,8 @@ import com.hotent.core.page.PageList;
 import com.hotent.core.util.AppUtil;
 import com.hotent.core.util.BeanUtils;
 import com.hotent.core.web.query.QueryFilter;
+import com.makshi.framework.mainframe.config.properties.HotentCoreProperties;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -25,13 +27,12 @@ import org.springframework.jdbc.core.JdbcTemplate;
 public abstract class GenericDao<E, PK extends Serializable> extends BaseMyBatisDao implements IEntityDao<E, PK> {
 	@Resource
 	protected JdbcTemplate jdbcTemplate;
-	@Resource
-	Properties configproperties;
 
 	public abstract Class getEntityClass();
 
 	protected String getDbType() {
-		return this.configproperties.getProperty("jdbc.dbType");
+		HotentCoreProperties bean = AppUtil.getBean(HotentCoreProperties.class);
+		return bean.getJdbc().getDbType();
 	}
 
 	public E getById(PK primaryKey) {

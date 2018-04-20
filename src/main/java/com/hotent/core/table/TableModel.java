@@ -1,7 +1,9 @@
 /*   1:    */ package com.hotent.core.table;
 /*   2:    */ 
-/*   3:    */ import com.hotent.core.util.AppConfigUtil;
+import com.hotent.core.util.AppUtil;
 /*   4:    */ import com.hotent.core.util.StringUtil;
+import com.makshi.framework.mainframe.config.properties.HotentCoreProperties;
+
 /*   5:    */ import java.util.ArrayList;
 /*   6:    */ import java.util.List;
 /*   7:    */ 
@@ -25,10 +27,12 @@
 /*  25:    */   
 /*  26:    */   static
 /*  27:    */   {
-/*  28: 76 */     String customerTablePrefix = AppConfigUtil.get("CUSTOMER_TABLE_PREFIX");
+					HotentCoreProperties bean = AppUtil.getBean(HotentCoreProperties.class);
+					
+/*  28: 76 */     String customerTablePrefix = bean.getCustomer_table_prefix();
 /*  29: 77 */     CUSTOMER_TABLE_PREFIX = StringUtil.isEmpty(customerTablePrefix) ? CUSTOMER_TABLE_PREFIX : customerTablePrefix;
 /*  30:    */     
-/*  31: 79 */     String customerColumnPrefix = AppConfigUtil.get("CUSTOMER_COLUMN_PREFIX");
+/*  31: 79 */     String customerColumnPrefix = bean.getCustomer_column_prefix();
 /*  32: 80 */     CUSTOMER_COLUMN_PREFIX = StringUtil.isEmpty(customerColumnPrefix) ? CUSTOMER_COLUMN_PREFIX : customerColumnPrefix;
 /*  33:    */   }
 /*  34:    */   

@@ -3,6 +3,7 @@ package com.hotent.core.util;
 import com.hotent.core.util.AppUtil;
 import com.hotent.core.util.FileUtil;
 import com.makshi.framework.mainframe.config.properties.GenIdProperties;
+import com.makshi.framework.mainframe.config.properties.HotentCoreProperties;
 
 import java.io.File;
 import java.util.Map;
@@ -27,9 +28,8 @@ public class UniqueIdUtil {
 	private static void init() {
 		try {
 			jdbcTemplate = (JdbcTemplate) AppUtil.getBean("jdbcTemplateSn");
-			GenIdProperties configproperties = (GenIdProperties) AppUtil.getBean("genIdProperties");
-			
-			String strAdjust = configproperties.getAdjust();
+			HotentCoreProperties bean = AppUtil.getBean(HotentCoreProperties.class);
+			String strAdjust =bean.getGenId().getAdjust();
 			if (strAdjust != null) {
 				adjust = (long) Integer.parseInt(strAdjust);
 			}
