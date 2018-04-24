@@ -57,8 +57,8 @@ import com.hotent.platform.service.system.SysUserService;
  * @author csx
  * 
  */
-@Controller
-@RequestMapping("/login.ht")
+//@Controller
+//@RequestMapping("/login.ht")
 @Action(ownermodel = SysAuditModelType.LOGIN_MANAGEMENT)
 public class LoginController extends BaseController {
 	@Resource

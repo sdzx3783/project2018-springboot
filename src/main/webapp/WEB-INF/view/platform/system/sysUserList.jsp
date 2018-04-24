@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="com.hotent.platform.model.system.SysUser"%>
-<%-- <%@include file="/commons/include/html_doctype.html" %> --%>
+<%@include file="/commons/include/html_doctype.html" %>
 <html>
 <head>
 	<title>用户表管理</title>

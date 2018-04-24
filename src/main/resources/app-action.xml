@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+         http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-autowire="byName" default-lazy-init="false">
+	
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource" scope="prototype">
+		<property name="basenames">
+			<list>
+				<!--<value>classpath:resource/errors</value> -->
+				<value>classpath:messages/messages</value>
+			</list>
+        </property>
+        <property name="useCodeAsDefaultMessage" value="true"/>
+        <property name="cacheSeconds" value="0"></property>
+        <property name="defaultEncoding" value="UTF-8"></property>
+    </bean>
+    <bean id="localeResolver"
+	    class="org.springframework.web.servlet.i18n.SessionLocaleResolver">  
+	</bean>
+	
+	<bean id="templateResolver"
+          class="org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver">
+        <property name="prefix" value="classpath:/template/thymeleaf/" />
+        <property name="templateMode" value="HTML5" />
+        <property name="cacheable" value="false" />
+        <property name="characterEncoding" value="UTF-8"/>
+    </bean>
+
+    <bean id="templateEngine"
+          class="org.thymeleaf.spring4.SpringTemplateEngine">
+        <property name="templateResolver" ref="templateResolver" />
+    </bean>
+    <!--  配置多个视图解析-->
+    <bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+
+        <property name="viewResolvers">
+            <list>
+                <!--used thymeleaf  -->
+                <bean class="org.thymeleaf.spring4.view.ThymeleafViewResolver">
+                    <property name="characterEncoding" value="UTF-8"/>
+                    <property name="templateEngine" ref="templateEngine" />
+                    <property name="viewNames" value="*.html" />
+                    <property name="order" value="1" />
+                </bean>
+                <!-- used jsp -->
+                <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+                    <property name="prefix" value="/WEB-INF/view/"/>
+                    <property name="viewNames" value="*.jsp"/>
+                    <property name="order" value="2" />
+                </bean>
+
+            </list>
+        </property>
+    </bean>
+	
+	
+</beans>

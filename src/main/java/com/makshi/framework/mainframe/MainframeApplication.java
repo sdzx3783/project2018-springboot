@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ImportResource;
 @SpringBootApplication
 @ComponentScan(basePackages= {"com.hotent","com.makshi"})
 @ServletComponentScan(basePackages={"com.hotent"})
-@ImportResource(locations = {"classpath:app-beans.xml"})
+@ImportResource(locations = {"classpath:app-beans.xml","classpath:app-action.xml"})
 public class MainframeApplication{
 
     public static void main(String[] args) {

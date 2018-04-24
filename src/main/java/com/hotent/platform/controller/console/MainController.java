@@ -24,7 +24,6 @@ import com.hotent.core.util.AppUtil;
 import com.hotent.core.util.StringUtil;
 import com.hotent.core.web.controller.BaseController;
 import com.hotent.core.web.util.RequestUtil;
-import com.hotent.platform.dao.system.SysUserDao;
 import com.hotent.platform.model.system.Position;
 import com.hotent.platform.model.system.Resources;
 import com.hotent.platform.model.system.SubSystem;
