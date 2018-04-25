@@ -5,7 +5,7 @@
 <head>
 <%@include file="/commons/include/get.jsp"%>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script type="text/javascript" src="${ctx }/js/lg/plugins/ligerLayout.js" ></script>
+<script type="text/javascript" src="${ctx }/static/platform/js/lg/plugins/ligerLayout.js" ></script>
 <title>流水号列表</title>
 <script type="text/javascript">
 var win = window.parent.frameElement.dialog;

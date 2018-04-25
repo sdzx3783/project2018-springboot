@@ -10,8 +10,8 @@
 <f:link href="web.css"></f:link>
 <f:link href="form.css" ></f:link>
 <f:link href="jquery/plugins/rowOps.css"></f:link>
-<f:js pre="js/lang/common"></f:js>
-<f:js pre="js/lang/js"></f:js>
+<f:js pre="static/platform/js/lang/common"></f:js>
+<f:js pre="static/platform/js/lang/js"></f:js>
 <link href="${ctx}/css/common/jquery-ui.min.css" rel="stylesheet" />
 <link href="${ctx}/css/common/bootstrap.css" rel="stylesheet" />
 <link href="${ctx}/css/common/bootstrap-table.css" rel="stylesheet" />
@@ -20,32 +20,32 @@
 	rel="stylesheet" />
 <link href="${ctx}/css/common/dragtable.css" rel="stylesheet" />
 
-<script src="${ctx}/js/common/jquery.js"></script>
+<script src="${ctx}/static/platform/js/common/jquery.js"></script>
 <script type="text/javascript" src="${ctx}/js/dynamic.jsp"></script>
-<script type="text/javascript" src="${ctx}/js/util/util.js"></script>
-<script type="text/javascript" src="${ctx}/js/util/json2.js"></script>
-<script type="text/javascript" src="${ctx}/js/util/form.js"></script>
-<script type="text/javascript" src="${ctx}/js/tree/jquery.ztree.js"></script>
-<script type="text/javascript" src="${ctx}/js/lg/base.js"></script>
-<script type="text/javascript" src="${ctx}/js/custom/cookie.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/displaytag.js" ></script>
-<script type="text/javascript" src="${ctx}/js/lg/plugins/ligerDialog_list.js" ></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/util/util.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/util/json2.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/util/form.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/lg/base.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/custom/cookie.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/displaytag.js" ></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerDialog_list.js" ></script>
 
-<script src="${ctx}/js/common/jquery-ui.js"></script>
-<script src="${ctx}/js/common/bootstrap.js"></script>
-<script src="${ctx}/js/common/bootstrap-table.js"></script>
-<script src="${ctx}/js/common/bootstrap-table-zh-CN.js"></script>
-<script src="${ctx}/js/common/bootstrap-datepicker.min.js"></script>
-<script src="${ctx}/js/common/bootstrap-datepicker.zh-CN.min.js"></script>
-<script src="${ctx}/js/common/jquery.dragtable.js"></script>
-<script src="${ctx}/js/common/bootstrap-table-reorder-columns.js"></script>
-<script src="${ctx}/js/common/colResizable-1.6.js"></script>
-<script src="${ctx}/js/common/bootstrap-table-resizable.js"></script>
-<script src="${ctx}/js/common/bootstrap-table-contract-export.js"></script>
-<%-- <script src="${ctx}/js/common/bootstrap-table-fixed-columns.js"></script> --%>
-<script src="${ctx}/js/common/tableExport.js"></script>
-<script src="${ctx}/js/common/maishicommon.js"></script>
-<script type="text/javascript" src="${ctx}/js/calendar/My97DatePicker/newWdatePicker.js"></script>
+<script src="${ctx}/static/platform/js/common/jquery-ui.js"></script>
+<script src="${ctx}/static/platform/js/common/bootstrap.js"></script>
+<script src="${ctx}/static/platform/js/common/bootstrap-table.js"></script>
+<script src="${ctx}/static/platform/js/common/bootstrap-table-zh-CN.js"></script>
+<script src="${ctx}/static/platform/js/common/bootstrap-datepicker.min.js"></script>
+<script src="${ctx}/static/platform/js/common/bootstrap-datepicker.zh-CN.min.js"></script>
+<script src="${ctx}/static/platform/js/common/jquery.dragtable.js"></script>
+<script src="${ctx}/static/platform/js/common/bootstrap-table-reorder-columns.js"></script>
+<script src="${ctx}/static/platform/js/common/colResizable-1.6.js"></script>
+<script src="${ctx}/static/platform/js/common/bootstrap-table-resizable.js"></script>
+<script src="${ctx}/static/platform/js/common/bootstrap-table-contract-export.js"></script>
+<%-- <script src="${ctx}/static/platform/js/common/bootstrap-table-fixed-columns.js"></script> --%>
+<script src="${ctx}/static/platform/js/common/tableExport.js"></script>
+<script src="${ctx}/static/platform/js/common/maishicommon.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/calendar/My97DatePicker/newWdatePicker.js"></script>
 <style>
 .fixed-table-container {
 	border: 0;

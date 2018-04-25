@@ -1,6 +1,6 @@
-<script type="text/javascript" charset="utf-8" src="${ctx}/js/ueditor1433/ueditor_default.config.js"></script>
-<script type="text/javascript" charset="utf-8" src="${ctx}/js/ueditor1433/ueditor.all.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="${ctx}/js/ueditor1433/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript" charset="utf-8" src="${ctx}/static/platform/js/ueditor1433/ueditor_default.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="${ctx}/static/platform/js/ueditor1433/ueditor.all.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="${ctx}/static/platform/js/ueditor1433/lang/zh-cn/zh-cn.js"></script>
 
 <script type="text/javascript">
 	$(function() {

@@ -8,10 +8,10 @@
 <head>
 	<title>编辑 组织策略</title>
 	<%@include file="/commons/include/form.jsp" %>
-	<link type="text/css" rel="stylesheet"  href="${ctx}/js/jquery/plugins/token-input-facebook.css"></link>
-	<script type="text/javascript" src="${ctx}/js/hotent/CustomValid.js"></script>
-	<script type="text/javascript" src="${ctx}/js/jquery/plugins/jquery.tokeninput.js"></script>
-	<script type="text/javascript" src="${ctx}/js/hotent/platform/system/SysDialog.js"></script>
+	<link type="text/css" rel="stylesheet"  href="${ctx}/static/platform/js/jquery/plugins/token-input-facebook.css"></link>
+	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/CustomValid.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/jquery/plugins/jquery.tokeninput.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/SysDialog.js"></script>
 	<script type="text/javascript">
 		$(function() {
 			$("a.save").click(function() {

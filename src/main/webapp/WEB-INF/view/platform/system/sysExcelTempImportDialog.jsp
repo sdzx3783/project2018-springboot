@@ -4,9 +4,9 @@
 <head>
 <title>导入 Excel数据</title>
 <%@include file="/commons/include/form.jsp"%>
-<script type="text/javascript" src="${ctx}/js/hotent/CustomValid.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/formdata.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/subform.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/CustomValid.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/formdata.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/subform.js"></script>
 <script type="text/javascript">
 	var dialog = frameElement.dialog; //调用页面的dialog对象(ligerui对象)
 	function showResponse(responseText) {

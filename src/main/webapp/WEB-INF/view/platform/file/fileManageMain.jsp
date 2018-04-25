@@ -6,9 +6,9 @@
 <title>文件管理</title>
 <%@include file="/commons/include/form.jsp" %>
 <f:link href="tree/zTreeStyle.css"></f:link>
-<script type="text/javascript" src="${ctx}/js/tree/jquery.ztree.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/GlobalType.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/FormDefMenu.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/GlobalType.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/FormDefMenu.js"></script>
 <style type="text/css">
 	.tree-title{overflow:hidden;width:100%;}
 	html,body{ padding:0px; margin:0; width:100%;height:100%;overflow: hidden;} 

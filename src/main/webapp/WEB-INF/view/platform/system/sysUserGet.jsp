@@ -5,34 +5,34 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>用户表明细</title>
-<link href="${ctx}/styles/default/css/form.css" rel="stylesheet" />
+<link href="${ctx}/static/platform/styles/default/css/form.css" rel="stylesheet" />
 <%@include file="/commons/include/form.jsp" %>
 <%@include file="/codegen/include/customForm.jsp" %>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/AttachMent.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/AttachMent.js"></script>
 <%@include file="/commons/include/ueditor.jsp" %>
 <script type="text/javascript" src="${ctx}/servlet/ValidJs?form=sysUser"></script>
 <f:link href="tree/zTreeStyle.css"></f:link>
-<script type="text/javascript" src="${ctx}/js/tree/jquery.ztree.js"></script>
-<script type="text/javascript" src="${ctx}/js/lg/plugins/ligerTab.js" ></script>
-<script type="text/javascript" src="${ctx}/js/hotent/displaytag.js" ></script>
-<script type="text/javascript" src="${ctx}/js/lg/plugins/ligerWindow.js" ></script>
-<script type="text/javascript"  src="${ctx}/js/hotent/platform/system/SysDialog.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/system/FlexUploadDialog.js"></script>
-<script type="text/javascript" src="${ctx}/js/handlebars/handlebars.min.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/system/HtmlUploadDialog.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/OfficePlugin.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/rule.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/formdata.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/CustomValid.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/subform.js"></script>
-<script type="text/javascript" src="${ctx}/js/jquery/plugins/jquery.attach.js" ></script>
-<script type="text/javascript" src="${ctx}/js/ntkoWebSign/WebSignPlugin.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/FormUtil.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/ReadOnlyQuery.js"></script>
-<script type="text/javascript" src="${ctx}/js/pictureShow/PictureShowPlugin.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/FormMath.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/Cascadequery.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/TablePermission.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerTab.js" ></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/displaytag.js" ></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerWindow.js" ></script>
+<script type="text/javascript"  src="${ctx}/static/platform/js/hotent/platform/system/SysDialog.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/FlexUploadDialog.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/handlebars/handlebars.min.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/HtmlUploadDialog.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/OfficePlugin.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/rule.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/formdata.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/CustomValid.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/subform.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/jquery/plugins/jquery.attach.js" ></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/ntkoWebSign/WebSignPlugin.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/FormUtil.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/ReadOnlyQuery.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/pictureShow/PictureShowPlugin.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/FormMath.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/Cascadequery.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/TablePermission.js"></script>
 <script type="text/javascript">
 
     var dialog =null;
@@ -118,7 +118,7 @@
     </div>
     
     <div id="tabMyInfo">
-		<div title="账号信息" tabid="accountdetail" icon="${ctx}/styles/default/images/resicon/user.gif">
+		<div title="账号信息" tabid="accountdetail" icon="${ctx}/static/platform/styles/default/static/images/resicon/user.gif">
 			<div class="profile">
                 <img 
                     <c:choose>
@@ -182,7 +182,7 @@
 			</table>
 		</div>
 		
-        <div title="基本信息" tabid="userdetail" icon="${ctx}/styles/default/images/resicon/user.gif">           
+        <div title="基本信息" tabid="userdetail" icon="${ctx}/static/platform/styles/default/static/images/resicon/user.gif">           
             <h3 class="oa-h3">资料信息</h3>
             <table class="oa-table--default oa-table--second">               
                <tr>
@@ -454,7 +454,7 @@
                         </tr>
                     </c:if>
                 </table>
-	            <%-- <div title="所属角色" tabid="roldetail" icon="${ctx}/styles/default/images/resicon/customer.png">
+	            <%-- <div title="所属角色" tabid="roldetail" icon="${ctx}/static/platform/styles/default/static/images/resicon/customer.png">
 	                <table class="oa-table--default">
 	                    <thead>
 	                        <th>角色名称</th>
@@ -473,7 +473,7 @@
 	                    </c:if>
 	                </table>
 	            </div> 
-	            <div title="所属组织角色" tabid="orgRoldetail" icon="${ctx}/styles/default/images/resicon/customer.png">
+	            <div title="所属组织角色" tabid="orgRoldetail" icon="${ctx}/static/platform/styles/default/static/images/resicon/customer.png">
 	
 	                <table class="oa-table--default">
 	                    <thead>
@@ -501,7 +501,7 @@
         	</c:if>                                                                         
         </div>
 
-        <div title="职称及执业资格 " tabid="otherInfo" icon="${ctx}/styles/default/images/resicon/user.gif">
+        <div title="职称及执业资格 " tabid="otherInfo" icon="${ctx}/static/platform/styles/default/static/images/resicon/user.gif">
             <h3 class="oa-h3">职称专业</h3>
             <table class="oa-table--default"> 
                 <thead>
@@ -643,7 +643,7 @@
             </table> 
        </div>
         
-        <div title="学习及工作经历 " tabid="studyAndworkInfo" icon="${ctx}/styles/default/images/resicon/user.gif">
+        <div title="学习及工作经历 " tabid="studyAndworkInfo" icon="${ctx}/static/platform/styles/default/static/images/resicon/user.gif">
         	<h3 class="oa-h3">学习经历（包括所接受的专业培训，大学起填）</h3>
             <table class="oa-table--default"> 
                 <thead>
@@ -702,7 +702,7 @@
             </table>
         </div>
         
-        <div title="家庭成员主要关系 " tabid="familyInfo" icon="${ctx}/styles/default/images/resicon/user.gif">
+        <div title="家庭成员主要关系 " tabid="familyInfo" icon="${ctx}/static/platform/styles/default/static/images/resicon/user.gif">
         	<h3 class="oa-h3">家庭成员及主要社会关系</h3>
             <table class="oa-table--default"> 
                 <thead>
@@ -762,7 +762,7 @@
             </table>
         </div>        
        
-        <div title="保管资产" tabid="asset" icon="${ctx}/styles/default/images/resicon/article.gif">
+        <div title="保管资产" tabid="asset" icon="${ctx}/static/platform/styles/default/static/images/resicon/article.gif">
             <display:table  name="assetRegistrationList" id="assetRegistrationItem" requestURI="list.ht" sort="external" class="oa-table--default">
                 <display:column title="资产编号">${assetRegistrationItem.asset_id }</display:column>
                 <display:column title="资产名称">${assetRegistrationItem.asset_name }</display:column>
@@ -790,7 +790,7 @@
             </display:table>
         </div>
         
-        <div title="借阅合同" tabid="borrow" icon="${ctx}/styles/default/images/resicon/article.gif">
+        <div title="借阅合同" tabid="borrow" icon="${ctx}/static/platform/styles/default/static/images/resicon/article.gif">
             <display:table  name="borrowConList" id="borrowItem" requestURI="list.ht" sort="external" class="oa-table--default">
                 <display:column title="合同编号">${borrowItem.contract_num }</display:column>
                 <display:column title="合同名称">${borrowItem.contract_name }</display:column>
@@ -804,7 +804,7 @@
             </display:table>
         </div>
         
-        <div title="个人荣誉" tabid="honor" icon="${ctx}/styles/default/images/resicon/article.gif">
+        <div title="个人荣誉" tabid="honor" icon="${ctx}/static/platform/styles/default/static/images/resicon/article.gif">
             <display:table  name="honorList" id="honorItem" requestURI="list.ht" sort="external" class="oa-table--default">
                 <display:column title="荣誉编号">${honorItem.honor_num }</display:column>
                 <display:column title="奖项名称">${honorItem.honor_name }</display:column>
@@ -818,7 +818,7 @@
             </display:table>
         </div>
         
-        <div title="个人借阅" tabid="qualification" icon="${ctx}/styles/default/images/resicon/article.gif">
+        <div title="个人借阅" tabid="qualification" icon="${ctx}/static/platform/styles/default/static/images/resicon/article.gif">
             <display:table  name="certificateBorrowList" id="certificateBorrowItem" requestURI="list.ht" sort="external" class="oa-table--default">
                 <display:column title="证书名称">${certificateBorrowItem.steal_name}</display:column>
                 <display:column title="证书类型">
@@ -842,7 +842,7 @@
             </display:table>
         </div>
         
-        <div title="我的流程" tabid="process" icon="${ctx}/styles/default/images/resicon/article.gif">
+        <div title="我的流程" tabid="process" icon="${ctx}/static/platform/styles/default/static/images/resicon/article.gif">
             <display:table  name="processList" id="processItem" requestURI="list.ht" sort="external" class="oa-table--default">
                 <display:column title="名称">${processItem.processName }</display:column>
                 <display:column title="发起时间">
@@ -867,7 +867,7 @@
             </display:table>
         </div>
         
-        <div title="借用印章" tabid="contract" icon="${ctx}/styles/default/images/resicon/article.gif">
+        <div title="借用印章" tabid="contract" icon="${ctx}/static/platform/styles/default/static/images/resicon/article.gif">
             <display:table  name="sealList" id="sealItem" requestURI="list.ht" sort="external" class="oa-table--default">
                 <display:column title="印章编号">${sealItem.seal_num }</display:column>
                 <display:column title="印章名称">${sealItem.seal_name }</display:column>
@@ -886,7 +886,7 @@
             </display:table>
         </div>
         
-        <div title="经手合同" tabid="seal" icon="${ctx}/styles/default/images/resicon/article.gif">
+        <div title="经手合同" tabid="seal" icon="${ctx}/static/platform/styles/default/static/images/resicon/article.gif">
             <display:table  name="contractList" id="sealItem" requestURI="list.ht" sort="external" class="oa-table--default">
                 <display:column title="合同编号"><a href="/makshi/contract/contractinfo/get.ht?id=${sealItem.id }" target="_blank">${sealItem.contract_num }</a></display:column>
                 <display:column title="名称">${sealItem.contract_name }</display:column>
@@ -903,7 +903,7 @@
                 </display:column>
             </display:table>
         </div>
-        <div title="历史变更" tabid="infoChange" icon="${ctx}/styles/default/images/resicon/article.gif">
+        <div title="历史变更" tabid="infoChange" icon="${ctx}/static/platform/styles/default/static/images/resicon/article.gif">
             <display:table  name="changeList" id="infoChangeItem" requestURI="list.ht" sort="external" class="oa-table--default">
             	<display:column title="变更字段">${infoChangeItem.field}</display:column>
                 <display:column title="变更前">${infoChangeItem.before}</display:column>

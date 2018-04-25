@@ -14,11 +14,11 @@
 <%@include file="/commons/include/form.jsp"%>
     <f:link href="tree/zTreeStyle.css"></f:link>
     <script type="text/javascript" src="${ctx}/servlet/ValidJs?form=sysOrgParam"></script>
-    <script type="text/javascript" src="${ctx }/js/hotent/displaytag.js"></script>
-	<script type="text/javascript" src="${ctx}/js/tree/jquery.ztree.js"></script>
-	<script type="text/javascript" src="${ctx}/js/lg/plugins/ligerComboBox.js"></script>
-	<script type="text/javascript" src="${ctx}/js/lg/plugins/htCatCombo.js"></script>
-	<script type="text/javascript" src="${ctx}/js/lg/plugins/htDicCombo.js"></script>
+    <script type="text/javascript" src="${ctx }/static/platform/js/hotent/displaytag.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerComboBox.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/htCatCombo.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/htDicCombo.js"></script>
 <style type="text/css">
 .error {
 	border-color: red;

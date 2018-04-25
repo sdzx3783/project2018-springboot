@@ -4,7 +4,7 @@
 <head>
 	<title>流水号生成管理</title>
 	<%@include file="/commons/include/get.jsp" %>
-	<script type="text/javascript" src="${ctx}/js/hotent/platform/bpm/ImportExportXmlUtil.js" charset="UTF-8"></script>	
+	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/bpm/ImportExportXmlUtil.js" charset="UTF-8"></script>	
 	<script type="text/javascript">
 	//导出流水号
 	function exportXml(){	

@@ -5,15 +5,15 @@
 <title>文件上传管理</title>
 <%@include file="/commons/include/form.jsp"%>
 <script type="text/javascript"
-	src="${ctx}/js/hotent/platform/system/SysDialog.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/CustomValid.js"></script>
-<link href="${ctx}/styles/swfupload/form.upload.css" rel="stylesheet"
+	src="${ctx}/static/platform/js/hotent/platform/system/SysDialog.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/CustomValid.js"></script>
+<link href="${ctx}/static/platform/styles/swfupload/form.upload.css" rel="stylesheet"
 	type="text/css" />
-<script type="text/javascript" src="${ctx}/js/swfupload/swfupload.js"></script>
-<script type="text/javascript" src="${ctx}/js/swfupload/fileprogress.js"></script>
-<script type="text/javascript" src="${ctx}/js/swfupload/handlers.form.upload.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/OfficeControl.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/OfficePlugin.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/swfupload/swfupload.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/swfupload/fileprogress.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/swfupload/handlers.form.upload.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/OfficeControl.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/OfficePlugin.js"></script>
 
 <script type="text/javascript">
 	
@@ -160,14 +160,14 @@
 			upload_complete_handler : uploadComplete,
 
 			// Button Settings
-			button_image_url : "${ctx}/styles/swfupload/XPButtonUpload.png",
+			button_image_url : "${ctx}/static/platform/styles/swfupload/XPButtonUpload.png",
 			button_placeholder_id : "spanButtonPlaceholder",
 			button_width : 61,
 			button_height : 22,
 
 			// Flash Settings
-			flash_url : "${ctx}/js/swfupload/swfupload.swf",
-			flash9_url : "${ctx}/js/swfupload/swfuploadbutton.swf",
+			flash_url : "${ctx}/static/platform/js/swfupload/swfupload.swf",
+			flash9_url : "${ctx}/static/platform/js/swfupload/swfuploadbutton.swf",
 
 			custom_settings : {
 				progress_target : "fsUploadProgress",

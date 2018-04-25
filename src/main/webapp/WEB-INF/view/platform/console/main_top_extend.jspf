@@ -2,8 +2,8 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
 	<f:link href="jquery/plugins/jquery.chosen.css"></f:link>
-<script type="text/javascript" src="${ctx}/js/jquery/plugins/jquery.chosen.js""></script>
-<script type="text/javascript" src="${ctx}/js/jquery/plugins/jquery.htselect.js""></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/jquery/plugins/jquery.chosen.js""></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/jquery/plugins/jquery.htselect.js""></script>
 <script type="text/javascript">
 	var isStop = false,pWidth,sWidth;
 	$(function(){
@@ -83,7 +83,7 @@
 			$('#labMsgSize').text(data);
 			if (data == 0) {
 				$('#inMsg').attr('src',
-						__ctx + '/styles/default/images/msg_none.png');
+						__ctx + '/static/platform/styles/default/static/images/msg_none.png');
 			}
 		});
 		$("iframe[name='home']").attr('src',__ctx+'/platform/console/home.ht');
@@ -128,7 +128,7 @@
 		$('link[rel=stylesheet]:[title='+linktitle+']',obj).each(
 			function(){
 				var curhref=this.href;
-				var startIndex=curhref.indexOf("/styles/");
+				var startIndex=curhref.indexOf("/static/platform/styles/");
 				var endIndex=curhref.indexOf("/css/");
 				var substr=curhref.substring((startIndex+8),endIndex);
 				this.href=curhref.replace(substr,styleName) ;
@@ -194,10 +194,10 @@
 					<td>
 						<div class="msg_div" alt="站内消息">
 							<c:if test="${readMsg>0}">
-								<img id="inMsg"  title="站内消息" src="${ctx}/styles/default/images/msg_own.png">
+								<img id="inMsg"  title="站内消息" src="${ctx}/static/platform/styles/default/static/images/msg_own.png">
 							</c:if> 
 							<c:if test="${readMsg==0}">
-								<img id="inMsg"  title="站内消息" src="${ctx}/styles/default/images/msg_none.png">
+								<img id="inMsg"  title="站内消息" src="${ctx}/static/platform/styles/default/static/images/msg_none.png">
 							</c:if> (<a href="javascript:showReadMsgDlg()" id="labMsgSize">${readMsg}</a>)
 						</div>
 					</td>
@@ -215,8 +215,8 @@
 				</tr>
 				<tr>
 					<td  colspan="2">
-						<a href="javascript:void(0)"  onclick="changeSkin('default')" >	<img src="${ctx}/styles/default/images/icons/icons_38.png" /> </a>
-						<a href="javascript:void(0)"  onclick="changeSkin('green')" ><img src="${ctx}/styles/default/images/icons/icons_40-69.png" /> </a>
+						<a href="javascript:void(0)"  onclick="changeSkin('default')" >	<img src="${ctx}/static/platform/styles/default/static/images/icons/icons_38.png" /> </a>
+						<a href="javascript:void(0)"  onclick="changeSkin('green')" ><img src="${ctx}/static/platform/styles/default/static/images/icons/icons_40-69.png" /> </a>
 					</td>
 				</tr>
 			</table>

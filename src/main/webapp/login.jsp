@@ -21,12 +21,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="renderer" content="webkit">
     <title>登录</title>
-    <link rel="stylesheet" href="${ctx}/styles/login/new/reset.css">
-    <link rel="stylesheet" href="${ctx}/styles/login/new/login.css">
-    <script type="text/javascript" src="${ctx}/js/custom/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="${ctx}/js/custom/jquery.validate.js"></script>
- 	<script type="text/javascript" src="${ctx}/js/custom/cookie.js"></script>
- 	<script type="text/javascript" src="${ctx}/js/common/browserinfo.js"></script>
+    <link rel="stylesheet" href="${ctx}/static/platform/styles/login/new/reset.css">
+    <link rel="stylesheet" href="${ctx}/static/platform/styles/login/new/login.css">
+    <script type="text/javascript" src="${ctx}/static/platform/js/custom/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/custom/jquery.validate.js"></script>
+ 	<script type="text/javascript" src="${ctx}/static/platform/js/custom/cookie.js"></script>
+ 	<script type="text/javascript" src="${ctx}/static/platform/js/common/browserinfo.js"></script>
 </head>
 <body>
     <div class="header">
@@ -35,10 +35,10 @@
     </div>
 
     <div class="main">
-        <img src="/images/login_bg2.png" alt="">
+        <img src="/static/platform/images/login_bg2.png" alt="">
         <div class="form">
             <h2>用户登录</h2>
-			<form id="form-login" action="${ctx}/login.ht" method="post">
+			<form id="form-login" action="${ctx}/platform/login.ht" method="post">
                 <div class="form-line user-line">
                     <input type="text" class="input" id="txt_username" name="username" placeholder="请输入用户名/手机号码">
                     <div class="clear"></div>
@@ -108,8 +108,8 @@
     			<p>如需正常使用本网站，请确认您已经<span class="red">关闭兼容模式</span></p>
     			<p>如需更好体验本网站，我们推荐您下载使用如下浏览器：</p>
     			<div class="agents">
-    				<a target="_blank" href="http://down.360safe.com/se/360se9.1.0.404.exe"><img src="/images/360.png" alt="360浏览器">360浏览器</a>
-    				<!-- <a target="_blank" href="https://www.baidu.com/link?url=csFpIp27ubGjFFV73-xzZ4Jlhws0FvWn8QAtQYSKih8UZoZEbdNCHQ4WB14YqQZ9-KKTrUqTsMoik0EyoCjXq_xNgn81J6a-_Mv-xfmmRM_&wd=&eqid=884234ee00008b5f000000065a5da436"><img src="/images/qq.png" alt="QQ浏览器">QQ浏览器</a>    				 -->
+    				<a target="_blank" href="http://down.360safe.com/se/360se9.1.0.404.exe"><img src="/static/platform/images/360.png" alt="360浏览器">360浏览器</a>
+    				<!-- <a target="_blank" href="https://www.baidu.com/link?url=csFpIp27ubGjFFV73-xzZ4Jlhws0FvWn8QAtQYSKih8UZoZEbdNCHQ4WB14YqQZ9-KKTrUqTsMoik0EyoCjXq_xNgn81J6a-_Mv-xfmmRM_&wd=&eqid=884234ee00008b5f000000065a5da436"><img src="/static/platform/images/qq.png" alt="QQ浏览器">QQ浏览器</a>    				 -->
     			</div>
     		</div>
     		<div class="tips-footer">

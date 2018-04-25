@@ -8,13 +8,13 @@
 <%@include file="/commons/include/form.jsp"%>
 <title>人员脚本添加对话框</title>
 <f:link href="form.css" ></f:link>
-<script type="text/javascript" src="${ctx}/js/hotent/CustomValid.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/formdata.js"></script>
-<script type="text/javascript"src="${ctx}/js/hotent/platform/system/PersonScriptDialog.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/system/SysDialog.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/FormUtil.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/SelectorInit.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/CommonDialog.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/CustomValid.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/formdata.js"></script>
+<script type="text/javascript"src="${ctx}/static/platform/js/hotent/platform/system/PersonScriptDialog.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/SysDialog.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/FormUtil.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/SelectorInit.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/CommonDialog.js"></script>
 <script type="text/javascript">
 	/*KILLDIALOG*/
 	var dialog = frameElement.dialog; //调用页面的dialog对象(ligerui对象)

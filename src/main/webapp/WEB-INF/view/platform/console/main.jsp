@@ -25,9 +25,9 @@
     <f:link href="index.css"></f:link>
     <f:link href="select.css"></f:link>
     <f:link href="tree/zTreeStyle.css"></f:link>
-    <f:js pre="js/lang/common" ></f:js>
-    <f:js pre="js/lang/js" ></f:js>
-    <link rel="stylesheet" href="${ctx}/styles/custom/all_update.css" />
+    <f:js pre="static/platform/js/lang/common" ></f:js>
+    <f:js pre="static/platform/js/lang/js" ></f:js>
+    <link rel="stylesheet" href="${ctx}/static/platform/styles/custom/all_update.css" />
     <style>
     *{
         font-family: "Microsoft YaHei", "Verdana, Arial, Helvetica, sans-serif" !important;
@@ -88,7 +88,7 @@
         width: 13px;
         height: 32px;
         content: '';
-        background: url(/images/label_bg.png) no-repeat left bottom;
+        background: url(/static/platform/images/label_bg.png) no-repeat left bottom;
         background-position: -26px 1px;
     }
  
@@ -99,7 +99,7 @@
         width: 13px;
         height: 32px;
         content: '';
-        background: url(/images/label_bg.png) no-repeat left bottom;
+        background: url(/static/platform/images/label_bg.png) no-repeat left bottom;
         background-position: -39px 1px;
     }
  
@@ -110,7 +110,7 @@
         width: 13px;
         height: 33px;
         content: '';
-        background: url(/images/label_bg.png) no-repeat left bottom;
+        background: url(/static/platform/images/label_bg.png) no-repeat left bottom;
         background-position: 0 1px;
     }
  
@@ -121,7 +121,7 @@
         width: 13px;
         height: 33px;
         content: '';
-        background: url(/images/label_bg.png) no-repeat left bottom;
+        background: url(/static/platform/images/label_bg.png) no-repeat left bottom;
         background-position: -13px 1px;
     }
  
@@ -166,7 +166,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: white url('${ctx}/styles/${skinStyle}/images/loading.gif') no-repeat center;
+        background: white url('${ctx}/static/platform/styles/${skinStyle}/images/loading.gif') no-repeat center;
     }
  
     #top {
@@ -192,19 +192,19 @@
     }
     </style>
     <script src="${ctx}/js/dynamic.jsp"></script>
-    <script src="${ctx}/js/jquery/jquery.js"></script>
-    <script src="${ctx}/js/util/util.js"></script>
-    <script src="${ctx}/js/util/form.js"></script>
-    <script src="${ctx}/js/lg/base.js"></script>
-    <script src="${ctx}/js/lg/plugins/ligerDialog.js"></script>
-    <script src="${ctx}/js/lg/plugins/ligerDrag.js"></script>
-    <script src="${ctx}/js/lg/plugins/ligerLayout.js"></script>
-    <script src="${ctx}/js/lg/plugins/ligerMenu.js"></script>
-    <script src="${ctx}/js/lg/plugins/ligerTab.js"></script>
-    <script src="${ctx}/js/lg/plugins/ligerAccordion.js"  ></script>
-    <script src="${ctx}/js/tree/jquery.ztree.js"></script>
-    <script src="${ctx}/js/hotent/platform/system/sysPopupRemind/SysPopupRemindUtil.js"></script>
-    <script src="${ctx}/js/custom/jquery.nicescroll.js"></script><!-- 自定义滚动条插件 -->
+    <script src="${ctx}/static/platform/js/jquery/jquery.js"></script>
+    <script src="${ctx}/static/platform/js/util/util.js"></script>
+    <script src="${ctx}/static/platform/js/util/form.js"></script>
+    <script src="${ctx}/static/platform/js/lg/base.js"></script>
+    <script src="${ctx}/static/platform/js/lg/plugins/ligerDialog.js"></script>
+    <script src="${ctx}/static/platform/js/lg/plugins/ligerDrag.js"></script>
+    <script src="${ctx}/static/platform/js/lg/plugins/ligerLayout.js"></script>
+    <script src="${ctx}/static/platform/js/lg/plugins/ligerMenu.js"></script>
+    <script src="${ctx}/static/platform/js/lg/plugins/ligerTab.js"></script>
+    <script src="${ctx}/static/platform/js/lg/plugins/ligerAccordion.js"  ></script>
+    <script src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
+    <script src="${ctx}/static/platform/js/hotent/platform/system/sysPopupRemind/SysPopupRemindUtil.js"></script>
+    <script src="${ctx}/static/platform/js/custom/jquery.nicescroll.js"></script><!-- 自定义滚动条插件 -->
     <script type="text/javascript">
         if(top != this){//当这个窗口出现在iframe里，表示其目前已经timeout，需要把外面的框架窗口也重定向登录页面
               top.location = '<%=request.getContextPath()%>/platform/console/main.ht';
@@ -839,7 +839,7 @@
  
         <!-- 右侧内容 -->
         <div position="center" id="framecenter"> 
-            <div tabid="home" title="<img src='${ctx}/styles/${skinStyle}/images/icon/work.jpg' style='vertical-align:middle;'> 我的工作台">
+            <div tabid="home" title="<img src='${ctx}/static/platform/styles/${skinStyle}/images/icon/work.jpg' style='vertical-align:middle;'> 我的工作台">
                 <c:if test="${not empty currentSystem.homePage }">
                     <c:choose>
                         <c:when test="${currentSystem.isLocal==1}">

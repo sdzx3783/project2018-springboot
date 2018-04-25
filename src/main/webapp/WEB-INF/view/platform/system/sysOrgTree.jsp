@@ -7,8 +7,8 @@
 <%@include file="/commons/include/get.jsp" %>
 <base target="_self"/> 
 <f:link href="tree/zTreeStyle.css"></f:link>
-<script type="text/javascript" src="${ctx }/js/tree/jquery.ztree.js"></script>
-<script type="text/javascript"	src="${ctx }/js/lg/plugins/ligerMenu.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
+<script type="text/javascript"	src="${ctx }/static/platform/js/lg/plugins/ligerMenu.js"></script>
 <script type="text/javascript">
         	var orgTree; //树
         	var menu;

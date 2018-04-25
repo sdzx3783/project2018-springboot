@@ -547,7 +547,7 @@ public class ServiceUtil {
 	public static String getUserLinkOpenWindow(String userId,String fullName){
 		//String baseUrl= AppConfigUtil.get("serverUrl");//如果app设置错误会导致url出错
 		String baseUrl= getBaseUrl();
-		String imgSrc = "<img src='" + baseUrl + "/styles/default/images/bpm/user-16.png'>&nbsp;" ;
+		String imgSrc = "<img src='" + baseUrl + "/static/platform/styles/default/images/bpm/user-16.png'>&nbsp;" ;
 		//canReturn=1 用户页面无返回按钮
 		String userUrl=baseUrl+"/platform/system/sysUser/get.ht?userId=" + userId+"&canReturn=1&hasClose=true";
 		String url=imgSrc+"<a href='" +userUrl +"'target='_blank'>"+ fullName +"</a>&nbsp";
@@ -562,7 +562,7 @@ public class ServiceUtil {
 	public static String getUserLinkOpenWindowAndPostId(String userId,String fullName,String userPosId){
 		//String baseUrl= AppConfigUtil.get("serverUrl");//如果app设置错误会导致url出错
 		String baseUrl= getBaseUrl();
-		String imgSrc = "<img src='" + baseUrl + "/styles/default/images/bpm/user-16.png'>&nbsp;" ;
+		String imgSrc = "<img src='" + baseUrl + "/static/platform/styles/default/images/bpm/user-16.png'>&nbsp;" ;
 		//canReturn=1 用户页面无返回按钮
 		String userUrl=baseUrl+"/platform/system/sysUser/get.ht?userId=" + userId+"&canReturn=1&hasClose=true";
 		String url=imgSrc+"<a href='" +userUrl +"'target='_blank' data-userPosId='"+userPosId+"'>"+ fullName +"</a>&nbsp";

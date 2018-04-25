@@ -4,9 +4,9 @@
 <head>
 	<title>编辑 系统岗位表，实际是部门和职务的对应关系表</title>
 	<%@include file="/commons/include/form.jsp" %>
-	<script type="text/javascript" src="${ctx}/js/hotent/CustomValid.js"></script>
-	<script type="text/javascript" src="${ctx}/js/hotent/platform/system/Share.js"></script>
-	<script type="text/javascript" src="${ctx}/js/hotent/platform/form/CommonDialog.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/CustomValid.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/Share.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/CommonDialog.js"></script>
 	<script type="text/javascript">
 	  
 	  var authId = "${param.authId}";

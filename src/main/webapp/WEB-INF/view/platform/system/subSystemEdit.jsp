@@ -10,9 +10,9 @@
 <script type="text/javascript"
 	src="${ctx}/servlet/ValidJs?form=subSystem"></script>
 <script type="text/javascript"
-	src="${ctx }/js/lg/plugins/ligerWindow.js"></script>
+	src="${ctx }/static/platform/js/lg/plugins/ligerWindow.js"></script>
 <script type="text/javascript"
-	src="${ctx }/js/hotent/platform/system/IconDialog.js"></script>
+	src="${ctx }/static/platform/js/hotent/platform/system/IconDialog.js"></script>
 <script type="text/javascript">
 		$(function() {
 			function showRequest(formData, jqForm, options) { 

@@ -5,7 +5,7 @@
 <head>
 <title>系统分类导入</title>
 <%@include file="/commons/include/form.jsp" %>
-<%-- <link href="${ctx}/styles/ligerUI/ligerui-all.css" rel="stylesheet" type="text/css" /> --%>
+<%-- <link href="${ctx}/static/platform/styles/ligerUI/ligerui-all.css" rel="stylesheet" type="text/css" /> --%>
 <f:link href="Aqua/css/ligerui-all.css"></f:link>
 	<script type="text/javascript">
 	/*KILLDIALOG*/

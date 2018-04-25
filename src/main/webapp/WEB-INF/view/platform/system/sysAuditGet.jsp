@@ -8,7 +8,7 @@
     <title>详细信息</title>
     <%@include file="/commons/include/getById.jsp" %>
 </head>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/system/SysAuditLink.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/SysAuditLink.js"></script>
 <script type="text/javascript">
     //系统日志的详细信息的超链接
     $(function(){

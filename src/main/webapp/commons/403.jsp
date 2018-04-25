@@ -26,10 +26,10 @@
 	<div class="message-wrap">
 		<c:choose>
 			<c:when test="${ex.message=='对不起,你没有访问该页面的权限!' }">
-				<img src="/images/error-message/404img-5.png" alt="">
+				<img src="/static/platform/images/error-message/404img-5.png" alt="">
 			</c:when>
 			<c:otherwise>
-				<img src="/images/error-message/404img-3.png" alt="">
+				<img src="/static/platform/images/error-message/404img-3.png" alt="">
 			</c:otherwise>
 		</c:choose>
 		

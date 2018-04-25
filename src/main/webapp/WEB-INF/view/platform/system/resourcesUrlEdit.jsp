@@ -5,8 +5,8 @@
 <head>
 	<title>资源URL管理</title>
 	<%@include file="/commons/include/form.jsp" %>
-	<script type="text/javascript"	src="${ctx }/js/hotent/displaytag.js"></script>
-	<script type="text/javascript"	src="${ctx }/js/lg/plugins/ligerComboBox.js"></script>
+	<script type="text/javascript"	src="${ctx }/static/platform/js/hotent/displaytag.js"></script>
+	<script type="text/javascript"	src="${ctx }/static/platform/js/lg/plugins/ligerComboBox.js"></script>
 	<script type="text/javascript" src="${ctx}/servlet/ValidJs?form=resourcesUrl"></script>
 	<script type="text/javascript">
 		$(function() {

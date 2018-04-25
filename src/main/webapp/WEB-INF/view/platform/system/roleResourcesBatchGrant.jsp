@@ -5,11 +5,11 @@
 	<title>角色资源分配</title>
 	<%@include file="/commons/include/form.jsp" %>
 	<base target="_self"/> 
-	<%-- <link href="${ctx}/styles/ligerUI/ligerui-all.css" rel="stylesheet"	type="text/css" /> --%>
+	<%-- <link href="${ctx}/static/platform/styles/ligerUI/ligerui-all.css" rel="stylesheet"	type="text/css" /> --%>
 	<f:link href="Aqua/css/ligerui-all.css"></f:link>
-	<link rel="stylesheet" href="${ctx }/js/tree/zTreeStyle.css" type="text/css" />
-	<script type="text/javascript" src="${ctx}/js/tree/jquery.ztree.js"></script>
-	<script type="text/javascript" src="${ctx}/js/lg/plugins/ligerComboBox.js"></script>
+	<link rel="stylesheet" href="${ctx }/static/platform/js/tree/zTreeStyle.css" type="text/css" />
+	<script type="text/javascript" src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerComboBox.js"></script>
 	<script type="text/javascript">
 		/*KILLDIALOG*/
 		var dialog = frameElement.dialog; //调用页面的dialog对象(ligerui对象)

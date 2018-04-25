@@ -21,7 +21,7 @@
         background: #e0674a;
     }
 </style>
-<script type="text/javascript" src="${ctx }/js/hotent/platform/system/SysDialog.js"></script>
+<script type="text/javascript" src="${ctx }/static/platform/js/hotent/platform/system/SysDialog.js"></script>
 <script type="text/javascript">
     //选择后的回调函数，保存岗位用户关系数据
     function dlgCallBack(userIds) {

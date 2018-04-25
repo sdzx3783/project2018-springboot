@@ -6,11 +6,11 @@
 <title>用户参数自定义</title>
 <%@include file="/commons/include/form.jsp" %>
 <f:link href="tree/zTreeStyle.css"></f:link>
-<link href="${ctx}/js/jquery/plugins/link-div-default.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript"	src="${ctx}/js/tree/jquery.ztree.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/system/ConditionExpression.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/bpm/BpmNodeRule.js"></script>
-<script type="text/javascript" src="${ctx}/js/jquery/plugins/jquery.linkdiv.js"></script>
+<link href="${ctx}/static/platform/js/jquery/plugins/link-div-default.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript"	src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/ConditionExpression.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/bpm/BpmNodeRule.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/jquery/plugins/jquery.linkdiv.js"></script>
 <script type="text/javascript">
 	/*KILLDIALOG*/
 	//var args = window.dialogArguments;

@@ -7,7 +7,7 @@
 <title>分类管理</title>
 <%@include file="/commons/include/form.jsp" %>
 <script type="text/javascript" src="${ctx}/servlet/ValidJs?form=globalType"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/system/Share.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/Share.js"></script>
 <script type="text/javascript">
 /*KILLDIALOG*/
 var dialog = frameElement.dialog; //调用页面的dialog对象(ligerui对象)

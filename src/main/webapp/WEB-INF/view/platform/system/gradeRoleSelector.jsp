@@ -5,7 +5,7 @@
 <head>
 <title></title>
 <%@include file="/commons/include/get.jsp" %>
-<script type="text/javascript" src="${ctx }/js/hotent/platform/system/SysDialog.js"></script>
+<script type="text/javascript" src="${ctx }/static/platform/js/hotent/platform/system/SysDialog.js"></script>
 <script type="text/javascript">
 /*KILLDIALOG*/
 var dialog = frameElement.dialog; //调用页面的dialog对象(ligerui对象)

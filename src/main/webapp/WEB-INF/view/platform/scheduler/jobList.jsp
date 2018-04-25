@@ -4,7 +4,7 @@
 <head>
 <title>定时任务管理</title>
 <%@include file="/commons/include/get.jsp" %>
-    <script type="text/javascript" src="${ctx }/js/lg/plugins/ligerWindow.js" ></script>
+    <script type="text/javascript" src="${ctx }/static/platform/js/lg/plugins/ligerWindow.js" ></script>
     <script type="text/javascript"  >
 	    function changeStart(isStandby){
 			var url='${ctx}/platform/system/scheduler/changeStart.ht?isStandby='+isStandby;

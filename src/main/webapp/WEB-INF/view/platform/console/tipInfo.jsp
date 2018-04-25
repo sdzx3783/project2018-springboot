@@ -28,7 +28,7 @@ body {
 <body>
 <table align="center"  height="182" width="457" border="0" cellpadding="0" cellspacing="0">
   <tbody><tr valign="middle" >
-    <td height="111" valign="middle" width="480" background="${ctx}/styles/default/images/warm.gif"><table height="89" width="449" border="0" cellpadding="0" cellspacing="0">
+    <td height="111" valign="middle" width="480" background="${ctx}/static/platform/styles/default/static/images/warm.gif"><table height="89" width="449" border="0" cellpadding="0" cellspacing="0">
       <tbody><tr>
         <td height="12" width="67">&nbsp;</td>
         <td colspan="2">&nbsp;</td>

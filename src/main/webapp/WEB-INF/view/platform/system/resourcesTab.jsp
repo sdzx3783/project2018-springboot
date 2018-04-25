@@ -6,7 +6,7 @@
 <head>
 <title>TAB</title>
 <%@include file="/commons/include/get.jsp"%>
-<script type="text/javascript" src="${ctx}/js/lg/plugins/ligerTab.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerTab.js"></script>
 <script type="text/javascript">
 	$(function() {
 		$("#tabMyInfo").ligerTab({});

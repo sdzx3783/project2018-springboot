@@ -21,19 +21,19 @@ import org.apache.commons.lang.builder.EqualsBuilder;
 public class Resources extends BaseModel implements Cloneable
 {
 	//LOGO路径
-	public final static String LOGO_PATH="/styles/default/images/logo";
+	public final static String LOGO_PATH="/static/platform/styles/default/images/logo";
 	//ICON路径
-	public final static String ICON_PATH="/styles/default/images/resicon";
+	public final static String ICON_PATH="/static/platform/styles/default/images/resicon";
 	//图标类型
 	public final static String ICON_TYPE = "PNG|JPG|JPEG|GIF";
 	//扩展的功能按钮图标路径
-	public final static String ICON_EXTEND="/styles/default/images/extendIcon";
+	public final static String ICON_EXTEND="/static/platform/styles/default/images/extendIcon";
 	//扩展功能样式文件位置
-	public final static String EXTEND_CSS_PATH="/styles/default/css/form.css";
+	public final static String EXTEND_CSS_PATH="/static/platform/styles/default/css/form.css";
 	
-	
-	public final static String ICON_DEFAULT_FOLDER="/styles/default/images/icon/tree_folder.gif";
-	public final static String ICON_DEFAULT_LEAF="/styles/default/images/icon/tree_file.gif";
+	 
+	public final static String ICON_DEFAULT_FOLDER="/static/platform/styles/default/images/icon/tree_folder.gif";
+	public final static String ICON_DEFAULT_LEAF="/static/platform/styles/default/images/icon/tree_file.gif";
 	
 	/**
 	 * 根结点的父ID
@@ -47,7 +47,7 @@ public class Resources extends BaseModel implements Cloneable
 	/**
 	 * 根结点的icon
 	 */
-	public final static String ROOT_ICON="/styles/default/images/icon/remoteupload.gif";
+	public final static String ROOT_ICON="/static/platform/styles/default/images/icon/remoteupload.gif";
 	
 	/**
 	 * 是否打开0否，1是。

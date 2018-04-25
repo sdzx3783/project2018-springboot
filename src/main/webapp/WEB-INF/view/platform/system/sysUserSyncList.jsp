@@ -4,7 +4,7 @@
 <head>
 	<title>AD用户管理</title>
 	<%@include file="/commons/include/get.jsp" %>
-	<script type="text/javascript" src="${ctx }/js/lg/plugins/ligerWindow.js" ></script>
+	<script type="text/javascript" src="${ctx }/static/platform/js/lg/plugins/ligerWindow.js" ></script>
 	<style type="text/css">
 		#adError{
 			display: block;

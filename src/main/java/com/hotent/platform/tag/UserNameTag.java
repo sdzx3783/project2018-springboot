@@ -62,7 +62,7 @@ public class UserNameTag extends BodyTagSupport {
 
 		StringBuffer sb = new StringBuffer();
 		String imgSrc = "<img src='" + ctx
-				+ "/styles/default/images/bpm/user-16.png'>&nbsp;";
+				+ "/static/platform/styles/default/images/bpm/user-16.png'>&nbsp;";
 
 		if (this.userId != 0) { // 通过用户Id获取用户名称
 			SysUserService sysUserService = (SysUserService) AppUtil

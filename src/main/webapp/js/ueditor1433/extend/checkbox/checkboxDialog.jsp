@@ -5,18 +5,18 @@
 <title></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <%@include file="/commons/include/form.jsp"%>
-<script type="text/javascript" src="${ctx}/js/hotent/CustomValid.js"></script>
-<script type="text/javascript" src="${ctx}/js/ueditor1433/dialogs/internal.js"></script>
-<link rel="stylesheet" type="text/css" href="../edit.css">
-<link rel="stylesheet" type="text/css" href="${ctx}/styles/default/css/form.css">
-<script type="text/javascript" src="${ctx}/js/hotent/platform/system/ScriptDialog.js"></script>
-<script type="text/javascript" src="../util.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/CustomValid.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/ueditor1433/dialogs/internal.js"></script>
+<link rel="stylesheet" type="text/css" href="${ctx}/static/platform/js/ueditor1433/extend/edit.css">
+<link rel="stylesheet" type="text/css" href="${ctx}/static/platform/styles/default/css/form.css">
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/ScriptDialog.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/ueditor1433/extend/util.js"></script>
 <!-- ngjs -->
-<script type="text/javascript" src="${ctx}/js/angular/angular.min.js"></script>
-<script type="text/javascript" src="${ctx}/js/angular/service/baseServices.js"></script>
-<script type="text/javascript" src="${ctx}/js/angular/service/arrayToolService.js"></script>
-<script type="text/javascript" src="${ctx}/js/angular/service/commonListService.js"></script>
-<script type="text/javascript" src="checkboxDialogController.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/angular/angular.min.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/angular/service/baseServices.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/angular/service/arrayToolService.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/angular/service/commonListService.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/ueditor1433/extend/checkbox/checkboxDialogController.js"></script>
 
 <script type="text/javascript">
 	var scope;

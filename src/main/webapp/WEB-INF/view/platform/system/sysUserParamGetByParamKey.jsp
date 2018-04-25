@@ -5,9 +5,9 @@
 <head>
 <title>用户参数查询预览</title>
 <%@include file="/commons/include/form.jsp" %>
-<%-- <link href="${ctx}/styles/ligerUI/ligerui-all.css" rel="stylesheet" type="text/css" /> --%>
+<%-- <link href="${ctx}/static/platform/styles/ligerUI/ligerui-all.css" rel="stylesheet" type="text/css" /> --%>
 <f:link href="Aqua/css/ligerui-all.css"></f:link>
-<script type="text/javascript" src="${ctx}/js/lg/plugins/ligerLayout.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerLayout.js"></script>
 <script type="text/javascript">
 	/*KILLDIALOG*/
 	var dialog = frameElement.dialog; //调用页面的dialog对象(ligerui对象)

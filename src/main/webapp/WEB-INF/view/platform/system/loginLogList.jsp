@@ -4,7 +4,7 @@
 <head>
 <title>sys_login_log管理</title>
 <%@include file="/commons/include/get.jsp" %>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/bus/BusQueryRuleUtil.js" ></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/bus/BusQueryRuleUtil.js" ></script>
 <style>
     .l-dialog-win .l-dialog-content{
         padding: 0;

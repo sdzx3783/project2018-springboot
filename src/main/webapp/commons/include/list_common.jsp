@@ -46,7 +46,7 @@
         cursor: pointer;
         -webkit-border-radius: 3px;
                 border-radius: 3px;
-        background: #0f88eb url(/images/oa_arrow_down.png) no-repeat right center;
+        background: #0f88eb url(/static/platform/images/oa_arrow_down.png) no-repeat right center;
         -webkit-background-size: 20px 20px;
                 background-size: 20px 20px;
         background-position: 99% center;
@@ -55,7 +55,7 @@
     }
     .oa-search-wrap.active .oa-condi-head{
     	padding: 6px 0;
-        background: #0f88eb url(/images/oa_arrow_up.png) no-repeat right center;
+        background: #0f88eb url(/static/platform/images/oa_arrow_up.png) no-repeat right center;
         -webkit-background-size: 20px 20px;
                 background-size: 20px 20px;
         background-position: 99% center;

@@ -5,7 +5,7 @@
 <title>文件上传管理</title>
 <%@include file="/commons/include/form.jsp"%>
 <script type="text/javascript"
-	src="${ctx}/js/hotent/platform/system/SysDialog.js"></script>
+	src="${ctx}/static/platform/js/hotent/platform/system/SysDialog.js"></script>
 
 <script type="text/javascript">
 	$(function() {

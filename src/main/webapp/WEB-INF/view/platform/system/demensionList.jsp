@@ -4,7 +4,7 @@
 <head>
 	<title>维度信息管理</title>
 	<%@include file="/commons/include/get.jsp" %>
-	<script type="text/javascript" src="${ctx }/js/lg/plugins/ligerWindow.js" ></script>
+	<script type="text/javascript" src="${ctx }/static/platform/js/lg/plugins/ligerWindow.js" ></script>
 	<script type="text/javascript" >
 		function openDialog(demId){
 			var url="${ctx }/platform/system/sysOrgType/list.ht?demId="+demId;

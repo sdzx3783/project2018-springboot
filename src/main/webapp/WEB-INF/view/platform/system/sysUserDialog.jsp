@@ -5,7 +5,7 @@
 <title>选择用户 </title>
 	<%@include file="/commons/include/form.jsp" %>
 	<f:link href="tree/zTreeStyle.css"></f:link>
-	<script type="text/javascript" 	src="${ctx}/js/tree/jquery.ztree.js"></script>
+	<script type="text/javascript" 	src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
 	<script type="text/javascript">
 		var dialog = frameElement.dialog; //调用页面的dialog对象(ligerui对象)
 		var isSingle=${isSingle};

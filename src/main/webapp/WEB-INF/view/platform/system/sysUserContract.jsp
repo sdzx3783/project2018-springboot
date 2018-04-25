@@ -5,34 +5,34 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>经手合同</title>
-<link href="${ctx}/styles/default/css/form.css" rel="stylesheet" />
+<link href="${ctx}/static/platform/styles/default/css/form.css" rel="stylesheet" />
 <%@include file="/commons/include/form.jsp" %>
 <%@include file="/codegen/include/customForm.jsp" %>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/AttachMent.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/AttachMent.js"></script>
 <%@include file="/commons/include/ueditor.jsp" %>
 <script type="text/javascript" src="${ctx}/servlet/ValidJs?form=sysUser"></script>
 <f:link href="tree/zTreeStyle.css"></f:link>
-<script type="text/javascript" src="${ctx}/js/tree/jquery.ztree.js"></script>
-<script type="text/javascript" src="${ctx}/js/lg/plugins/ligerTab.js" ></script>
-<script type="text/javascript" src="${ctx}/js/hotent/displaytag.js" ></script>
-<script type="text/javascript" src="${ctx}/js/lg/plugins/ligerWindow.js" ></script>
-<script type="text/javascript"  src="${ctx}/js/hotent/platform/system/SysDialog.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/system/FlexUploadDialog.js"></script>
-<script type="text/javascript" src="${ctx}/js/handlebars/handlebars.min.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/system/HtmlUploadDialog.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/OfficePlugin.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/rule.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/formdata.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/CustomValid.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/subform.js"></script>
-<script type="text/javascript" src="${ctx}/js/jquery/plugins/jquery.attach.js" ></script>
-<script type="text/javascript" src="${ctx}/js/ntkoWebSign/WebSignPlugin.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/FormUtil.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/ReadOnlyQuery.js"></script>
-<script type="text/javascript" src="${ctx}/js/pictureShow/PictureShowPlugin.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/FormMath.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/Cascadequery.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/TablePermission.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerTab.js" ></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/displaytag.js" ></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerWindow.js" ></script>
+<script type="text/javascript"  src="${ctx}/static/platform/js/hotent/platform/system/SysDialog.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/FlexUploadDialog.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/handlebars/handlebars.min.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/HtmlUploadDialog.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/OfficePlugin.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/rule.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/formdata.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/CustomValid.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/subform.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/jquery/plugins/jquery.attach.js" ></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/ntkoWebSign/WebSignPlugin.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/FormUtil.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/ReadOnlyQuery.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/pictureShow/PictureShowPlugin.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/FormMath.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/Cascadequery.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/TablePermission.js"></script>
 <script type="text/javascript">
 
     var dialog =null;
@@ -106,7 +106,7 @@
     </div>
     
     <div id="tabMyInfo">
-        <div title="经手合同" tabid="seal" icon="${ctx}/styles/default/images/resicon/article.gif">
+        <div title="经手合同" tabid="seal" icon="${ctx}/static/platform/styles/default/static/images/resicon/article.gif">
             <display:table  name="contractList" id="sealItem" requestURI="list.ht" sort="external" class="oa-table--default">
                 <display:column title="合同编号">${sealItem.contract_num }</display:column>
                 <display:column title="名称">${sealItem.contract_name }</display:column>

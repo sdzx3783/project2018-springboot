@@ -5,8 +5,8 @@
 <head>
 <title></title>
 <%@include file="/commons/include/get.jsp" %>
-<script type="text/javascript" src="${ctx }/js/hotent/platform/system/SysDialog.js"></script>
-<script type="text/javascript" src="${ctx }/js/hotent/platform/system/GradeRoleSelectDialog.js"></script>
+<script type="text/javascript" src="${ctx }/static/platform/js/hotent/platform/system/SysDialog.js"></script>
+<script type="text/javascript" src="${ctx }/static/platform/js/hotent/platform/system/GradeRoleSelectDialog.js"></script>
 <script type="text/javascript">
 	var orgId="${orgId}";
 	//是否分级设置。

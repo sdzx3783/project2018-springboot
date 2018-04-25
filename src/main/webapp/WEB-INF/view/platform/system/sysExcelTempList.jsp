@@ -4,7 +4,7 @@
 <head>
 <title>Excel模板管理</title>
 <%@include file="/commons/include/get.jsp" %>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/bus/BusQueryRuleUtil.js" ></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/bus/BusQueryRuleUtil.js" ></script>
 </head>
 <body>
 	<div class="panel">

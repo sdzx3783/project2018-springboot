@@ -9,10 +9,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>业务流程系统</title>
 	<f:link href="choose_sys.css"></f:link>
-	<link rel="stylesheet" type="text/css" href="${ctx}/styles/login/login.css"></link>
-    <script type="text/javascript" src="${ctx }/js/jquery/jquery.js" ></script>
-    <script type="text/javascript" src="${ctx }/js/util/util.js"  ></script>
-    <script type="text/javascript" src="${ctx}/js/util/form.js"></script>
+	<link rel="stylesheet" type="text/css" href="${ctx}/static/platform/styles/login/login.css"></link>
+    <script type="text/javascript" src="${ctx }/static/platform/js/jquery/jquery.js" ></script>
+    <script type="text/javascript" src="${ctx }/static/platform/js/util/util.js"  ></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/util/form.js"></script>
     <script language="JavaScript"> 
 	
 	function showSubSystemList(){
@@ -56,7 +56,7 @@
                   				  <div class="content_login">  
                   				  <div class="column">  
                   				 			 <span>请选择系统:</span><br>              				  
-                                			<div class="select_sys"><span id="select_sys"></span><img src="${ctx}/styles/default/images/jiantou.jpg" class="show_sys_choose" onclick="showSubSystemList()"/></div>
+                                			<div class="select_sys"><span id="select_sys"></span><img src="${ctx}/static/platform/styles/default/static/images/jiantou.jpg" class="show_sys_choose" onclick="showSubSystemList()"/></div>
                                	  
                                				<c:choose> 				
 													<c:when test="${fn:length(subSystemList) > 0}">  

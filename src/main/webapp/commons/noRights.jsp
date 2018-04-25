@@ -24,7 +24,7 @@
 </head>
 <body>
 	<div class="message-wrap">
-		<img src="/images/error-message/404img-5.png" alt="">
+		<img src="/static/platform/images/error-message/404img-5.png" alt="">
 	</div>
 </body>
 </html>

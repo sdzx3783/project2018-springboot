@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>个人简历</title>
-<link href="${ctx}/styles/default/css/form.css" rel="stylesheet" />
+<link href="${ctx}/static/platform/styles/default/css/form.css" rel="stylesheet" />
 <%@include file="/commons/include/form.jsp" %>
 <%@include file="/codegen/include/customForm.jsp" %>
 </head>

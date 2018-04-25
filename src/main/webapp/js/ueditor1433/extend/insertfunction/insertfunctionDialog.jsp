@@ -3,13 +3,13 @@
 <html>
 <head>
 <title>数学函数编辑器</title>
-<script type="text/javascript" src="${ctx}/js/lg/plugins/ligerTab.js"></script>
-<script type="text/javascript" src="${ctx}/js/javacode/codemirror.js"></script>
-<script type="text/javascript" src="${ctx}/js/tree/jquery.ztree.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/system/MathCaltools.js"></script>
-<script type="text/javascript" src="${ctx}/js/ueditor1433/dialogs/internal.js"></script>
-<link rel="stylesheet" href="${ctx}/js/tree/zTreeStyle.css" type="text/css" />
-<link href="${ctx}/styles/default/css/expression.css" rel="stylesheet" />
+<script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerTab.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/javacode/codemirror.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/MathCaltools.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/ueditor1433/dialogs/internal.js"></script>
+<link rel="stylesheet" href="${ctx}/static/platform/js/tree/zTreeStyle.css" type="text/css" />
+<link href="${ctx}/static/platform/styles/default/css/expression.css" rel="stylesheet" />
 <script type="text/javascript">
 	var isMobileForm = 'mb' == editor.type;
 	var funcexpAttrStr = isMobileForm ? "ht-funcexp" : "funcexp";
@@ -84,7 +84,7 @@
 
 	//获取表单字段
 	function getFieldsByTableId(param) {
-		var iconFolder = __ctx + '/styles/tree/';
+		var iconFolder = __ctx + '/static/platform/styles/tree/';
 		$.post(__ctx + '/platform/form/bpmFormDef/getAllFieldsByTableId.ht', param, function(data) {
 			var json;
 			var treeData = [];
@@ -213,7 +213,7 @@
 		}
 	};
 </script>
-<script type="text/javascript" src="${ctx}/js/javacode/InitMirror.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/javacode/InitMirror.js"></script>
 </head>
 <body>
 	<div class="math_div">

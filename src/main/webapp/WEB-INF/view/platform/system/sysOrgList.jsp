@@ -10,8 +10,8 @@
 <%@include file="/commons/include/get.jsp"%>
 <f:link href="tree/zTreeStyle.css"></f:link>
 
-<script type="text/javascript" src="${ctx }/js/tree/jquery.ztree.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/system/SysOrgSearch.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/SysOrgSearch.js"></script>
 <script type="text/javascript">
 	var orgTree; //树
 	var menu;
@@ -146,7 +146,7 @@
 			for (var i=0, l=childNodes.length; i<l; i++) {
 				var node = childNodes[i];
 				if (node.isRoot == 1) {
-					node.icon = __ctx + "/styles/default/images/icon/root.png";
+					node.icon = __ctx + "/static/platform/styles/default/images/icon/root.png";
 				} else {
 					if (node.ownUser == null || node.ownUser.length < 1) {
 					//	node.orgName += "[未]";
@@ -176,23 +176,23 @@
 		/*
 		switch (node.orgType) {
 			case 1:
-				node.icon = __ctx+ "/styles/default/images/icon/group.gif";
+				node.icon = __ctx+ "/static/platform/styles/default/static/images/icon/group.gif";
 				break;
 			case 2:
 				node.icon = __ctx
-						+ "/styles/default/images/icon/org.gif";
+						+ "/static/platform/styles/default/static/images/icon/org.gif";
 				break;
 			case 3:
 				node.icon = __ctx
-						+ "/styles/default/images/icon/dep.gif";
+						+ "/static/platform/styles/default/static/images/icon/dep.gif";
 				break;
 			case 4:
 				node.icon = __ctx
-						+ "/styles/default/images/icon/unit.gif";
+						+ "/static/platform/styles/default/static/images/icon/unit.gif";
 				break;
 			case 5:
 				node.icon = __ctx
-						+ "/styles/default/images/icon/icon-reload.gif";
+						+ "/static/platform/styles/default/static/images/icon/icon-reload.gif";
 				break;
 		}
 		*/

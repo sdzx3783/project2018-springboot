@@ -10,10 +10,10 @@
 }
 </style>
 <%@include file="/commons/include/get.jsp" %>
-<%-- <link href="${ctx}/styles/default/css/jquery.qtip.css" rel="stylesheet" /> --%>
+<%-- <link href="${ctx}/static/platform/styles/default/css/jquery.qtip.css" rel="stylesheet" /> --%>
 <f:link href="jquery.qtip.css"></f:link>
-<script type="text/javascript" src="${ctx}/js/jquery/plugins/jquery.qtip.js" ></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/system/ImageQtip.js" ></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/jquery/plugins/jquery.qtip.js" ></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/ImageQtip.js" ></script>
 <script type="text/javascript">
 	$(function() {
 		$("a.file_name").each(function() {

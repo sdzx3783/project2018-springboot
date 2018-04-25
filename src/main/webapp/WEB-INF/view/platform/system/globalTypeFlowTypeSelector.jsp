@@ -19,11 +19,11 @@
 		height:21px;
 	}
 </style>
-<script type="text/javascript" src="${ctx}/js/lg/plugins/ligerDialog.js" ></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/bpm/ProcessUrgeDialog.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/system/SysDialog.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/foldBox.js" ></script>
-<script type="text/javascript" src="${ctx}/js/hotent/displaytag.js" ></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerDialog.js" ></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/bpm/ProcessUrgeDialog.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/SysDialog.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/foldBox.js" ></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/displaytag.js" ></script>
 <script type="text/javascript">
 
 	

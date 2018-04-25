@@ -10,10 +10,10 @@
 	color:black;
 }
 </style>
-<link href="${ctx}/styles/default/css/jquery.qtip.css" rel="stylesheet" />
-<script type="text/javascript" src="${ctx}/js/jquery/plugins/jquery.qtip.js" ></script>
-<script type="text/javascript" src="${ctx}/js/lg/plugins/ligerWindow.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/system/ImageQtip.js" ></script>
+<link href="${ctx}/static/platform/styles/default/css/jquery.qtip.css" rel="stylesheet" />
+<script type="text/javascript" src="${ctx}/static/platform/js/jquery/plugins/jquery.qtip.js" ></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerWindow.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/ImageQtip.js" ></script>
 <script type="text/javascript">
 	$(function() {
 

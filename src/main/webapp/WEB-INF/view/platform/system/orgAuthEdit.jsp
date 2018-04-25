@@ -5,8 +5,8 @@
 <head>
 	<title>编辑 分级管理员</title>
 	<%@include file="/commons/include/form.jsp" %>
-	<script type="text/javascript" src="${ctx}/js/hotent/CustomValid.js"></script>
-	<script type="text/javascript" src="${ctx }/js/hotent/platform/system/SysDialog.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/CustomValid.js"></script>
+	<script type="text/javascript" src="${ctx }/static/platform/js/hotent/platform/system/SysDialog.js"></script>
 	<script type="text/javascript">
 		$(function() {
 			$("a.save").click(function() {

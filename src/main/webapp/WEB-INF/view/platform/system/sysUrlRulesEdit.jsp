@@ -22,8 +22,8 @@ input {
 	height: 21px;
 }
 </style>
-<script type="text/javascript" src="${ctx}/js/javacode/codemirror.js"></script>
-<script type="text/javascript" src="${ctx}/js/javacode/InitMirror.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/javacode/codemirror.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/javacode/InitMirror.js"></script>
 <script type="text/javascript">
 	/*KILLDIALOG*/
 	var dialog = frameElement.dialog; //调用页面的dialog对象(ligerui对象)

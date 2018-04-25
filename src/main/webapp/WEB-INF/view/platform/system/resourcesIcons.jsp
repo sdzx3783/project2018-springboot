@@ -4,7 +4,7 @@
 <head>
 	<title>设置图标</title>
 	<%@include file="/commons/include/form.jsp" %>
-	<script type="text/javascript" src="${ctx}/js/hotent/platform/system/FlexUploadDialog.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/FlexUploadDialog.js"></script>
 	<script type="text/javascript">
 		var selectedImg=null;
 		$(function(){

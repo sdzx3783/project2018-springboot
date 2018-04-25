@@ -8,8 +8,8 @@
 <title>分级组织管理</title>
 <%@include file="/commons/include/get.jsp"%>
 <f:link href="tree/zTreeStyle.css"></f:link>
-<script type="text/javascript" src="${ctx}/js/tree/jquery.ztree.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/system/OrgManage.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/OrgManage.js"></script>
 <script type="text/javascript">
 		var contextMenu=null;
 		$(function() {

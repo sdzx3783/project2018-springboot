@@ -10,7 +10,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>用户变更历史</title>
 <%@include file="/commons/include/get.jsp" %>
-	<script type="text/javascript" src="${ctx}/js/util/form.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/util/form.js"></script>
 
 
 <script type="text/javascript">
@@ -43,7 +43,7 @@
 	<div id="tabMyInfo" style="overflow: hidden; position: relative;">
 
 		<div title="变更历史" tabid="userdetail"
-			icon="${ctx}/styles/default/images/resicon/user.gif">
+			icon="${ctx}/static/platform/styles/default/static/images/resicon/user.gif">
 			<div class="panel-detail">
 				<display:table  name="changeHisList" id="changeHisItem" requestURI="list.ht" sort="external" cellpadding="1" cellspacing="1" class="table-grid">
 								

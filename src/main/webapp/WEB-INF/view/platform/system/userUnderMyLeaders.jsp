@@ -4,7 +4,7 @@
 <head>
 	<title>上级信息查看</title>
 	<%@include file="/commons/include/get.jsp" %>
-	<script type="text/javascript" src="${ctx }/js/lg/plugins/ligerWindow.js" ></script>
+	<script type="text/javascript" src="${ctx }/static/platform/js/lg/plugins/ligerWindow.js" ></script>
 </head>
 <body>
 	<div class="panel">

@@ -8,9 +8,9 @@
 <head>
 	<title>编辑 自定义显示</title>
 	<%@include file="/commons/include/form.jsp" %>
-	<script type="text/javascript" src="${ctx}/js/hotent/CustomValid.js"></script>
-	<script type="text/javascript" src="${ctx}/js/hotent/formdata.js"></script>
-	<script type="text/javascript"src="${ctx}/js/hotent/platform/system/ScriptDialog.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/CustomValid.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/formdata.js"></script>
+	<script type="text/javascript"src="${ctx}/static/platform/js/hotent/platform/system/ScriptDialog.js"></script>
 	<style type="text/css">
 		.hide{
 			display: none;

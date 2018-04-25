@@ -13,11 +13,11 @@
 
 <title>附件选择</title>
 <f:link href="tree/zTreeStyle.css"></f:link>
-<script type="text/javascript" src="${ctx}/js/lg/plugins/ligerMenu.js"></script>
-<script type="text/javascript" src="${ctx}/js/lg/plugins/ligerLayout.js"></script>
-<script type="text/javascript" src="${ctx}/js/tree/jquery.ztree.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/GlobalType.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/system/FileMenu.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerMenu.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerLayout.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/GlobalType.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/FileMenu.js"></script>
 <script type="text/javascript">
 	/*KILLDIALOG*/
 	var dialog = frameElement.dialog; //调用页面的dialog对象(ligerui对象)

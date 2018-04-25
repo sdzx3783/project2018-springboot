@@ -5,16 +5,16 @@
 <title></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <%@include file="/commons/include/form.jsp"%>
-<link rel="stylesheet" type="text/css" href="../input.css">
+<link rel="stylesheet" type="text/css" href="${ctx}/static/platform/js/ueditor1433/extend/input.css">
 <f:link href="tree/zTreeStyle.css"></f:link>
-<script type="text/javascript" src="${ctx}/js/ueditor1433/dialogs/internal.js"></script>
-<script type="text/javascript" src="${ctx}/js/jquery/plugins/jquery.dragdiv.js"></script>
-<link rel="stylesheet" href="${ctx}/js/jquery/plugins/jquery.dragdiv.css" type="text/css" />
-<link rel="stylesheet" href="${ctx}/js/tree/zTreeStyle.css" type="text/css" />
-<script type="text/javascript" src="${ctx}/js/tree/jquery.ztree.js"></script>
-<script type="text/javascript" src="${ctx}/js/util/easyTemplate.js"></script>
-<script type="text/javascript" src="${ctx}/js/util/json2.js"></script>
-<script type="text/javascript" src="${ctx}/js/lg/plugins/ligerTab.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/ueditor1433/dialogs/internal.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/jquery/plugins/jquery.dragdiv.js"></script>
+<link rel="stylesheet" href="${ctx}/static/platform/js/jquery/plugins/jquery.dragdiv.css" type="text/css" />
+<link rel="stylesheet" href="${ctx}/static/platform/js/tree/zTreeStyle.css" type="text/css" />
+<script type="text/javascript" src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/util/easyTemplate.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/util/json2.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerTab.js"></script>
 <style type="text/css">
 .field-ul {
 	width: 95%;

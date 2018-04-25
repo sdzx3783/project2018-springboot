@@ -24,7 +24,7 @@ Desc:自定义表管理树模板
 		<#noparse>
 		$(function(){
 			var cssFiles=[
-				"${ctx}/js/tree/zTreeStyle.css"
+				"${ctx}/static/platform/js/tree/zTreeStyle.css"
 			];
 			
 			for(var i=0;i<cssFiles.length;i++){
@@ -36,8 +36,8 @@ Desc:自定义表管理树模板
 			}
 			
 			var jsFiles=[
-				"${ctx}/js/tree/jquery.ztree.js",
-				"${ctx}/js/jqplot/plugins/jqplot.pointLabels.min.js"
+				"${ctx}/static/platform/js/tree/jquery.ztree.js",
+				"${ctx}/static/platform/js/jqplot/plugins/jqplot.pointLabels.min.js"
 			];
 			</#noparse>
 			$.getMutilScript(jsFiles,function(){

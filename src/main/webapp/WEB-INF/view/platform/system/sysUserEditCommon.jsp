@@ -22,11 +22,11 @@
 	    max-width: 100%;
 	}
 </style>
-<script type="text/javascript" src="${ctx}/js/hotent/CustomValid.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/formdata.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/subform.js"></script>
-<script type="text/javascript" src="${ctx }/js/lg/plugins/ligerTab.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/system/HtmlUploadDialog.js" ></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/CustomValid.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/formdata.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/subform.js"></script>
+<script type="text/javascript" src="${ctx }/static/platform/js/lg/plugins/ligerTab.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/HtmlUploadDialog.js" ></script>
 <script type="text/javascript">
 	var dialog =null;
 	try{

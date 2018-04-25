@@ -24,10 +24,10 @@
 	
 	<table  border="0" align="center" cellpadding="0" cellspacing="0">
 		  <tr>
-	    	<td><img src="${ctx}/styles/default/images/error/error_top.jpg" /></td>
+	    	<td><img src="${ctx}/static/platform/styles/default/static/images/error/error_top.jpg" /></td>
 	  	  </tr>
 		  <tr>
-		    <td height="200" align="center" valign="top" background="${ctx}/styles/default/images/error/error_bg.jpg">
+		    <td height="200" align="center" valign="top" background="${ctx}/static/platform/styles/default/static/images/error/error_bg.jpg">
 		    	<table width="80%" border="0" cellspacing="0" cellpadding="0">
 		        <tr>
 		          <td width="66%" valign="top" align="center">
@@ -49,7 +49,7 @@
 		      </td>
 		  </tr>    	 
 		  <tr>
-	    	<td><img src="${ctx}/styles/default/images/error/error_bootom.jpg" /></td>
+	    	<td><img src="${ctx}/static/platform/styles/default/static/images/error/error_bootom.jpg" /></td>
 	      </tr>
 		</table>
 	</body>

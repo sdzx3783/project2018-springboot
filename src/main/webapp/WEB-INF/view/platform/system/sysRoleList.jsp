@@ -6,7 +6,7 @@
 	<%@include file="/commons/include/get.jsp" %>
 	<%@ taglib prefix="hotent" uri="http://www.jee-soft.cn/paging" %>
 
-	<script type="text/javascript" src="${ctx}/js/hotent/platform/system/CopyRoleDialog.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/CopyRoleDialog.js"></script>
     <script type="text/javascript">
 	    function copyRole(roleId,roleName){
 	    	CopyRoleDialog({roleId:roleId});

@@ -9,7 +9,7 @@
 <%@include file="/commons/include/get.jsp"%>
 <title>显示通用对话框</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<script type="text/javascript" src="${ctx}/js/util/ObjectUtil.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/util/ObjectUtil.js"></script>
 <script type="text/javascript">
     var checkBoxData = new Array();
     var trArray = [];

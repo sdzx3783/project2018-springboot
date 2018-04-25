@@ -8,7 +8,7 @@
 <head>
 	<title>编辑 系统配置参数表</title>
 	<%@include file="/commons/include/form.jsp" %>
-	<script type="text/javascript" src="${ctx}/js/hotent/CustomValid.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/CustomValid.js"></script>
 	<script type="text/javascript">
 		$(function() {
 			$("a.save").click(function() {

@@ -6,8 +6,8 @@
 <title></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <%@include file="/commons/include/form.jsp" %>
-<link rel="stylesheet" type="text/css" href="${ctx}/styles/default/css/form.css">
-<link rel="stylesheet" type="text/css" href="../input.css">
+<link rel="stylesheet" type="text/css" href="${ctx}/static/platform/styles/default/css/form.css">
+<link rel="stylesheet" type="text/css" href="${ctx}/static/platform/js/ueditor1433/extend/input.css">
 <style type="text/css">
  a.extend{
    display:inline;

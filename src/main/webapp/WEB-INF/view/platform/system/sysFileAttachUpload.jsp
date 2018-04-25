@@ -57,7 +57,7 @@
   	<body>
   		<div id="flashContent" >
 			<h1>上传控件找不到</h1>
-			<p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p>
+			<p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/static/platform/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p>
 		</div>
 	  
 	</body>

@@ -7,9 +7,9 @@
 <title>流程定义列表</title>
 <%@include file="/codegen/include/customForm.jsp" %>
 	<%@include file="/commons/include/ueditor.jsp" %>
-	<script type="text/javascript" src="${ctx}/js/hotent/formdata.js"></script>
-	<script type="text/javascript" src="${ctx}/js/hotent/CustomValid.js"></script>
-	<script type="text/javascript" src="${ctx}/js/hotent/subform.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/formdata.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/CustomValid.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/subform.js"></script>
 </head>
 <style>
 	form {

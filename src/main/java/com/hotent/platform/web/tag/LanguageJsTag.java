@@ -16,7 +16,7 @@ import javax.servlet.jsp.tagext.BodyTagSupport;
  * js/lang/view/platform/bpm
  * 
  * 使用：
- * <f:js pre="js/lang/view/platform/bpm" ></f:js>
+ * <f:js pre="static/platform/js/lang/view/platform/bpm" ></f:js>
  * </pre>
  * @author sfhq282
  *

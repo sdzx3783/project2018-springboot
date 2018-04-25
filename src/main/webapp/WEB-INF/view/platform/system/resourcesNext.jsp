@@ -4,8 +4,8 @@
 <head>
 <title>我的流程定义列表</title>
 <%@include file="/commons/include/get.jsp" %>
-	<script type="text/javascript" src="${ctx}/js/util/form.js"></script>
-	<script type="text/javascript" src="${ctx}/js/plugins/ligerGrid.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/util/form.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/plugins/ligerGrid.js"></script>
 	
 <style type="text/css">
 html,body {

@@ -8,10 +8,10 @@
 <head>
 	<title>编辑子系统资源</title>
 	<%@include file="/commons/include/form.jsp" %>
-	<script type="text/javascript" src="${ctx }/js/lg/plugins/ligerComboBox.js"></script>
-	<script type="text/javascript" src="${ctx }/js/lg/plugins/ligerWindow.js" ></script>
-	<script type="text/javascript" src="${ctx }/js/hotent/platform/system/IconDialog.js"></script>
-	<script type="text/javascript" src="${ctx}/js/hotent/platform/system/Share.js"></script>
+	<script type="text/javascript" src="${ctx }/static/platform/js/lg/plugins/ligerComboBox.js"></script>
+	<script type="text/javascript" src="${ctx }/static/platform/js/lg/plugins/ligerWindow.js" ></script>
+	<script type="text/javascript" src="${ctx }/static/platform/js/hotent/platform/system/IconDialog.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/Share.js"></script>
 	<script type="text/javascript" src="${ctx}/servlet/ValidJs?form=resources"></script>
 	<script type="text/javascript">
 		var i=100;
@@ -151,8 +151,8 @@
 						<tr>
 							<th width="20%">资源图标:</th>
 							<td>
-								<input type="hidden" id="icon" name="icon" value="${empty resources.resId?'/images/menu_icon/menu_55.png':resources.icon}"  class="inputText"/>
-								<img id="iconImg" alt="" src="${empty resources.resId?'/images/menu_icon/menu_55.png':resources.icon}" <c:if test="${resources.icon==null}">style="display:none;"</c:if>>
+								<input type="hidden" id="icon" name="icon" value="${empty resources.resId?'/static/platform/images/menu_icon/menu_55.png':resources.icon}"  class="inputText"/>
+								<img id="iconImg" alt="" src="${empty resources.resId?'/static/platform/images/menu_icon/menu_55.png':resources.icon}" <c:if test="${resources.icon==null}">style="display:none;"</c:if>>
 								<a class="link detail" href="javascript:selectIcon();">选择</a>
 							</td>
 						</tr>

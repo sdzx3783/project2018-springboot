@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/platform")
 public class LoginController {
 	@Resource
 	private ReloadableResourceBundleMessageSource  messageSource;

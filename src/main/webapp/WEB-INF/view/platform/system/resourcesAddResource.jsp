@@ -5,11 +5,11 @@
 <title>资源管理</title>
 <%@include file="/commons/include/form.jsp" %>
 <f:link href="tree/zTreeStyle.css"></f:link>
-<script type="text/javascript" src="${ctx}/js/tree/jquery.ztree.js"></script>
-<script type="text/javascript" src="${ctx}/js/lg/plugins/ligerComboBox.js"></script>
-<script type="text/javascript" src="${ctx}/js/lg/plugins/ligerWindow.js" ></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/system/IconDialog.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/system/Share.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerComboBox.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerWindow.js" ></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/IconDialog.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/Share.js"></script>
 <script type="text/javascript" src="${ctx}/servlet/ValidJs?form=resources"></script>
 <script type="text/javascript">
 	/*KILLDIALOG*/

@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>下属管理管理</title>
 <%@include file="/commons/include/get.jsp" %>
-<script type="text/javascript" src="${ctx }/js/hotent/platform/system/SysDialog.js"></script>
+<script type="text/javascript" src="${ctx }/static/platform/js/hotent/platform/system/SysDialog.js"></script>
 <script type="text/javascript">
 	$(function() {
 		$('#reload').attr('href',window.location.href);

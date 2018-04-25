@@ -4,7 +4,7 @@
 <head>
 <title>密码策略管理</title>
 <%@include file="/commons/include/get.jsp" %>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/bus/BusQueryRuleUtil.js" ></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/bus/BusQueryRuleUtil.js" ></script>
 <script type="text/javascript">
 	function setEnable(ids,enable){
 		var url=__ctx +"/platform/system/pwdStrategy/ngjs.ht";

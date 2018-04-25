@@ -4,10 +4,10 @@
 	<head>
 		<title>添加计划</title>
 		<%@include file="/commons/include/form.jsp" %>
-		<script type="text/javascript" src="${ctx }/js/lg/plugins/ligerWindow.js" ></script>
-		<script type="text/javascript" src="${ctx }/js/hotent/platform/scheduler/JobDialog.js"></script>
-		<script type="text/javascript" src="${ctx }/js/hotent/platform/scheduler/Trigger.js"></script>
-		<script type="text/javascript" src="${ctx}/js/lg/plugins/ligerDialog.js"></script>
+		<script type="text/javascript" src="${ctx }/static/platform/js/lg/plugins/ligerWindow.js" ></script>
+		<script type="text/javascript" src="${ctx }/static/platform/js/hotent/platform/scheduler/JobDialog.js"></script>
+		<script type="text/javascript" src="${ctx }/static/platform/js/hotent/platform/scheduler/Trigger.js"></script>
+		<script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerDialog.js"></script>
  		<script  type="text/javascript">
  		$(function() {
  			

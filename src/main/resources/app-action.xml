@@ -22,7 +22,7 @@
 	
 	<bean id="templateResolver"
           class="org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver">
-        <property name="prefix" value="classpath:/template/thymeleaf/" />
+        <property name="prefix" value="classpath:/template/platform/thymeleaf/" />
         <property name="templateMode" value="HTML5" />
         <property name="cacheable" value="false" />
         <property name="characterEncoding" value="UTF-8"/>

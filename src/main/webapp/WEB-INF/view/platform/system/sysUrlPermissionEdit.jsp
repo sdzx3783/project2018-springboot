@@ -9,7 +9,7 @@ tr.ruleTR th, tr.sysUrlruleTr td {
 	text-align: center;
 }
 </style>
-<script type="text/javascript" src="${ctx}/js/hotent/CustomValid.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/CustomValid.js"></script>
 <script type="text/javascript">
 	$(function() {
 		var frm=$('#sysUrlPermissionItems').form();

@@ -11,21 +11,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <f:link href="jqGrid/jquery-ui.css" ></f:link>
 <f:link href="jqGrid/ui.jqgrid.css" ></f:link>
-<f:js pre="js/lang/common" ></f:js>
-<f:js pre="js/lang/js" ></f:js>
+<f:js pre="static/platform/js/lang/common" ></f:js>
+<f:js pre="static/platform/js/lang/js" ></f:js>
 <script type="text/javascript" src="${ctx}/js/dynamic.jsp"></script>
-<script type="text/javascript" src="${ctx}/js/jquery/jquery.js"></script>
-<script type="text/javascript" src="${ctx}/js/jqGrid/i18n/grid.locale-cn.js"></script>
-<script type="text/javascript" src="${ctx}/js/jqGrid/jquery.jqGrid.src.js"></script>
-<script type="text/javascript" src="${ctx}/js/jquery/plugins/jquery.rowOps.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/foldBoxJqGrid.js" ></script>
-<script type="text/javascript" src="${ctx}/js/hotent/absoulteInTop.js" ></script>
-<script type="text/javascript" src="${ctx}/js/util/util.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/system/sqlquery/grid.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/CommonDialog.js"></script>
-<script type="text/javascript" src="${ctx}/js/lg/ligerui.min.js"></script>
-<script type="text/javascript" src="${ctx}/js/lg/plugins/ligerDialog.js" ></script>
-<script type="text/javascript" src="${ctx}/js/lg/util/DialogUtil.js" ></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/system/SysDialog.js" ></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/SelectorUtil.js" ></script>
-<script type="text/javascript" src="${ctx}/js/calendar/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/jqGrid/i18n/grid.locale-cn.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/jqGrid/jquery.jqGrid.src.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/jquery/plugins/jquery.rowOps.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/foldBoxJqGrid.js" ></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/absoulteInTop.js" ></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/util/util.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/sqlquery/grid.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/CommonDialog.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/lg/ligerui.min.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerDialog.js" ></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/lg/util/DialogUtil.js" ></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/SysDialog.js" ></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/SelectorUtil.js" ></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/calendar/My97DatePicker/WdatePicker.js"></script>

@@ -43,7 +43,7 @@ public class StyleTag extends BodyTagSupport {
 		logger.info(request.getRequestURI());
 		StringBuffer content = new StringBuffer("<link title=\"index\" name=\"styleTag\" rel=\"stylesheet\" type=\"text/css\" href=\"");
 		content.append(request.getContextPath());
-		content.append("/styles/");
+		content.append("/static/platform/styles/");
 		String styleName=ContextUtil.getCurrentUserSkin(request);
 		content.append(styleName+"/css");
 		content.append("/");

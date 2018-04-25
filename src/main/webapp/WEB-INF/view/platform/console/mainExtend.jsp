@@ -16,21 +16,21 @@
 	<f:link href="index.css"></f:link>
 	<f:link href="select.css"></f:link>
 	<f:link href="tree/zTreeStyle.css"></f:link>
-	<f:js pre="js/lang/common" ></f:js>
-	<f:js pre="js/lang/js" ></f:js>
+	<f:js pre="static/platform/js/lang/common" ></f:js>
+	<f:js pre="static/platform/js/lang/js" ></f:js>
     <f:link href="greenMain.css"></f:link>
 	<script type="text/javascript" src="${ctx}/js/dynamic.jsp"></script>
-   	<script type="text/javascript" src="${ctx}/js/jquery/jquery.js"></script>
-   	<script type="text/javascript" src="${ctx}/js/util/util.js"></script>
-	<script type="text/javascript" src="${ctx}/js/util/form.js"></script>
-    <script type="text/javascript" src="${ctx}/js/lg/base.js"  ></script>
-    <script type="text/javascript" src="${ctx}/js/lg/plugins/ligerDialog.js"  ></script>
-    <script type="text/javascript" src="${ctx}/js/lg/plugins/ligerDrag.js"  ></script>
-    <script type="text/javascript" src="${ctx}/js/lg/plugins/ligerLayout.js"  ></script>
-    <script type="text/javascript" src="${ctx}/js/lg/plugins/ligerMenu.js"></script>
-    <script type="text/javascript" src="${ctx}/js/lg/plugins/ligerTab.js"  ></script>
-    <script type="text/javascript" src="${ctx}/js/lg/plugins/ligerAccordion.js"  ></script>
-    <script type="text/javascript" src="${ctx}/js/tree/jquery.ztree.js"  ></script>
+   	<script type="text/javascript" src="${ctx}/static/platform/js/jquery/jquery.js"></script>
+   	<script type="text/javascript" src="${ctx}/static/platform/js/util/util.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/util/form.js"></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/lg/base.js"  ></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerDialog.js"  ></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerDrag.js"  ></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerLayout.js"  ></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerMenu.js"></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerTab.js"  ></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerAccordion.js"  ></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/tree/jquery.ztree.js"  ></script>
     <script type="text/javascript">
 		    if(top!=this){//当这个窗口出现在iframe里，表示其目前已经timeout，需要把外面的框架窗口也重定向登录页面
 				  top.location='<%=request.getContextPath()%>/platform/console/main.ht';
@@ -300,7 +300,7 @@
 <style type="text/css"> 
     body,html{height:100%;}
     body{ padding:0px; margin:0;   overflow:hidden;}  
-    #pageloading{position:absolute; left:0px; top:0px; background:white url('${ctx}/styles/default/images/loading.gif') no-repeat center; width:100%; height:100%; height:700px; z-index:99999;}
+    #pageloading{position:absolute; left:0px; top:0px; background:white url('${ctx}/static/platform/styles/default/static/images/loading.gif') no-repeat center; width:100%; height:100%; height:700px; z-index:99999;}
     #top{color:White;height: 80px;}
 	#top a{color:white;}
  </style>

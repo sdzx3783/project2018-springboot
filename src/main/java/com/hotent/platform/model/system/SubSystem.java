@@ -16,7 +16,7 @@ public class SubSystem extends BaseModel{
 	//当前系统
 	public static String CURRENT_SYSTEM="CURRENT_SYSTEM";
 	//默认图标
-	public static String DEFAULT_LOG="/styles/default/images/resicon/home.png";
+	public static String DEFAULT_LOG="/static/platform/styles/default/images/resicon/home.png";
 	
 	public static short isLocal_Y=1;
 	public static short isLocal_N=0;

@@ -20,7 +20,7 @@ Desc:自定义表管理树模板
 			<#noparse>
 		$(function(){
 			var cssFiles=[
-				"${ctx}/js/jqplot/jquery.jqplot.min.css"
+				"${ctx}/static/platform/js/jqplot/jquery.jqplot.min.css"
 			];
 			
 			for(var i=0;i<cssFiles.length;i++){
@@ -32,11 +32,11 @@ Desc:自定义表管理树模板
 			}
 			
 			var jsFiles=[
-				"${ctx}/js/jqplot/jquery.jqplot.js",
-				"${ctx}/js/jqplot/plugins/jqplot.barRenderer.min.js",
-				"${ctx}/js/jqplot/plugins/jqplot.categoryAxisRenderer.min.js",
-				"${ctx}/js/jqplot/plugins/jqplot.canvasTextRenderer.min.js",
-				"${ctx}/js/jqplot/plugins/jqplot.pointLabels.min.js"
+				"${ctx}/static/platform/js/jqplot/jquery.jqplot.js",
+				"${ctx}/static/platform/js/jqplot/plugins/jqplot.barRenderer.min.js",
+				"${ctx}/static/platform/js/jqplot/plugins/jqplot.categoryAxisRenderer.min.js",
+				"${ctx}/static/platform/js/jqplot/plugins/jqplot.canvasTextRenderer.min.js",
+				"${ctx}/static/platform/js/jqplot/plugins/jqplot.pointLabels.min.js"
 			];
 			</#noparse>
 			$.getMutilScript(jsFiles,function(){

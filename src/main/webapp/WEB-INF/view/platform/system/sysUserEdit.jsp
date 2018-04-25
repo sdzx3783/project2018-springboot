@@ -7,33 +7,33 @@
 <title>编辑 用户表</title>
 <%@include file="/commons/include/form.jsp" %>
 <%@include file="/codegen/include/customForm.jsp" %>
-<script src="${ctx}/js/hotent/platform/form/AttachMent.js"></script>
+<script src="${ctx}/static/platform/js/hotent/platform/form/AttachMent.js"></script>
 <%@include file="/commons/include/ueditor.jsp" %>
 <%-- <script src="${ctx}/servlet/ValidJs?form=sysUser"></script> --%>
 <f:link href="tree/zTreeStyle.css"></f:link>
-<link href="${ctx}/styles/default/css/form.css" rel="stylesheet" />
-<script src="${ctx}/js/tree/jquery.ztree.js"></script>
-<script src="${ctx}/js/lg/plugins/ligerTab.js" ></script>
-<script src="${ctx}/js/hotent/displaytag.js" ></script>
-<script src="${ctx}/js/lg/plugins/ligerWindow.js" ></script>
-<script src="${ctx}/js/hotent/platform/system/SysDialog.js"></script>
-<script src="${ctx}/js/hotent/platform/system/FlexUploadDialog.js"></script>
-<script src="${ctx}/js/handlebars/handlebars.min.js"></script>
-<script src="${ctx}/js/hotent/platform/system/HtmlUploadDialog.js"></script>
-<script src="${ctx}/js/hotent/platform/form/OfficePlugin.js"></script>
-<script src="${ctx}/js/hotent/platform/form/rule.js"></script>
-<script src="${ctx}/js/hotent/formdata.js"></script>
-<script src="${ctx}/js/hotent/CustomValid.js"></script>
-<script src="${ctx}/js/hotent/subform.js"></script>
-<script src="${ctx}/js/jquery/plugins/jquery.attach.js" ></script>
-<script src="${ctx}/js/ntkoWebSign/WebSignPlugin.js"></script>
-<script src="${ctx}/js/hotent/platform/form/FormUtil.js"></script>
-<script src="${ctx}/js/hotent/platform/form/ReadOnlyQuery.js"></script>
-<script src="${ctx}/js/pictureShow/PictureShowPlugin.js"></script>
-<script src="${ctx}/js/hotent/platform/form/FormMath.js"></script>
-<script src="${ctx}/js/hotent/platform/form/Cascadequery.js"></script>
-<script src="${ctx}/js/hotent/platform/form/TablePermission.js"></script>
-<script src="${ctx}/js/lg/plugins/ligerComboBox.js"></script>
+<link href="${ctx}/static/platform/styles/default/css/form.css" rel="stylesheet" />
+<script src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
+<script src="${ctx}/static/platform/js/lg/plugins/ligerTab.js" ></script>
+<script src="${ctx}/static/platform/js/hotent/displaytag.js" ></script>
+<script src="${ctx}/static/platform/js/lg/plugins/ligerWindow.js" ></script>
+<script src="${ctx}/static/platform/js/hotent/platform/system/SysDialog.js"></script>
+<script src="${ctx}/static/platform/js/hotent/platform/system/FlexUploadDialog.js"></script>
+<script src="${ctx}/static/platform/js/handlebars/handlebars.min.js"></script>
+<script src="${ctx}/static/platform/js/hotent/platform/system/HtmlUploadDialog.js"></script>
+<script src="${ctx}/static/platform/js/hotent/platform/form/OfficePlugin.js"></script>
+<script src="${ctx}/static/platform/js/hotent/platform/form/rule.js"></script>
+<script src="${ctx}/static/platform/js/hotent/formdata.js"></script>
+<script src="${ctx}/static/platform/js/hotent/CustomValid.js"></script>
+<script src="${ctx}/static/platform/js/hotent/subform.js"></script>
+<script src="${ctx}/static/platform/js/jquery/plugins/jquery.attach.js" ></script>
+<script src="${ctx}/static/platform/js/ntkoWebSign/WebSignPlugin.js"></script>
+<script src="${ctx}/static/platform/js/hotent/platform/form/FormUtil.js"></script>
+<script src="${ctx}/static/platform/js/hotent/platform/form/ReadOnlyQuery.js"></script>
+<script src="${ctx}/static/platform/js/pictureShow/PictureShowPlugin.js"></script>
+<script src="${ctx}/static/platform/js/hotent/platform/form/FormMath.js"></script>
+<script src="${ctx}/static/platform/js/hotent/platform/form/Cascadequery.js"></script>
+<script src="${ctx}/static/platform/js/hotent/platform/form/TablePermission.js"></script>
+<script src="${ctx}/static/platform/js/lg/plugins/ligerComboBox.js"></script>
   
     <script type="text/javascript">
     
@@ -903,7 +903,7 @@
             
         <div  id="tabMyInfo">  
             <!-- tab -->
-            <div title="基本信息" tabid="userdetail" icon="${ctx}/styles/default/images/resicon/user.gif">
+            <div title="基本信息" tabid="userdetail" icon="${ctx}/static/platform/styles/default/static/images/resicon/user.gif">
                 <div class="profile">
                     <img id="personPic" onerror="this.src='/commons/image/default_image_male.jpg'" src="${pictureLoad}" alt="个人相片" />
                 </div>
@@ -1173,7 +1173,7 @@
            
             <%--不是修改本人信息则--%>
             <c:if test="${bySelf!=1}">
-                <div title="组织岗位选择" tabid="orgdetail" icon="${ctx}/styles/default/images/icon/home.png" >                             
+                <div title="组织岗位选择" tabid="orgdetail" icon="${ctx}/static/platform/styles/default/static/images/icon/home.png" >                             
         
                     <div style="width: 49%; height: 300px; overflow-y: auto; float: left; background: #f6f7fb; border: 1px solid #eceff8;">
 
@@ -1259,7 +1259,7 @@
                     <!-- 添加的列表 -->
                 </div>
       
-                <div title="角色选择" tabid="roldetail" icon="${ctx}/styles/default/images/resicon/customer.png"  >
+                <div title="角色选择" tabid="roldetail" icon="${ctx}/static/platform/styles/default/static/images/resicon/customer.png"  >
                     <div style="width: 49%; height: 300px; overflow-y: auto; float: left; background: #f6f7fb; border: 1px solid #eceff8;">
                         <h4 class="oa-h4">所有角色</h4>
                         <div id="rolTree" class="ztree"></div>

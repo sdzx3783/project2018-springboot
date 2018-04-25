@@ -4,7 +4,7 @@
 <head>
 <title>用户角色映射表管理</title>
 <%@include file="/commons/include/get.jsp"%>
-<script type="text/javascript" src="${ctx }/js/hotent/platform/system/SysDialog.js"></script>
+<script type="text/javascript" src="${ctx }/static/platform/js/hotent/platform/system/SysDialog.js"></script>
 <script type="text/javascript">
 	function dlgCallBack(userIds, fullnames) {
 		if (userIds.length > 0) {

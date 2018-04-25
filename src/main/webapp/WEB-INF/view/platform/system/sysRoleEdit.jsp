@@ -8,10 +8,10 @@
 <head>
     <title>编辑 系统角色表</title>
     <%@include file="/commons/include/form.jsp" %>
-    <%-- <link href="${ctx}/styles/ligerUI/ligerui-all.css" rel="stylesheet" type="text/css" /> --%>
+    <%-- <link href="${ctx}/static/platform/styles/ligerUI/ligerui-all.css" rel="stylesheet" type="text/css" /> --%>
     <f:link href="Aqua/css/ligerui-all.css"></f:link>
-    <script type="text/javascript" src="${ctx}/js/calendar/My97DatePicker/WdatePicker.js"></script>
-    <script type="text/javascript" src="${ctx}/js/hotent/platform/system/Share.js"></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/calendar/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/Share.js"></script>
     <script type="text/javascript" src="${ctx}/servlet/ValidJs?form=sysRole"></script>
     <script type="text/javascript">
         $(function() {

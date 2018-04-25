@@ -8,22 +8,22 @@
  <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
 <c:set var="ctx" value="${pageContext.request.contextPath}" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<script type="text/javascript" src="${ctx}/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/jquery/jquery.js"></script>
 
 <f:link href="Aqua/css/ligerui-all.css"></f:link>
 <title>系统附件上传</title>
 <f:link href="bootstrap/bootstrap.min.css"></f:link>
 <%@include file="/codegen/include/customForm.jsp" %>
 <c:set var="ctx" value="${pageContext.request.contextPath}" />
-<script type="text/javascript" src="${ctx}/js/angular/angular.js"></script>
-<script type="text/javascript" src="${ctx}/js/angular/angular-sanitize.min.js"></script>
-<script type="text/javascript" src="${ctx}/js/angular/angular-file-upload.js"></script>
-<script type="text/javascript" src="${ctx}/js/angular/bootstrap.min.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/angular/angular.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/angular/angular-sanitize.min.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/angular/angular-file-upload.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/angular/bootstrap.min.js"></script>
 
 <!--[if lte IE 8]>
-<script type="text/javascript" src="${ctx}/js/ie/es5-shim.min.js"></script>
-<script type="text/javascript" src="${ctx}/js/ie/es5-sham.min.js"></script>
-<script type="text/javascript" src="${ctx}/js/ie/respond.min.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/ie/es5-shim.min.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/ie/es5-sham.min.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/ie/respond.min.js"></script>
 <![endif]-->
 
 <style type="text/css">

@@ -9,14 +9,14 @@
 <head>
 	<title>编辑 密码策略</title>
 	<%@include file="/commons/include/form.jsp" %>
-	<script type="text/javascript" src="${ctx}/js/hotent/CustomValid.js"></script>
-	<script type="text/javascript" src="${ctx}/js/hotent/platform/form/rule.js"></script>
-	<script type="text/javascript" src="${ctx}/js/angular/angular.min.js"></script>
-	<script type="text/javascript" src="${ctx}/js/angular/service/baseServices.js"></script>
-	<script type="text/javascript" src="${ctx}/js/angular/service/arrayToolService.js"></script>
-	<script type="text/javascript" src="${ctx}/js/angular/service/commonListService.js"></script>
-	<script type="text/javascript" src="${ctx}/js/hotent/platform/system/pwdStrategy/PwdStrategyService.js"></script>
-	<script type="text/javascript" src="${ctx}/js/hotent/platform/system/pwdStrategy/EditController.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/CustomValid.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/rule.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/angular/angular.min.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/angular/service/baseServices.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/angular/service/arrayToolService.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/angular/service/commonListService.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/pwdStrategy/PwdStrategyService.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/pwdStrategy/EditController.js"></script>
 	<script type="text/javascript">
 		var id="${param.id}";
 	</script>

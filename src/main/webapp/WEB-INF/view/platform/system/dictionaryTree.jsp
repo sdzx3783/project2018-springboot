@@ -29,10 +29,10 @@
 		}
 		/*修改主体内容的颜色和背景*/
 	</style>
-	<script type="text/javascript" 	src="${ctx}/js/tree/jquery.ztree.js"></script>
-	<script type="text/javascript" src="${ctx}/js/tree/jquery.ztree.js"></script>
-	<script type="text/javascript" src="${ctx}/js/hotent/platform/form/GlobalType.js"></script>
-	<script type="text/javascript" src="${ctx}/js/hotent/platform/system/GlobalMenu.js"></script>
+	<script type="text/javascript" 	src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/GlobalType.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/GlobalMenu.js"></script>
 	<script type="text/javascript">
 		var catKey="<%=GlobalType.CAT_DIC%>";
 		var menuMenu;
@@ -222,7 +222,7 @@
 				if(node.parentId==0){
 					node.isRoot=1;
 					node.parentId==0;
-					node.icon=__ctx + "/styles/default/images/icon/root.png";
+					node.icon=__ctx + "/static/platform/styles/default/images/icon/root.png";
 					break;
 				}
 			}

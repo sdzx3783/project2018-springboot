@@ -6,12 +6,12 @@
 	<%@include file="/commons/include/form.jsp" %>
 	<base target="_self"/> 
 	<f:link href="tree/zTreeStyle.css"></f:link>
-	<script type="text/javascript" src="${ctx}/js/tree/jquery.ztree.js"></script>
-	<script type="text/javascript" src="${ctx}/js/hotent/platform/system/GlobalMenu.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/GlobalMenu.js"></script>
 	<script type="text/javascript">
 		var catId=${sysTypeKey.typeId};
 	</script>
-	<script type="text/javascript" src="${ctx}/js/hotent/platform/system/GlobalType.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/GlobalType.js"></script>
 	
 </head>
 <body>

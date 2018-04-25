@@ -8,9 +8,9 @@
 <head>
 <title>编辑 Excel模板</title>
 <%@include file="/commons/include/form.jsp"%>
-<script type="text/javascript" src="${ctx}/js/hotent/CustomValid.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/formdata.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/subform.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/CustomValid.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/formdata.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/subform.js"></script>
 <script type="text/javascript">
 	$(function() {
 		$("a.save").click(function() {

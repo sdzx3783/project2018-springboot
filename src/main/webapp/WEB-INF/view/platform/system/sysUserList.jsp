@@ -4,7 +4,7 @@
 <head>
 	<title>用户表管理</title>
 	<%@include file="/commons/include/get.jsp" %>
-	<script type="text/javascript" src="${ctx}/js/util/form.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/util/form.js"></script>
 	<script type="text/javascript">
 	function openUserUnder(userid,obj){
 		if($(obj).hasClass('disabled')) return false;

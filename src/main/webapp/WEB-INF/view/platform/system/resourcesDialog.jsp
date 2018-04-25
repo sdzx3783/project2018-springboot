@@ -5,7 +5,7 @@
     <title>设置图标</title>
     <%@include file="/commons/include/form.jsp" %>
     <f:link href="tree/zTreeStyle.css"></f:link>
-    <script type="text/javascript" src="${ctx}/js/tree/jquery.ztree.js"></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
     <script type="text/javascript">
         /*KILLDIALOG*/
         var dialog = frameElement.dialog; //调用页面的dialog对象(ligerui对象)
@@ -100,7 +100,7 @@
                 };
                 $.post("${ctx}/platform/system/resources/getFolderData.ht",function(result) {
                     for(var i=0;i<result.length;i++){
-                        result[i].icon="${ctx}/styles/default/images/resicon/folderClosed.gif";
+                        result[i].icon="${ctx}/static/platform/styles/default/static/images/resicon/folderClosed.gif";
                     }
                     folderTree = $.fn.zTree.init($("#folderTree"), setting,result);
                     

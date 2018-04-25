@@ -3,17 +3,17 @@
 <head>
     <title>业务流程管理系统</title>
 <%--    <%@include file="/commons/include/home.jsp"%> --%>  
-    <link rel="stylesheet" href="${ctx}/styles/custom/reset.css">
-    <link rel="stylesheet" href="${ctx}/styles/custom/icon.css">
-    <link rel="stylesheet" href="${ctx}/styles/custom/index.css">
-    <link rel="stylesheet" href="${ctx}/styles/custom/calendar.css">
+    <link rel="stylesheet" href="${ctx}/static/platform/styles/custom/reset.css">
+    <link rel="stylesheet" href="${ctx}/static/platform/styles/custom/icon.css">
+    <link rel="stylesheet" href="${ctx}/static/platform/styles/custom/index.css">
+    <link rel="stylesheet" href="${ctx}/static/platform/styles/custom/calendar.css">
     <style>
     .city-wrap {
         position: absolute;
         right: 1px;
         bottom: 15px;
         padding-left: 15px;
-        background: url(/images/map_icon.png) no-repeat left center;
+        background: url(/static/platform/images/map_icon.png) no-repeat left center;
         color: #657386;
     }
 
@@ -405,7 +405,7 @@
                               <!--           <div class="weather-left fl fixFloat">
                                                 <div class="weather-today">
                                                     <div class="today-info"><p class="today-week">周三</p><p>小雨</p><p>微风</p><p>24 ~ 16℃</p></div>
-                                                    <div class="today-icon"><img src="http://api.map.baidu.com/images/weather/day/zhenyu.png" alt=""></div>
+                                                    <div class="today-icon"><img src="http://api.map.baidu.com/static/platform/images/weather/day/zhenyu.png" alt=""></div>
                                                 </div>
                                         </div> -->
                                         <!-- 当天天气 -->
@@ -413,9 +413,9 @@
                                         <!-- 未来三天天气 -->
                                         <div class="weather-right fixFloat">
                                         	<div style="text-align:center;margin-top:10%;">天气获取中...</div>
-                                            <!-- <div class="item"><div class="weather-icon"><img src="http://api.map.baidu.com/images/weather/day/xiaoyu.png" alt=""></div><p class="weather-week">周四</p><p class="weather-temper">17 ~ 13℃</p></div>
-                                            <div class="item"><div class="weather-icon"><img src="http://api.map.baidu.com/images/weather/day/xiaoyu.png" alt=""></div><p class="weather-week">周四</p><p class="weather-temper">17 ~ 13℃</p></div>
-                                            <div class="item"><div class="weather-icon"><img src="http://api.map.baidu.com/images/weather/day/xiaoyu.png" alt=""></div><p class="weather-week">周四</p><p class="weather-temper">17 ~ 13℃</p></div> -->
+                                            <!-- <div class="item"><div class="weather-icon"><img src="http://api.map.baidu.com/static/platform/images/weather/day/xiaoyu.png" alt=""></div><p class="weather-week">周四</p><p class="weather-temper">17 ~ 13℃</p></div>
+                                            <div class="item"><div class="weather-icon"><img src="http://api.map.baidu.com/static/platform/images/weather/day/xiaoyu.png" alt=""></div><p class="weather-week">周四</p><p class="weather-temper">17 ~ 13℃</p></div>
+                                            <div class="item"><div class="weather-icon"><img src="http://api.map.baidu.com/static/platform/images/weather/day/xiaoyu.png" alt=""></div><p class="weather-week">周四</p><p class="weather-temper">17 ~ 13℃</p></div> -->
                                         </div>
                                         <!-- 未来三天天气 -->
                                     </div>
@@ -441,12 +441,12 @@
 
             </div>
         </div>
-    <script type="text/javascript" src="${ctx}/js/custom/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="${ctx}/js/custom/calendar.js"></script>
-     <script type="text/javascript" src="${ctx}/js/custom/common.js"></script>
-     <script type="text/javascript" src="${ctx}/js/util/util.js"></script>
-    <script type="text/javascript" src="${ctx}/js/custom/main_home.js"></script>
-    <script type="text/javascript" src="${ctx}/js/custom/cityselect.js"></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/custom/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/custom/calendar.js"></script>
+     <script type="text/javascript" src="${ctx}/static/platform/js/custom/common.js"></script>
+     <script type="text/javascript" src="${ctx}/static/platform/js/util/util.js"></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/custom/main_home.js"></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/custom/cityselect.js"></script>
     <script>
         $(function(){
             var $fl = $('.friends-link');

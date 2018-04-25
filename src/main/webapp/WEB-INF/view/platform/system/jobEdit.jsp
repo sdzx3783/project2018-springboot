@@ -9,13 +9,13 @@
     <title>编辑 职务表</title>
     <%@include file="/commons/include/form.jsp" %>
     <f:link href="Aqua/css/ligerui-all.css" ></f:link>
-    <script type="text/javascript" src="${ctx}/js/hotent/CustomValid.js"></script>
-    <script type="text/javascript" src="${ctx}/js/hotent/formdata.js"></script>
-    <script type="text/javascript" src="${ctx}/js/hotent/subform.js"></script>
-    <script type="text/javascript" src="${ctx}/js/hotent/platform/system/Share.js"></script>
-    <script type="text/javascript" src="${ctx}/js/tree/jquery.ztree.js"></script>
-    <script type="text/javascript" src="${ctx}/js/lg/plugins/ligerComboBox.js"></script>
-    <script type="text/javascript" src="${ctx}/js/lg/plugins/htDicCombo.js"></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/hotent/CustomValid.js"></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/hotent/formdata.js"></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/hotent/subform.js"></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/Share.js"></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerComboBox.js"></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/htDicCombo.js"></script>
     
     <script type="text/javascript">
         $(function() {
@@ -88,7 +88,7 @@
         box-shadow: 0 1px 1px rgba(0,0,0,0.15);
     }
     a.link.add {
-        background-image: url(../images/icons/icons_add.png) no-repeat scroll 0 -1px transparent;
+        background-image: url(../static/platform/images/icons/icons_add.png) no-repeat scroll 0 -1px transparent;
     }
     .table-grid.table-list{
         display: none;

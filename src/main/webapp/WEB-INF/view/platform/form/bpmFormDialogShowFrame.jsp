@@ -18,19 +18,19 @@
     <c:set var="ctx" value="${pageContext.request.contextPath}" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <f:link href="web.css" ></f:link>
-    <%-- <link href="${ctx}/js/lg/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css"  --%>
+    <%-- <link href="${ctx}/static/platform/js/lg/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css"  --%>
     <f:link href="Aqua/css/ligerui-all.css"></f:link>
     <script type="text/javascript" src="${ctx}/js/dynamic.jsp"></script>
-    <script type="text/javascript" src="${ctx}/js/jquery/jquery.js"></script>
-    <script type="text/javascript" src="${ctx}/js/util/util.js"></script>
-    <script type="text/javascript" src="${ctx}/js/hotent/displaytag.js" ></script>
-    <script type="text/javascript" src="${ctx}/js/calendar/My97DatePicker/WdatePicker.js"></script>
-    <script type="text/javascript" src="${ctx}/js/hotent/foldBox.js" ></script>
-    <script type="text/javascript" src="${ctx}/js/hotent/absoulteInTop.js" ></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/jquery/jquery.js"></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/util/util.js"></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/hotent/displaytag.js" ></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/calendar/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/hotent/foldBox.js" ></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/hotent/absoulteInTop.js" ></script>
     <c:choose>
         <c:when test="${bpmFormDialog.style==1}">
-            <link rel="stylesheet" href="${ctx}/js/tree/zTreeStyle.css" type="text/css" />
-            <script type="text/javascript" src="${ctx}/js/tree/jquery.ztree.js"></script>
+            <link rel="stylesheet" href="${ctx}/static/platform/js/tree/zTreeStyle.css" type="text/css" />
+            <script type="text/javascript" src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
             <script type="text/javascript">
                 var json=${bpmFormDialog.displayfield};
                 var isMuliti=${bpmFormDialog.issingle==0};
@@ -151,15 +151,15 @@
             </script>
         </c:when>
         <c:otherwise>
-        <script type="text/javascript" src="${ctx}/js/hotent/platform/system/SysDialog.js"></script>
-        <script type="text/javascript" src="${ctx}/js/hotent/platform/form/FormUtil.js"></script>
-        <script type="text/javascript" src="${ctx}/js/hotent/platform/form/SelectorInit.js"></script>
-        <script type="text/javascript" src="${ctx}/js/hotent/platform/form/CommonDialog.js"></script>
-        <f:js pre="js/lang/common" ></f:js>
-        <f:js pre="js/lang/js" ></f:js>
+        <script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/SysDialog.js"></script>
+        <script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/FormUtil.js"></script>
+        <script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/SelectorInit.js"></script>
+        <script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/CommonDialog.js"></script>
+        <f:js pre="static/platform/js/lang/common" ></f:js>
+        <f:js pre="static/platform/js/lang/js" ></f:js>
         <f:link href="form.css" ></f:link>
-        <script type="text/javascript" src="${ctx}/js/lg/ligerui.min.js"></script>
-        <script type="text/javascript" src="${ctx}/js/lg/plugins/ligerDialog.js" ></script>
+        <script type="text/javascript" src="${ctx}/static/platform/js/lg/ligerui.min.js"></script>
+        <script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerDialog.js" ></script>
             <script type="text/javascript">
                 var isSingle='${bpmFormDialog.issingle}';
                 var isIE=!!window.ActiveXObject;

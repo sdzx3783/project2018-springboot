@@ -5,7 +5,7 @@
 	<title>分类排序</title>
 	
 	<%@include file="/commons/include/form.jsp" %>
-	<script type="text/javascript" src="${ctx}/js/util/SelectOption.js"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/util/SelectOption.js"></script>
 	<script type="text/javascript">
 	$(function(){
 		/*KILLDIALOG*/

@@ -11,8 +11,8 @@ response.setDateHeader("Expires", -10);
 <title>文件上传管理</title>
 <%@include file="/commons/include/form.jsp"%>
 	
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/OfficeControl.js"></script>
-<script type="text/javascript" src="${ctx}/js/hotent/platform/form/OfficePlugin.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/OfficeControl.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/OfficePlugin.js"></script>
 
 <script type="text/javascript">
 	$().ready(function (){

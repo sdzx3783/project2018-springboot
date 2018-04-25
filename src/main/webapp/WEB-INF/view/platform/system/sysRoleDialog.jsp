@@ -5,8 +5,8 @@
 		<title>选择角色</title>
 		<%@include file="/commons/include/form.jsp" %>
 		<f:link href="tree/zTreeStyle.css"></f:link>
-	    <script type="text/javascript"	src="${ctx}/js/tree/jquery.ztree.js"></script>
-	    <script type="text/javascript" src="${ctx}/js/lg/plugins/ligerLayout.js" ></script>
+	    <script type="text/javascript"	src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
+	    <script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerLayout.js" ></script>
 		
  
 		<script type="text/javascript">
