@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>修改密码</title>
 	<%@include file="/commons/include/form.jsp" %>
-	<script type="text/javascript" src="${ctx}/servlet/ValidJs?form=sysUser"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/servlet/ValidJs?form=sysUser"></script>
 	<script type="text/javascript">
 		$(function() {
 			function showRequest(formData, jqForm, options) {

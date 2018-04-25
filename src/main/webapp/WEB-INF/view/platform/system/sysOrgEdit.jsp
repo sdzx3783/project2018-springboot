@@ -7,7 +7,7 @@
 <head>
 	<title>添加组织架构</title>
 	<%@include file="/commons/include/form.jsp" %>
-	<script type="text/javascript" src="${ctx}/servlet/ValidJs?form=sysOrg"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/servlet/ValidJs?form=sysOrg"></script>
 	<script type="text/javascript" src="${ctx }/static/platform/js/lg/plugins/htButtons.js" ></script>
 	<script type="text/javascript" src="${ctx }/static/platform/js/lg/plugins/ligerWindow.js" ></script>
 	<script type="text/javascript" src="${ctx }/static/platform/js/hotent/platform/system/SysDialog.js"></script>

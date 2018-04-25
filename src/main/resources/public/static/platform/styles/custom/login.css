@@ -7,7 +7,7 @@ body {
     line-height: 1.7;
     font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
     -webkit-font-smoothing: subpixel-antialiased;
-    background: url(../static/platform/images/login_bg.png) no-repeat center center;
+    background: url(../images/login_bg.png) no-repeat center center;
     background-size: cover;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/login_bg.png', sizingMethod='scale');
 }
@@ -63,7 +63,7 @@ body {
     right: 0;
     width: 40px;
     height: 42px;
-    background: url(../static/platform/images/clear_icon.png) no-repeat center;
+    background: url(../images/clear_icon.png) no-repeat center;
 }
 
 .clear.view {
@@ -87,7 +87,7 @@ body {
     border: 1px solid #ccc;
     padding-left: 54px;
     padding-right: 40px;
-    background: #fafafa url(../static/platform/images/phone_icon.png) no-repeat 21px center;
+    background: #fafafa url(../images/phone_icon.png) no-repeat 21px center;
 }
 
 .pswd-line {
@@ -99,7 +99,7 @@ body {
     border: 1px solid #ccc;
     padding-left: 54px;
     padding-right: 40px;
-    background: #fafafa url(../static/platform/images/lock_icon.png) no-repeat 21px center;
+    background: #fafafa url(../images/lock_icon.png) no-repeat 21px center;
 }
 
 .line {
@@ -116,7 +116,7 @@ body {
     height: 14px;
     display: inline-block;
     vertical-align: middle;
-    background: url(../static/platform/images/agree_icon.png) no-repeat;
+    background: url(../images/agree_icon.png) no-repeat;
 }
 
 .save-label.active {

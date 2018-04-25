@@ -11,7 +11,7 @@
 <f:link href="jquery/plugins/rowOps.css"></f:link>
 <f:js pre="static/platform/js/lang/common" ></f:js>
 <f:js pre="static/platform/js/lang/js" ></f:js>
-<script type="text/javascript" src="${ctx}/js/dynamic.jsp"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/dynamic.jsp"></script>
 <script type="text/javascript" src="${ctx}/static/platform/js/jquery/jquery.js"></script>
 <script type="text/javascript" src="${ctx}/static/platform/js/util/util.js"></script>
 <script type="text/javascript" src="${ctx}/static/platform/js/util/json2.js"></script>
@@ -30,5 +30,5 @@
 <script type="text/javascript" src="${ctx}/static/platform/js/custom/cookie.js"></script>
 <script type="text/javascript" src="${ctx}/static/platform/js/custom/common.js" ></script>
 
-<%@include file="/js/msg.jsp"%>
+<%@include file="/static/platform/js/msg.jsp"%>
 

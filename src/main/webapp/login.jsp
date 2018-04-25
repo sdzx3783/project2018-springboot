@@ -57,7 +57,7 @@
 							<input type="text" name="validCode"  />
 						</div>
 						<div class="vcode_img">
-							<img id="validImg" src="${ctx}/servlet/ValidCode" /><br>
+							<img id="validImg" src="${ctx}/static/platform/servlet/ValidCode" /><br>
 							<input type="hidden" name="validCodeEnabled" value="true"/>
 							<a onclick="reload()">看不清，换一张</a>
 						</div>

@@ -47,10 +47,10 @@ h3 {
                     		<img class="photo" 
 			                    <c:choose>
 				                    <c:when test="${sysUser.sex==1}">
-				                        onerror="this.src='/commons/image/default_image_male.jpg'"
+				                        onerror="this.src='/static/platform/commons/image/default_image_male.jpg'"
 				                    </c:when>
 				                    <c:otherwise>
-				                        onerror="this.src='/commons/image/default_image_female.jpg'" 
+				                        onerror="this.src='/static/platform/commons/image/default_image_female.jpg'" 
 				                    </c:otherwise>
 			                    </c:choose>  src="${pictureLoad}" alt="个人相片"/>
                     	</div>

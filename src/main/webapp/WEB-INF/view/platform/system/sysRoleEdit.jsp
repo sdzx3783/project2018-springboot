@@ -12,7 +12,7 @@
     <f:link href="Aqua/css/ligerui-all.css"></f:link>
     <script type="text/javascript" src="${ctx}/static/platform/js/calendar/My97DatePicker/WdatePicker.js"></script>
     <script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/Share.js"></script>
-    <script type="text/javascript" src="${ctx}/servlet/ValidJs?form=sysRole"></script>
+    <script type="text/javascript" src="${ctx}/static/platform/servlet/ValidJs?form=sysRole"></script>
     <script type="text/javascript">
         $(function() {
             function showRequest(formData, jqForm, options) { 

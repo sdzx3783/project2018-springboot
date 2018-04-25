@@ -95,7 +95,7 @@
 	//删除照片
 	function delPic(){
 		$("#picture").val("");
-		$("#personPic").attr("src","${ctx}/commons/image/default_image_male.jpg");
+		$("#personPic").attr("src","${ctx}/static/platform/commons/image/default_image_male.jpg");
 	};
 </script>
 </head>

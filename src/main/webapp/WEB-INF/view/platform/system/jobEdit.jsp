@@ -88,7 +88,7 @@
         box-shadow: 0 1px 1px rgba(0,0,0,0.15);
     }
     a.link.add {
-        background-image: url(../static/platform/images/icons/icons_add.png) no-repeat scroll 0 -1px transparent;
+        background-image: url(../images/icons/icons_add.png) no-repeat scroll 0 -1px transparent;
     }
     .table-grid.table-list{
         display: none;

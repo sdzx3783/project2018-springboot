@@ -23,7 +23,7 @@ a.attachment{
 }
 
 a.cancel{
-   	background:url(../static/platform/images/cancel.png) 0 1px no-repeat;
+   	background:url(../images/cancel.png) 0 1px no-repeat;
    	display:inline-block;
    	height:14px;
    	margin-left:8px;
@@ -101,14 +101,14 @@ td.formHead{
 
 .datepicker input{
 	width:130px;
-	background: url(../static/platform/images/datePicker.gif) no-repeat scroll right center #FFFFFF;
+	background: url(../images/datePicker.gif) no-repeat scroll right center #FFFFFF;
     border: 1px solid #999999;
     height: 20px;
 }
 
 .dictionary input{
 	width:130px;
-	background: url(../static/platform/images/control-270.png) no-repeat scroll right center #FFFFFF;
+	background: url(../images/control-270.png) no-repeat scroll right center #FFFFFF;
     border: 1px solid #999999;
     height: 20px;
 }
@@ -160,7 +160,7 @@ table.listTable th{
 
 /*验证表单字段样式*/
 label.error {
-	background: url(../static/platform/images/valid/unchecked.gif) no-repeat 0px 0px;
+	background: url(../images/valid/unchecked.gif) no-repeat 0px 0px;
 	margin-left: 16px;
 	padding-left: 16px;
 	padding-bottom: 2px;
@@ -182,7 +182,7 @@ table.listTable tr.listRow td{
 	width:600px;
 	height:50px;
 	border:1px dashed #000;
-	background:url(../static/platform/images/taskopinion_logo.png) 5px 0px no-repeat;
+	background:url(../images/taskopinion_logo.png) 5px 0px no-repeat;
 }
 
 .taskopinion input{
@@ -197,7 +197,7 @@ table.listTable tr.listRow td{
 	width:600px;
 	height:300px;
 	border:1px dashed #000;
-	background:url(../static/platform/images/flowchart_logo.png) 5px 0px no-repeat;
+	background:url(../images/flowchart_logo.png) 5px 0px no-repeat;
 }
 
 .flowchart input{
@@ -210,21 +210,21 @@ table.listTable tr.listRow td{
 	width:90%;
 	height:300px;
 	border:1px solid #ccc;
-	background:url(../static/platform/images/office_logo.png) 5px 0px no-repeat;
+	background:url(../images/office_logo.png) 5px 0px no-repeat;
 }
 
 .webSign-div{
 	width:90%;
 	height:100px;
 	border:1px solid #ccc;
-	background:url(../static/platform/images/webSign_logo.png) 5px 0px no-repeat;
+	background:url(../images/webSign_logo.png) 5px 0px no-repeat;
 }
 
 .pictureShow-div{
 	width:90%;
 	height:300px;
 	border:1px solid #ccc;
-	background:url(../static/platform/images/pictureShow_logo.png) 5px 0px no-repeat;
+	background:url(../images/pictureShow_logo.png) 5px 0px no-repeat;
 }
 
 a.link{
@@ -241,43 +241,43 @@ a.link{
 }
 
 a.link.add{
-	background:url(../static/platform/images/icons/icons_add.png) 0px -1px no-repeat;
+	background:url(../images/icons/icons_add.png) 0px -1px no-repeat;
 }
 
 a.link.date{
-	background:url(../static/platform/images/icons/log_btn.png) 0px -1px no-repeat;
+	background:url(../images/icons/log_btn.png) 0px -1px no-repeat;
 }
 
 a.link.del{
-	background:url(../static/platform/images/icons/icons_del.png) 0px -1px no-repeat;
+	background:url(../images/icons/icons_del.png) 0px -1px no-repeat;
 }
 
 a.link.dic{
-	background:url(../static/platform/images/icons/dictionary.png) 0px -1px no-repeat;
+	background:url(../images/icons/dictionary.png) 0px -1px no-repeat;
 }
 
 a.link.role{
-	background:url(../static/platform/images/icon/find.png) 0px 0px no-repeat;
+	background:url(../images/icon/find.png) 0px 0px no-repeat;
 }
 
 a.link.position{
-	background:url(../static/platform/images/icon/find.png) 0px -1px no-repeat;
+	background:url(../images/icon/find.png) 0px -1px no-repeat;
 }
 
 a.link.attachement{
-	background:url(../static/platform/images/icon/attachement.png) 0px -1px no-repeat;
+	background:url(../images/icon/attachement.png) 0px -1px no-repeat;
 }
 
 a.link.user{
-	background:url(../static/platform/images/icon/user.gif) 0px -1px no-repeat;
+	background:url(../images/icon/user.gif) 0px -1px no-repeat;
 }
 
 a.link.users{
-	background:url(../static/platform/images/icon/users.gif) 0px -1px no-repeat;
+	background:url(../images/icon/users.gif) 0px -1px no-repeat;
 }
 
 a.link.org{
-	background:url(../static/platform/images/icon/org.gif) 0px -1px no-repeat;
+	background:url(../images/icon/org.gif) 0px -1px no-repeat;
 }
 
 input.hidden{
@@ -300,7 +300,7 @@ a.extend{
 
 .hidedomain input{
 	border:1px dashed #000;
-	background:url(../static/platform/images/icon/hidedomain.png) 0 0 no-repeat;
+	background:url(../images/icon/hidedomain.png) 0 0 no-repeat;
 	width:42px;
 }
 
@@ -308,14 +308,14 @@ a.extend{
 	border:1px dashed #000;
 	width:800px;
 	height:80px;
-	background:url(../static/platform/images/office_logo.png) 0 0 no-repeat;
+	background:url(../images/office_logo.png) 0 0 no-repeat;
 }
 
 .websigncontrol input{
 	border:1px dashed #000;
 	width:800px;
 	height:80px;
-	background:url(../static/platform/images/webSign_logo.png) 0 0 no-repeat;
+	background:url(../images/webSign_logo.png) 0 0 no-repeat;
 }
 
 /**
@@ -325,7 +325,7 @@ a.extend{
 	border:1px dashed #000;
 	width:400px;
 	height:200px;
-	background:url(../static/platform/images/pictureShow_logo.png) 0 0 no-repeat;
+	background:url(../images/pictureShow_logo.png) 0 0 no-repeat;
 }
 
 .subtable{
@@ -338,14 +338,14 @@ a.extend{
 	border:1px dashed #000;
 	width:800px;
 	height:80px;
-	background:url(../static/platform/images/ckeditor_logo.png) 0 0 no-repeat;
+	background:url(../images/ckeditor_logo.png) 0 0 no-repeat;
 }
 
 .ckeditor input{
 	border:1px dashed #000;
 	width:800px;
 	height:80px;
-	background:url(../static/platform/images/ckeditor_logo.png) 0 0 no-repeat;
+	background:url(../images/ckeditor_logo.png) 0 0 no-repeat;
 }
 /*--自定义数据显示--*/
 .custom-display{
@@ -360,34 +360,34 @@ a.extend{
 
 /*--extend start--*/
 a.extend.stat{
-    background:url(../static/platform/images/extendIcon/stat.gif) 0px -1px no-repeat;
+    background:url(../images/extendIcon/stat.gif) 0px -1px no-repeat;
 }
 
 a.extend.user{
-    background:url(../static/platform/images/extendIcon/user.png) 0px -1px no-repeat;
+    background:url(../images/extendIcon/user.png) 0px -1px no-repeat;
 }
 
 a.extend.navigation{
-    background:url(../static/platform/images/extendIcon/navigation.png) 0px -1px no-repeat;
+    background:url(../images/extendIcon/navigation.png) 0px -1px no-repeat;
 }
 
 a.extend.remoteupload{
-    background:url(../static/platform/images/extendIcon/remoteupload.gif) 0px -1px no-repeat;
+    background:url(../images/extendIcon/remoteupload.gif) 0px -1px no-repeat;
 }
 
 a.extend.task{
-    background:url(../static/platform/images/extendIcon/task.png) 0px -1px no-repeat;
+    background:url(../images/extendIcon/task.png) 0px -1px no-repeat;
 }
 
 a.extend.message{
-    background:url(../static/platform/images/extendIcon/message.gif) 0px -1px no-repeat;
+    background:url(../images/extendIcon/message.gif) 0px -1px no-repeat;
 }
 
 a.extend.script{
-    background:url(../static/platform/images/extendIcon/script.gif) 0px -1px no-repeat;
+    background:url(../images/extendIcon/script.gif) 0px -1px no-repeat;
 }
 
 a.extend.subsys{
-    background:url(../static/platform/images/extendIcon/subsys.png) 0px -1px no-repeat;
+    background:url(../images/extendIcon/subsys.png) 0px -1px no-repeat;
 }
 /*--extend end--*/

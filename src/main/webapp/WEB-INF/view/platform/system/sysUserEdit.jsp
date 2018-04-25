@@ -9,7 +9,7 @@
 <%@include file="/codegen/include/customForm.jsp" %>
 <script src="${ctx}/static/platform/js/hotent/platform/form/AttachMent.js"></script>
 <%@include file="/commons/include/ueditor.jsp" %>
-<%-- <script src="${ctx}/servlet/ValidJs?form=sysUser"></script> --%>
+<%-- <script src="${ctx}/static/platform/servlet/ValidJs?form=sysUser"></script> --%>
 <f:link href="tree/zTreeStyle.css"></f:link>
 <link href="${ctx}/static/platform/styles/default/css/form.css" rel="stylesheet" />
 <script src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
@@ -197,7 +197,7 @@
     //删除照片
     function delPic(){
         $("#picture").val("");
-        $("#personPic").attr("src","${ctx}/commons/image/default_image_male.jpg");
+        $("#personPic").attr("src","${ctx}/static/platform/commons/image/default_image_male.jpg");
     };
     
     //生成组织树             
@@ -905,7 +905,7 @@
             <!-- tab -->
             <div title="基本信息" tabid="userdetail" icon="${ctx}/static/platform/styles/default/static/images/resicon/user.gif">
                 <div class="profile">
-                    <img id="personPic" onerror="this.src='/commons/image/default_image_male.jpg'" src="${pictureLoad}" alt="个人相片" />
+                    <img id="personPic" onerror="this.src='/static/platform/commons/image/default_image_male.jpg'" src="${pictureLoad}" alt="个人相片" />
                 </div>
 
                 <div class="oa-text-center oa-pdb20">

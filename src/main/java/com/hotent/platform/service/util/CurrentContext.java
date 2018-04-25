@@ -58,6 +58,7 @@ public class CurrentContext implements ICurrentContext {
 				SysUserDao bean = AppUtil.getBean(SysUserDao.class);
 				sysUser = bean.getByAccount("admin");
 			}
+			curUser.set(sysUser);
 		}
 		request.getSession().setAttribute("SPRING_SECURITY_CONTEXT", sysUser);
         return sysUser;

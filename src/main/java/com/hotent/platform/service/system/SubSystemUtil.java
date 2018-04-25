@@ -1,5 +1,8 @@
 package com.hotent.platform.service.system;
 
+import java.util.List;
+
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 import com.hotent.core.api.util.ContextUtil;
@@ -28,7 +31,14 @@ public class SubSystemUtil {
 		//判断session是否存在子系统
 		SubSystem subSystem=(SubSystem) request.getSession().getAttribute(SubSystem.CURRENT_SYSTEM);
 		//存在则返回
-		if(subSystem!=null) return subSystem;
+		if(subSystem==null){
+			//当前有权限的子系统
+			SubSystemService subSystemService=AppUtil.getBean(SubSystemService.class);
+			List<SubSystem> subSystemList = subSystemService.getByUser(curUser);
+			return subSystemList.get(0);
+		}
+			
+		//return subSystem;
 		//判断cookie是否存在
 		boolean isCookieExists=CookieUitl.isExistByName(SubSystem.CURRENT_SYSTEM,request);
 		//cookie不存在则返回为空。

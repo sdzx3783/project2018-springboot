@@ -56,7 +56,7 @@ div.panel-body{
 }
 
 .date,.datetime,.datePicker,.wdateTime{
-	background: url(../static/platform/images/datePicker.gif) no-repeat scroll right center #FFFFFF;
+	background: url(../images/datePicker.gif) no-repeat scroll right center #FFFFFF;
     border: 1px solid #999999;
     /*margin-left: 4px;
     height: 20px;*/
@@ -358,13 +358,13 @@ th.sortable a {
 }
 
 th.order1 a {
-	background-image: url(../static/platform/images/displaytag/icon-sort-desc.gif);
+	background-image: url(../images/displaytag/icon-sort-desc.gif);
 	background-repeat: no-repeat;
 	background-position: 80% 50%;
 }
 
 th.order2 a {
-	background-image: url(../static/platform/images/displaytag/icon-sort-asc.gif);
+	background-image: url(../images/displaytag/icon-sort-asc.gif);
 	background-repeat: no-repeat;
 	background-position: 80% 50%;
 }
@@ -397,7 +397,7 @@ th.order2 a {
 }
 
 .table-grid .over {
-	/*background: url(../static/platform/images/content_bg_hover.jpg);*/
+	/*background: url(../images/content_bg_hover.jpg);*/
 	background: #dfeffc;
 }
 
@@ -434,27 +434,27 @@ th.order2 a {
 }
 
 .area-export .exportlinks .excel {
-	background-image: url(../static/platform/images/displaytag/ico_file_excel.png);
+	background-image: url(../images/displaytag/ico_file_excel.png);
 	background-repeat: no-repeat;
 }
 
 .area-export .exportlinks .csv {
-	background-image: url(../static/platform/images/displaytag/ico_file_csv.png);
+	background-image: url(../images/displaytag/ico_file_csv.png);
 	background-repeat: no-repeat;
 }
 
 .area-export .exportlinks .xml {
-	background-image: url(../static/platform/images/displaytag/ico_file_xml.png);
+	background-image: url(../images/displaytag/ico_file_xml.png);
 	background-repeat: no-repeat;
 }
 
 .area-export .exportlinks .pdf {
-	background-image: url(../static/platform/images/displaytag/ico_file_pdf.png);
+	background-image: url(../images/displaytag/ico_file_pdf.png);
 	background-repeat: no-repeat;
 }
 
 .area-export .exportlinks .rtf {
-	background-image: url(../static/platform/images/displaytag/ico_file_rtf.png);
+	background-image: url(../images/displaytag/ico_file_rtf.png);
 	background-repeat: no-repeat;
 }
 .panel-norecord{
@@ -466,7 +466,7 @@ th.order2 a {
    border: 1px solid #ebf6fe;
    border-top:none;
    background-color: #ebf6fe;
-	/*background: url(../static/platform/images/tool_bg.jpg) repeat-x; border: 3px solid #dddddd;*/
+	/*background: url(../images/tool_bg.jpg) repeat-x; border: 3px solid #dddddd;*/
 }
 .l-bar-group-right {
     float: left;
@@ -482,7 +482,7 @@ th.order2 a {
 	height: 21px;
 	font-size: 15px;
 	font-family: Verdana, Geneva, sans-serif;
-	background: url(../static/platform/images/trun_button2.jpg) no-repeat 0 1px;
+	background: url(../images/trun_button2.jpg) no-repeat 0 1px;
 	border: none;
 	cursor: pointer;
 }
@@ -494,7 +494,7 @@ th.order2 a {
 
 
 label.error {
-	background: url(../static/platform/images/valid/unchecked.gif) no-repeat 0px 0px;
+	background: url(../images/valid/unchecked.gif) no-repeat 0px 0px;
 	margin-left: 16px;
 	padding-left: 16px;
 	padding-bottom: 2px;
@@ -511,7 +511,7 @@ label.initerror {
 }
 
 label.checked {
-	background: url(../static/platform/images/valid/checked.gif) no-repeat 0px 0px;
+	background: url(../images/valid/checked.gif) no-repeat 0px 0px;
 }
 
 
@@ -578,7 +578,7 @@ a.link.reference,.panel-toolbar  a.link.reference span {
 	background: url("../images/icons/icons_search.png") no-repeat scroll 0 1px transparent;
 }
 a.link.ok,.panel-toolbar  a.link.ok span {
-	background: url(../static/platform/images/icon/ok.gif) no-repeat scroll 0 1px transparent;
+	background: url(../images/icon/ok.gif) no-repeat scroll 0 1px transparent;
 }
 
 a.link.del,.panel-toolbar a.link.del span {
@@ -589,10 +589,10 @@ a.link.save,.panel-toolbar a.link.save span {
     background: url("../images/icons/icons_save.png") no-repeat scroll 0 1px transparent;
 }
 a.link.del.disabled,.panel-toolba a.link.del.disabled span{
-	background:url(../static/platform/images/icons/icons_del_disabled.png) 0px -2px no-repeat;
+	background:url(../images/icons/icons_del_disabled.png) 0px -2px no-repeat;
 }
 a.link.customdel, .panel-toolba a.link.customdel span{
-    background:url(../static/platform/images/icons/icons_del.png) 0px -2px no-repeat;
+    background:url(../images/icons/icons_del.png) 0px -2px no-repeat;
 }
 
 a.link.back,.panel-toolbar a.link.back span {
@@ -701,23 +701,23 @@ a.link.initRights,.panel-toolbar a.link.initRights span {
 }
 
 a.link.reset,.panel-toolbar a.link.reset span{
-	background: url(../static/platform/images/button/reload.png) 0px 1px no-repeat;
+	background: url(../images/button/reload.png) 0px 1px no-repeat;
 }
 
 a.link.send{
-	background:url(../static/platform/images/menu/add.gif) 0px -2px no-repeat;
+	background:url(../images/menu/add.gif) 0px -2px no-repeat;
 }
 a.link.end{
-	background:url(../static/platform/images/button/run.png) 0px -2px no-repeat;
+	background:url(../images/button/run.png) 0px -2px no-repeat;
 }
 
 a.link.done,.panel-toolbar a.link.done span{
-	background:url(../static/platform/images/icon/ok.gif) 0px 0px no-repeat;
+	background:url(../images/icon/ok.gif) 0px 0px no-repeat;
 }
 
 
 a.link.get,.panel-toolbar a.link.get span{
-	background:url(../static/platform/images/button/get.gif)  0px -2px no-repeat;
+	background:url(../images/button/get.gif)  0px -2px no-repeat;
 }
 a.link.get,.panel-toolbar a.link.get span {
     background: url("../images/button/get.gif") no-repeat scroll 0 -2px transparent;
@@ -825,10 +825,10 @@ a.link.abandon,.panel-toolbar a.link.abandon span {
     background: url("../images/button/giveup.gif") no-repeat scroll 0 0 transparent;
 }
 a.link.addWebSigns,.panel-toolbar a.link.addWebSigns span{
-	background:url(../static/platform/images/button/addWebSigns.gif) 0px 0px no-repeat;
+	background:url(../images/button/addWebSigns.gif) 0px 0px no-repeat;
 }
 a.link.addHangSigns,.panel-toolbar a.link.addHangSigns span{
-	background:url(../static/platform/images/button/addHangSigns.gif) 0px 0px no-repeat;
+	background:url(../images/button/addHangSigns.gif) 0px 0px no-repeat;
 }
 a.link.history,.panel-toolbar a.link.history span {
     background: url("../images/icons/icons_search.png") no-repeat scroll 0 1px transparent;
@@ -871,40 +871,40 @@ a.link.backed span{
 background: url("../images/error/error_back.png") no-repeat scroll 0 1px transparent;
 }
 a.link.category,.panel-toolbar a.link.category span{
-	background:url(../static/platform/images/icon/category.gif) 0px 1px no-repeat;
+	background:url(../images/icon/category.gif) 0px 1px no-repeat;
 }
 a.link.copyTo,.panel-toolbar a.link.copyTo span{
-	background:url(../static/platform/images/icons/devHelp.png) 0px 1px no-repeat;
+	background:url(../images/icons/devHelp.png) 0px 1px no-repeat;
 }
 
 .link.copyTo {
-	background: url(../static/platform/images/icons/devHelp.png) 0px 1px no-repeat;
+	background: url(../images/icons/devHelp.png) 0px 1px no-repeat;
 }
 
 .link-sortUp {
-	background: url(../static/platform/images/menu/arrow-up.png) no-repeat !important;
+	background: url(../images/menu/arrow-up.png) no-repeat !important;
 	text-decoration: none;
 }
 
 .link-sortDown {
-	background: url(../static/platform/images/menu/arrow-down.png) no-repeat !important;
+	background: url(../images/menu/arrow-down.png) no-repeat !important;
 	text-decoration: none;
 }
 
 .link-sortTop {
-	background: url(../static/platform/images/menu/sort_top.png) no-repeat !important;
+	background: url(../images/menu/sort_top.png) no-repeat !important;
 }
 
 .link-sortBottom {
-	background: url(../static/platform/images/menu/sort_bottom.png) no-repeat !important;
+	background: url(../images/menu/sort_bottom.png) no-repeat !important;
 }
 
 a.link.help {
-	background: url(../static/platform/images/icon/help.gif) no-repeat !important;
+	background: url(../images/icon/help.gif) no-repeat !important;
 }
 
 a.link.excel {
-	background-image: url(../static/platform/images/displaytag/ico_file_excel.png);
+	background-image: url(../images/displaytag/ico_file_excel.png);
 	background-repeat: no-repeat;
 }
 /*==================end of link button===============================*/
@@ -934,7 +934,7 @@ a.button {
 	height:15px; 
 	line-height: 15px;
 	white-space:nowrap; 
-	background:url(../static/platform/images/button/button.gif) no-repeat right  0px;
+	background:url(../images/button/button.gif) no-repeat right  0px;
 	color:#000; 
 	padding:5px 10px 5px 3px; 
 	font-size: 12px;
@@ -952,13 +952,13 @@ a.button span.icon{
 }
 
 a.button:hover {
-	background:url(../static/platform/images/button/button_over.gif) no-repeat left 0px;
+	background:url(../images/button/button_over.gif) no-repeat left 0px;
 	text-decoration: none;
 border-color: #737373;
 -webkit-box-shadow: 1px 1px 2px #c6c6c6;
 }
 /* a.button:hover span{
-	background:url(../static/platform/images/button/button_over.gif) no-repeat right 0px;
+	background:url(../images/button/button_over.gif) no-repeat right 0px;
 	margin: -5px -2px 0px 0px;
 } */
 
@@ -974,24 +974,24 @@ a.button:hover span.icon{
 	
 */
 a.button span.icon.save{
-	background: url(../static/platform/images/icons/icons_save.png) no-repeat -2px -2px;
+	background: url(../images/icons/icons_save.png) no-repeat -2px -2px;
 }
 
 a.button span.icon.ok{
-	background: url(../static/platform/images/icon/ok.gif) no-repeat 0px 3px;
+	background: url(../images/icon/ok.gif) no-repeat 0px 3px;
 }
 
 a.button span.icon.upload{
-	background: url(../static/platform/images/button/upload.png) no-repeat 0px 3px;
+	background: url(../images/button/upload.png) no-repeat 0px 3px;
 }
 
 
 a.button span.icon.cancel{
-	background: url(../static/platform/images/icon/cancel.gif) no-repeat 0px 3px;
+	background: url(../images/icon/cancel.gif) no-repeat 0px 3px;
 }
 
 a.button span.icon.valid{
-	background: url(../static/platform/images/icon/valid.gif) no-repeat 0px 3px;
+	background: url(../images/icon/valid.gif) no-repeat 0px 3px;
 }
 
 
@@ -1000,7 +1000,7 @@ a.button span.icon.valid{
 	
 */
 a.tipinfo{
-	background:url(../static/platform/images/icon/help.gif) 0px -2px no-repeat;
+	background:url(../images/icon/help.gif) 0px -2px no-repeat;
 	padding-left: 20px;
 	line-height: 20px;
 	text-decoration: none;
@@ -1048,7 +1048,7 @@ a.tipinfo:hover span{
 }
 /* link search icon widthout event bind */
 a.link.search2{
-	background:url(../static/platform/images/icons/icons_search.png) 0px 1px no-repeat;
+	background:url(../images/icons/icons_search.png) 0px 1px no-repeat;
 }
 
 
@@ -1104,12 +1104,12 @@ div.desktop{
 .table-noborder th { border: medium none;font-size: 14px;font-weight: bold;padding: 5px 10px;}
 
 span.open-message{
-	background: url(../static/platform/images/msg_none.png) no-repeat 0px -1px;
+	background: url(../images/msg_none.png) no-repeat 0px -1px;
 	padding:2px 0 2px 20px;
 }
 
 span.close-message{
-	background: url(../static/platform/images/msg_own.png) no-repeat 0px -1px;
+	background: url(../images/msg_own.png) no-repeat 0px -1px;
 	padding:2px 0 2px 20px;
 }
 a.message{
@@ -1120,11 +1120,11 @@ a.message{
 	height:20px;
 }
 a.message.open-message{
-	background: url(../static/platform/images/msg_none.png) no-repeat 0px -1px;
+	background: url(../images/msg_none.png) no-repeat 0px -1px;
 }
 
 a.message.close-message{
-	background: url(../static/platform/images/msg_own.png) no-repeat 0px -1px;
+	background: url(../images/msg_own.png) no-repeat 0px -1px;
 }
 
 .quick-find{
@@ -1132,7 +1132,7 @@ a.message.close-message{
 }
 
 div.tipbox{
-	background:url(../static/platform/images/icon/help.gif) 0 0 no-repeat;
+	background:url(../images/icon/help.gif) 0 0 no-repeat;
 	width:20px;
 	height:20px;
 	display:inline;
@@ -1181,7 +1181,7 @@ a.current{
 	float: left;
 	text-decoration: none;
 	color: #000;
-	background:url(../static/platform/images/button/button.gif) no-repeat top right;
+	background:url(../images/button/button.gif) no-repeat top right;
 	padding: 5px 15px 0 0;
 	margin-left: 10px;
 	font-size: 13px;
@@ -1195,14 +1195,14 @@ a.current span{
 	margin-top: -5px;
 	height:25px;
 	cursor:pointer;
-	background:url(../static/platform/images/button/button.gif) no-repeat top left;
+	background:url(../images/button/button.gif) no-repeat top left;
 	line-height:25px;
 }
 a.current:hover{
-	background:url(../static/platform/images/button/button_over.gif) no-repeat top right;	
+	background:url(../images/button/button_over.gif) no-repeat top right;	
 }
 a.current:hover span{
-	background:url(../static/platform/images/button/button_over.gif) no-repeat top left;	
+	background:url(../images/button/button_over.gif) no-repeat top left;	
 }
 
 .panel-table img {
@@ -1228,16 +1228,16 @@ span.backgrounddiv{
 }
 
 a.link.mobile{
-	background:url(../static/platform/images/icons/mobile.gif) 0px 0px no-repeat;
+	background:url(../images/icons/mobile.gif) 0px 0px no-repeat;
 }
 
 
 a.link.movetop {
-	background: url(../static/platform/images/menu/sort_top.png) no-repeat !important;
+	background: url(../images/menu/sort_top.png) no-repeat !important;
 }
 
 a.link.movebottom {
-	background: url(../static/platform/images/menu/sort_bottom.png) no-repeat !important;
+	background: url(../images/menu/sort_bottom.png) no-repeat !important;
 }
 
 /*解决在火狐下 ligerdialog弹出框显示不全的问题*/

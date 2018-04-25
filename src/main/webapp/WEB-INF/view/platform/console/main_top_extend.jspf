@@ -1,7 +1,5 @@
 <%@page pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
-	<f:link href="jquery/plugins/jquery.chosen.css"></f:link>
 <script type="text/javascript" src="${ctx}/static/platform/js/jquery/plugins/jquery.chosen.js""></script>
 <script type="text/javascript" src="${ctx}/static/platform/js/jquery/plugins/jquery.htselect.js""></script>
 <script type="text/javascript">

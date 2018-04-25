@@ -10,7 +10,7 @@
 <%@include file="/codegen/include/customForm.jsp" %>
 <script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/AttachMent.js"></script>
 <%@include file="/commons/include/ueditor.jsp" %>
-<script type="text/javascript" src="${ctx}/servlet/ValidJs?form=sysUser"></script>
+<script type="text/javascript" src="${ctx}/static/platform/servlet/ValidJs?form=sysUser"></script>
 <f:link href="tree/zTreeStyle.css"></f:link>
 <script type="text/javascript" src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
 <script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerTab.js" ></script>
@@ -123,10 +123,10 @@
                 <img 
                     <c:choose>
 	                    <c:when test="${sysUser.sex==1}">
-	                        onerror="this.src='/commons/image/default_image_male.jpg'"
+	                        onerror="this.src='/static/platform/commons/image/default_image_male.jpg'"
 	                    </c:when>
 	                    <c:otherwise>
-	                        onerror="this.src='/commons/image/default_image_female.jpg'" 
+	                        onerror="this.src='/static/platform/commons/image/default_image_female.jpg'" 
 	                    </c:otherwise>
                     </c:choose>  src="${pictureLoad}" alt="个人相片"/>
             </div>

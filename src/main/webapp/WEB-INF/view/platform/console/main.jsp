@@ -191,7 +191,7 @@
         display: none !important;
     }
     </style>
-    <script src="${ctx}/js/dynamic.jsp"></script>
+    <script src="${ctx}/static/platform/js/dynamic.jsp"></script>
     <script src="${ctx}/static/platform/js/jquery/jquery.js"></script>
     <script src="${ctx}/static/platform/js/util/util.js"></script>
     <script src="${ctx}/static/platform/js/util/form.js"></script>

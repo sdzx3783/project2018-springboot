@@ -21,7 +21,7 @@
 <link href="${ctx}/css/common/dragtable.css" rel="stylesheet" />
 
 <script src="${ctx}/static/platform/js/common/jquery.js"></script>
-<script type="text/javascript" src="${ctx}/js/dynamic.jsp"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/dynamic.jsp"></script>
 <script type="text/javascript" src="${ctx}/static/platform/js/util/util.js"></script>
 <script type="text/javascript" src="${ctx}/static/platform/js/util/json2.js"></script>
 <script type="text/javascript" src="${ctx}/static/platform/js/util/form.js"></script>
@@ -57,5 +57,5 @@
 }
 </style>
 
-<%@include file="/js/msg.jsp"%>
+<%@include file="/static/platform/js/msg.jsp"%>
 

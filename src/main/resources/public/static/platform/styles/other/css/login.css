@@ -4,7 +4,7 @@ body{
 	line-height:23px;
 	margin:0;
 	padding:0;
-	background:url(../static/platform/images/login_bg.jpg);
+	background:url(../images/login_bg.jpg);
 	color:#3b6e81;
 	}
 .second_body{
@@ -14,7 +14,7 @@ body{
 	margin-top:10%;
 	padding-left:300px;
 	padding-top:110px;
-	background:url(../static/platform/images/login_panel.png) no-repeat;
+	background:url(../images/login_panel.png) no-repeat;
 	}
 .login,.login2{
 	width:200px;
@@ -31,9 +31,9 @@ body{
 	border:none;
 	color:#FFF;
 	font-weight:bold;
-	background:url(../static/platform/images/login1.jpg);
+	background:url(../images/login1.jpg);
 	margin-left:15px;
 	}
 .reset_botton{
-	background:url(../static/platform/images/reset.jpg);
+	background:url(../images/reset.jpg);
 	}

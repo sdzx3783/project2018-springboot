@@ -8,7 +8,7 @@
 <head>
     <title>重置密码</title>
     <%@include file="/commons/include/form.jsp" %>
-    <script type="text/javascript" src="${ctx}/servlet/ValidJs?form=sysUser"></script>
+    <script type="text/javascript" src="${ctx}/static/platform/servlet/ValidJs?form=sysUser"></script>
     <script type="text/javascript">
         $(function() {
             function showRequest(formData, jqForm, options) { 

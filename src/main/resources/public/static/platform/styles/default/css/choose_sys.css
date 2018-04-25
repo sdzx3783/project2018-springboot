@@ -16,7 +16,7 @@ body{
 	min-width:1024px;
 	background:#bae6f1;
 	padding:0;
-	background:url(../static/platform/images/choose_sys_bg.jpg);
+	background:url(../images/choose_sys_bg.jpg);
 	padding-top:13%;
 	}
 
@@ -37,7 +37,7 @@ body{
 	margin:0 auto;
 	padding-top:95px;
 	padding-left:50px;
-	background:url(../static/platform/images/choose_sys_03.jpg) no-repeat;
+	background:url(../images/choose_sys_03.jpg) no-repeat;
 	}
 .select_sys{
 	width:325px;
@@ -62,7 +62,7 @@ body{
 	width:65px;
 	height:30px;
 	border:none;
-	background:url(../static/platform/images/sure_button.jpg);
+	background:url(../images/sure_button.jpg);
 	display:block;
 	position:absolute;
 	margin-top:-33px;
@@ -101,4 +101,4 @@ body{
 .show_sys ul li a:hover{
 	background: #689dfc;
 	color: #fff;
-	}/*background:url(../static/platform/images/content_bg_hover.jpg) repeat-x;*/
+	}/*background:url(../images/content_bg_hover.jpg) repeat-x;*/

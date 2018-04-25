@@ -1,23 +1,23 @@
 @CHARSET "UTF-8";
 
 .myTask{
-	background:url(../static/platform/images/mobile/myTask.jpg) no-repeat;
+	background:url(../images/mobile/myTask.jpg) no-repeat;
 }
 
 .myAttend{
-	background:url(../static/platform/images/mobile/myAttend.jpg) no-repeat;
+	background:url(../images/mobile/myAttend.jpg) no-repeat;
 }
 
 .myAssignee{
-	background:url(../static/platform/images/mobile/myAssignee.jpg) no-repeat;
+	background:url(../images/mobile/myAssignee.jpg) no-repeat;
 }
 
 .taskAssignee{
-	background:url(../static/platform/images/mobile/taskAssignee.jpg) no-repeat;
+	background:url(../images/mobile/taskAssignee.jpg) no-repeat;
 }
 
 .userImage{
-	background:url(../static/platform/images/mobile/userImage.jpg) no-repeat;
+	background:url(../images/mobile/userImage.jpg) no-repeat;
 	float: right;
 	width: 23px;
 	height: 20px;
@@ -25,22 +25,22 @@
 
 .x-tab .x-button-icon.complete,
 .x-button .x-button-icon.x-icon-mask.complete {
-	background:url(../static/platform/images/button/run.png) no-repeat;
+	background:url(../images/button/run.png) no-repeat;
 }
 
 .x-tab .x-button-icon.end,
 .x-button .x-button-icon.x-icon-mask.end {
-	background:url(../static/platform/images/button/run.png) no-repeat;
+	background:url(../images/button/run.png) no-repeat;
 }
 
 .x-tab .x-button-icon.refuse,
 .x-button .x-button-icon.x-icon-mask.refuse {
-	background:url(../static/platform/images/button/refuse.gif) no-repeat;
+	background:url(../images/button/refuse.gif) no-repeat;
 }
 
 .x-tab .x-button-icon.giveup,
 .x-button .x-button-icon.x-icon-mask.giveup {
-	background:url(../static/platform/images/button/giveup.gif) no-repeat;
+	background:url(../images/button/giveup.gif) no-repeat;
 }
 
 .touchgridpanel{

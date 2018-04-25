@@ -12,7 +12,7 @@
 	<script type="text/javascript" src="${ctx }/static/platform/js/lg/plugins/ligerWindow.js" ></script>
 	<script type="text/javascript" src="${ctx }/static/platform/js/hotent/platform/system/IconDialog.js"></script>
 	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/Share.js"></script>
-	<script type="text/javascript" src="${ctx}/servlet/ValidJs?form=resources"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/servlet/ValidJs?form=resources"></script>
 	<script type="text/javascript">
 		var i=100;
 		var ctx="${ctx}";

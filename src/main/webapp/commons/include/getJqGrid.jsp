@@ -13,7 +13,7 @@
 <f:link href="jqGrid/ui.jqgrid.css" ></f:link>
 <f:js pre="static/platform/js/lang/common" ></f:js>
 <f:js pre="static/platform/js/lang/js" ></f:js>
-<script type="text/javascript" src="${ctx}/js/dynamic.jsp"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/dynamic.jsp"></script>
 <script type="text/javascript" src="${ctx}/static/platform/js/jquery/jquery.js"></script>
 <script type="text/javascript" src="${ctx}/static/platform/js/jqGrid/i18n/grid.locale-cn.js"></script>
 <script type="text/javascript" src="${ctx}/static/platform/js/jqGrid/jquery.jqGrid.src.js"></script>

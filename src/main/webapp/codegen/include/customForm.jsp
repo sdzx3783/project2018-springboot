@@ -12,7 +12,7 @@
 <f:link href="form.css" ></f:link>
 <f:js pre="static/platform/js/lang/common" ></f:js>
 <f:js pre="static/platform/js/lang/js" ></f:js>
-<script type="text/javascript" src="${ctx}/js/dynamic.jsp"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/dynamic.jsp"></script>
 <script type="text/javascript" src="${ctx}/static/platform/js/jquery/jquery.js"></script>
 <script type="text/javascript" src="${ctx}/static/platform/js/jquery/jquery.form.js"></script>
 <script type="text/javascript" src="${ctx}/static/platform/js/util/util.js"></script>
@@ -66,13 +66,13 @@
 <script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/RunAliasScript.js"></script>
 <script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/form/OfficeControl.js"></script>
 
-<script type="text/javascript" src="${ctx}/codegen/js/PictureShowPlugin.js"></script>
-<script type="text/javascript" src="${ctx}/codegen/js/NtkoWebSign.js"></script>
-<script type="text/javascript" src="${ctx}/codegen/js/WebSignPlugin.js"></script>
-<script type="text/javascript" src="${ctx}/codegen/js/FormUtil.js"></script>
-<script type="text/javascript" src="${ctx}/codegen/js/CustomForm.js"></script>
-<script type="text/javascript" src="${ctx}/codegen/js/AttachMent.js"></script>
-<script type="text/javascript" src="${ctx}/codegen/js/FormInit.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/codegen/js/PictureShowPlugin.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/codegen/js/NtkoWebSign.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/codegen/js/WebSignPlugin.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/codegen/js/FormUtil.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/codegen/js/CustomForm.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/codegen/js/AttachMent.js"></script>
+<script type="text/javascript" src="${ctx}/static/platform/codegen/js/FormInit.js"></script>
 
 <link href="${ctx}/static/platform/js/jquery/plugins/attach.css" rel="stylesheet" />
 <script type="text/javascript" src="${ctx}/static/platform/js/jquery/plugins/jquery.attach.js" ></script>

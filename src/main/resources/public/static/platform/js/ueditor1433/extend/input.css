@@ -37,7 +37,7 @@
 }
 
 .button-td{
-	background: url("../../themes/default/static/platform/images/icons-all.gif") no-repeat
+	background: url("../../themes/default/images/icons-all.gif") no-repeat
 		scroll 0 0 transparent;
 	display: inline-block !important;
 	position: relative;

@@ -7,7 +7,7 @@
 <head>
 	<title>添加 系统日志</title>
 	<%@include file="/commons/include/form.jsp" %>
-	<script type="text/javascript" src="${ctx}/servlet/ValidJs?form=sysAudit"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/servlet/ValidJs?form=sysAudit"></script>
 	<script type="text/javascript">
 		$(function() {
 			function showRequest(formData, jqForm, options) { 

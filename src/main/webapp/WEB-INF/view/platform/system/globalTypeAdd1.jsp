@@ -10,7 +10,7 @@
 	<f:link href="tree/zTreeStyle.css"></f:link>
 	<script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/ligerComboBox.js"></script>
 	<script type="text/javascript" src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>
-	<script type="text/javascript" src="${ctx}/servlet/ValidJs?form=globalType"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/servlet/ValidJs?form=globalType"></script>
 	<script src="${ctx}/static/platform/js/jquery/plugins/jquery.selectInput.js" type="text/javascript"></script>
 	<script src="${ctx}/static/platform/js/jquery/plugins/jquery.bgiframe.js" type="text/javascript"></script>
 	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/Share.js"></script>

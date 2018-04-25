@@ -19,7 +19,7 @@
 	<f:js pre="static/platform/js/lang/common" ></f:js>
 	<f:js pre="static/platform/js/lang/js" ></f:js>
     <f:link href="greenMain.css"></f:link>
-	<script type="text/javascript" src="${ctx}/js/dynamic.jsp"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/dynamic.jsp"></script>
    	<script type="text/javascript" src="${ctx}/static/platform/js/jquery/jquery.js"></script>
    	<script type="text/javascript" src="${ctx}/static/platform/js/util/util.js"></script>
 	<script type="text/javascript" src="${ctx}/static/platform/js/util/form.js"></script>

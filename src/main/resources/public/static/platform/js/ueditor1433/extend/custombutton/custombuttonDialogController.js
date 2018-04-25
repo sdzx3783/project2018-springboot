@@ -6,7 +6,7 @@ app.controller("ctrl", [ '$scope', 'BaseService', 'CommonListService', 'ArrayToo
 	$scope.comment = "选择";
 
 	$scope.openIconDialog = function() {
-		var url= __ctx+"/js/ueditor1433/extend/custombutton/icons.jsp";
+		var url= __ctx+"/static/platform/js/ueditor1433/extend/custombutton/icons.jsp";
 		DialogUtil.open({
 			height : "380",
 			width : "400",

@@ -125,7 +125,7 @@ public class SysUserController extends BaseController {
 	@Resource
 	GroovyScriptEngine groovyScriptEngine;
 
-	private final String defaultUserImage = "/commons/image/default_image_male.jpg";
+	private final String defaultUserImage = "/static/platform/commons/image/default_image_male.jpg";
 
 	/**
 	 * 取得用户表分页列表

@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="${ctx}/static/platform/styles/common/css/fullcalendar/fullcalendar.min.css"></link>
 	
 	<f:link href="hotent/index.css"></f:link>
-	<script type="text/javascript" src="${ctx}/js/dynamic.jsp"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/js/dynamic.jsp"></script>
 		<script type="text/javascript" src="${ctx}/static/platform/js/fullcalendar/moment.min.js"></script>
 	<!--[if !IE]> -->
 	<script type="text/javascript">

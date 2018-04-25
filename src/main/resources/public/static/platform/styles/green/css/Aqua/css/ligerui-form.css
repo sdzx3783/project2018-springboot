@@ -96,8 +96,8 @@
 * ------------- */
 .l-spinner-up .l-spinner-icon,.l-spinner-down .l-spinner-icon{overflow: hidden;position: absolute;left: 0px;top: 50%;margin-top: -3px;width: 100%;height: 6px;background: no-repeat center top;}
 .l-spinner-down-over,.l-spinner-up-over{background:#fedc75 url('../images/controls/bg-trigger-over.gif') repeat-x left;}
-.l-spinner-up .l-spinner-icon{background-image: url(../static/platform/images/icon/icon-up.gif);}
-.l-spinner-down .l-spinner-icon{background-image: url(../static/platform/images/icon/icon-down.gif);}
+.l-spinner-up .l-spinner-icon{background-image: url(../images/icon/icon-up.gif);}
+.l-spinner-down .l-spinner-icon{background-image: url(../images/icon/icon-down.gif);}
 .l-spinner-up,.l-spinner-down {width: 100%;height: 50%;overflow: hidden;display: block;position: absolute;left: 0px;top: 0px;}
 .l-spinner-down{top: 50%;}
 .l-spinner-split{overflow: hidden;width: 13px;height: 1px;position: absolute;left: 1px;top: 50%;z-index: 10;background: #B5B8C8;   }
@@ -226,7 +226,7 @@ div.l-disabled a.l-radio-checked
 }
 .l-box-dateeditor-header
 {
-    width:100%; height: 23px; background:url(../static/platform/images/controls/dateeditor-header-bg.gif) repeat-x -2px center; text-align:center;
+    width:100%; height: 23px; background:url(../images/controls/dateeditor-header-bg.gif) repeat-x -2px center; text-align:center;
     position:relative; text-align:center;
 }
 .l-box-dateeditor-header-text
@@ -242,21 +242,21 @@ div.l-disabled a.l-radio-checked
 }
 .l-box-dateeditor-header-btn-over
 {
-     background: url(../static/platform/images/icon/bar-button-over.gif) no-repeat center;
+     background: url(../images/icon/bar-button-over.gif) no-repeat center;
 }
 .l-box-dateeditor-header-btn span
 {
      width:20px; height:20px; display:block; position:absolute; top:2px; left:2px;
 }
 .l-box-dateeditor-header-prevmonth{left:24px; }
-.l-box-dateeditor-header-prevmonth span{background: url(../static/platform/images/dateeditor/icon-prev.gif) no-repeat center;}
+.l-box-dateeditor-header-prevmonth span{background: url(../images/dateeditor/icon-prev.gif) no-repeat center;}
 .l-box-dateeditor-header-nextmonth{right:24px;}
-.l-box-dateeditor-header-nextmonth span{background: url(../static/platform/images/dateeditor/icon-next.gif) no-repeat center;}
+.l-box-dateeditor-header-nextmonth span{background: url(../images/dateeditor/icon-next.gif) no-repeat center;}
 
 .l-box-dateeditor-header-prevyear{left:4px; }
-.l-box-dateeditor-header-prevyear span{background: url(../static/platform/images/dateeditor/icon-first.gif) no-repeat center;}
+.l-box-dateeditor-header-prevyear span{background: url(../images/dateeditor/icon-first.gif) no-repeat center;}
 .l-box-dateeditor-header-nextyear{ right:4px;}
-.l-box-dateeditor-header-nextyear span{background: url(../static/platform/images/dateeditor/icon-last.gif) no-repeat center;}
+.l-box-dateeditor-header-nextyear span{background: url(../images/dateeditor/icon-last.gif) no-repeat center;}
 
 .l-box-dateeditor-body{border:1px solid #A3C0E8; border-left:none; border-right:none; text-align:center; position:relative; }
 .l-box-dateeditor-body table{ margin:0 auto;}
@@ -288,7 +288,7 @@ div.l-disabled a.l-radio-checked
 .l-box-dateeditor-toolbar
 {
     padding-left:10px;
-    width:100%; height: 28px; background:url(../static/platform/images/controls/dateeditor-bar-bg.gif) repeat-x 1px center;
+    width:100%; height: 28px; background:url(../images/controls/dateeditor-bar-bg.gif) repeat-x 1px center;
     text-align:right; position:relative;
 }
 .l-box-dateeditor-time{ width:30px; display:none; height:18px; margin-top:4px; float:left;color:#333;}

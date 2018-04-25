@@ -37,7 +37,7 @@ div.panel-body{
 }
 
 .date,.datetime{
-	background: url(../static/platform/images/datePicker.gif) no-repeat scroll right center #FFFFFF;
+	background: url(../images/datePicker.gif) no-repeat scroll right center #FFFFFF;
     border: 1px solid #999999;
     /*height: 20px;*/
 }
@@ -209,7 +209,7 @@ ul.row{
 }
 
 div.header{
-	background: url(../static/platform/images/content_bg_sort.jpg) repeat-x;
+	background: url(../images/content_bg_sort.jpg) repeat-x;
 	height: 30px;
 	line-height:30px;
 	width: 100%;
@@ -280,13 +280,13 @@ th.sortable a {
 }
 
 th.order1 a {
-	background-image: url(../static/platform/images/displaytag/icon-sort-desc.gif);
+	background-image: url(../images/displaytag/icon-sort-desc.gif);
 	background-repeat: no-repeat;
 	background-position: 80% 0%;
 }
 
 th.order2 a {
-	background-image: url(../static/platform/images/displaytag/icon-sort-asc.gif);
+	background-image: url(../images/displaytag/icon-sort-asc.gif);
 	background-repeat: no-repeat;
 	background-position: 80% 0%;
 }
@@ -315,7 +315,7 @@ th.order2 a {
 }
 
 .table-grid .over {
-	/*background: url(../static/platform/images/content_bg_hover.jpg);*/
+	/*background: url(../images/content_bg_hover.jpg);*/
 	background: #fdfdaf;
 }
 
@@ -353,27 +353,27 @@ th.order2 a {
 }
 
 .area-export .exportlinks .excel {
-	background-image: url(../static/platform/images/displaytag/ico_file_excel.png);
+	background-image: url(../images/displaytag/ico_file_excel.png);
 	background-repeat: no-repeat;
 }
 
 .area-export .exportlinks .csv {
-	background-image: url(../static/platform/images/displaytag/ico_file_csv.png);
+	background-image: url(../images/displaytag/ico_file_csv.png);
 	background-repeat: no-repeat;
 }
 
 .area-export .exportlinks .xml {
-	background-image: url(../static/platform/images/displaytag/ico_file_xml.png);
+	background-image: url(../images/displaytag/ico_file_xml.png);
 	background-repeat: no-repeat;
 }
 
 .area-export .exportlinks .pdf {
-	background-image: url(../static/platform/images/displaytag/ico_file_pdf.png);
+	background-image: url(../images/displaytag/ico_file_pdf.png);
 	background-repeat: no-repeat;
 }
 
 .area-export .exportlinks .rtf {
-	background-image: url(../static/platform/images/displaytag/ico_file_rtf.png);
+	background-image: url(../images/displaytag/ico_file_rtf.png);
 	background-repeat: no-repeat;
 }
 
@@ -381,7 +381,7 @@ th.order2 a {
    margin-bottom: 20px;
    border:4px solid #d2d2d2;
    border-top:none;
-	/*background: url(../static/platform/images/tool_bg.jpg) repeat-x;*/
+	/*background: url(../images/tool_bg.jpg) repeat-x;*/
 }
 .l-bar-group-right {
     float: right;
@@ -397,7 +397,7 @@ th.order2 a {
 	height: 21px;
 	font-size: 15px;
 	font-family: Verdana, Geneva, sans-serif;
-	background: url(../static/platform/images/trun_button2.jpg) no-repeat 0 1px;
+	background: url(../images/trun_button2.jpg) no-repeat 0 1px;
 	border: none;
 	cursor: pointer;
 }
@@ -409,7 +409,7 @@ th.order2 a {
 
 
 label.error {
-	background: url(../static/platform/images/valid/unchecked.gif) no-repeat 0px 0px;
+	background: url(../images/valid/unchecked.gif) no-repeat 0px 0px;
 	margin-left: 16px;
 	padding-left: 16px;
 	padding-bottom: 2px;
@@ -426,7 +426,7 @@ label.initerror {
 }
 
 label.checked {
-	background: url(../static/platform/images/valid/checked.gif) no-repeat 0px 0px;
+	background: url(../images/valid/checked.gif) no-repeat 0px 0px;
 }
 
 
@@ -689,21 +689,21 @@ a.link.stop,.panel-toolbar a.link.stop span {
 
 
 .link-sortUp {
-	background: url(../static/platform/images/menu/arrow-up.png) no-repeat !important;
+	background: url(../images/menu/arrow-up.png) no-repeat !important;
 	text-decoration: none;
 }
 
 .link-sortDown {
-	background: url(../static/platform/images/menu/arrow-down.png) no-repeat !important;
+	background: url(../images/menu/arrow-down.png) no-repeat !important;
 	text-decoration: none;
 }
 
 .link-sortTop {
-	background: url(../static/platform/images/menu/sort_top.png) no-repeat !important;
+	background: url(../images/menu/sort_top.png) no-repeat !important;
 }
 
 .link-sortBottom {
-	background: url(../static/platform/images/menu/sort_bottom.png) no-repeat !important;
+	background: url(../images/menu/sort_bottom.png) no-repeat !important;
 }
 
 /*==================end of link button===============================*/
@@ -720,7 +720,7 @@ a.button {
 	text-decoration:none;
 	cursor:pointer;height:15px; 
 	line-height: 15px; 
-	background:url(../static/platform/images/button/button.gif) no-repeat left 0px;
+	background:url(../images/button/button.gif) no-repeat left 0px;
 	color:#000;  
 	padding:5px 0px 5px 10px; 
 	font-size: 12px;
@@ -732,7 +732,7 @@ a.button span{
 	height:15px; 
 	line-height: 15px;
 	white-space:nowrap; 
-	background:url(../static/platform/images/button/button.gif) no-repeat right  0px;
+	background:url(../images/button/button.gif) no-repeat right  0px;
 	color:#000; 
 	padding:5px 10px 5px 3px; 
 	font-size: 12px;
@@ -750,10 +750,10 @@ a.button span.icon{
 }
 
 a.button:hover {
-	background:url(../static/platform/images/button/button_over.gif) no-repeat left 0px;
+	background:url(../images/button/button_over.gif) no-repeat left 0px;
 }
 a.button:hover span{
-	background:url(../static/platform/images/button/button_over.gif) no-repeat right 0px;
+	background:url(../images/button/button_over.gif) no-repeat right 0px;
 	margin: -5px -2px 0px 0px;
 }
 
@@ -769,24 +769,24 @@ a.button:hover span.icon{
 	
 */
 a.button span.icon.save{
-	background: url(../static/platform/images/icons/icons_save.png) no-repeat -2px -2px;
+	background: url(../images/icons/icons_save.png) no-repeat -2px -2px;
 }
 
 a.button span.icon.ok{
-	background: url(../static/platform/images/icon/ok.gif) no-repeat 0px 3px;
+	background: url(../images/icon/ok.gif) no-repeat 0px 3px;
 }
 
 a.button span.icon.upload{
-	background: url(../static/platform/images/button/upload.png) no-repeat 0px 3px;
+	background: url(../images/button/upload.png) no-repeat 0px 3px;
 }
 
 
 a.button span.icon.cancel{
-	background: url(../static/platform/images/icon/cancel.gif) no-repeat 0px 3px;
+	background: url(../images/icon/cancel.gif) no-repeat 0px 3px;
 }
 
 a.button span.icon.valid{
-	background: url(../static/platform/images/icon/valid.gif) no-repeat 0px 3px;
+	background: url(../images/icon/valid.gif) no-repeat 0px 3px;
 }
 
 
@@ -795,7 +795,7 @@ a.button span.icon.valid{
 	
 */
 a.tipinfo{
-	background:url(../static/platform/images/icon/help.gif) 0px -2px no-repeat;
+	background:url(../images/icon/help.gif) 0px -2px no-repeat;
 	padding-left: 20px;
 	line-height: 20px;
 	text-decoration: none;
@@ -843,7 +843,7 @@ a.tipinfo:hover span{
 }
 /* link search icon widthout event bind */
 a.link.search2{
-	background:url(../static/platform/images/icons/icons_search.png) 0px 1px no-repeat;
+	background:url(../images/icons/icons_search.png) 0px 1px no-repeat;
 }
 
 

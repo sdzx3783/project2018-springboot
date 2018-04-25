@@ -9,7 +9,7 @@
 <%@include file="/codegen/include/customForm.jsp" %>
 <script src="${ctx}/static/platform/js/hotent/platform/form/AttachMent.js"></script>
 <%@include file="/commons/include/ueditor.jsp" %>
-<script src="${ctx}/servlet/ValidJs?form=sysUser"></script>
+<script src="${ctx}/static/platform/servlet/ValidJs?form=sysUser"></script>
 <f:link href="tree/zTreeStyle.css"></f:link>
 <link href="${ctx}/static/platform/styles/default/css/form.css" rel="stylesheet" />
 <script src="${ctx}/static/platform/js/tree/jquery.ztree.js"></script>

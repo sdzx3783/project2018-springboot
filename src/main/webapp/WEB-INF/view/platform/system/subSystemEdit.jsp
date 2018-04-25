@@ -8,7 +8,7 @@
 <title>修改子系统管理</title>
 <%@include file="/commons/include/form.jsp"%>
 <script type="text/javascript"
-	src="${ctx}/servlet/ValidJs?form=subSystem"></script>
+	src="${ctx}/static/platform/servlet/ValidJs?form=subSystem"></script>
 <script type="text/javascript"
 	src="${ctx }/static/platform/js/lg/plugins/ligerWindow.js"></script>
 <script type="text/javascript"

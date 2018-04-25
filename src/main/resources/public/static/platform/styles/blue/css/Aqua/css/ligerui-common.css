@@ -45,30 +45,30 @@ body{font-family: "微软雅黑", "宋体", Arial, sans-serif; font-size: 12px; 
 {
     display:block;border: solid 1px #A3C0E8;
     width:50px ; height:20px; overflow:hidden; line-height:20px;
-    background: #E0EDFF url(../static/platform/images/controls/button-bg.gif) repeat-x center;
+    background: #E0EDFF url(../images/controls/button-bg.gif) repeat-x center;
      text-align:center;color: #2C4D79;  text-decoration:none; cursor:pointer;
 }
 .l-button-over,.l-button:hover
-{background: #FFBE76 url(../static/platform/images/controls/button-bg-over.gif) repeat-x center; border-color:#D6A886;
+{background: #FFBE76 url(../images/controls/button-bg-over.gif) repeat-x center; border-color:#D6A886;
 }
 .l-btn
 {
     display:block; 
      height:21px; overflow:hidden; line-height:22px; position:relative; 
      padding-left:15px; padding-right:15px; cursor:pointer;
-    background: #E0EDFF url(../static/platform/images/controls/btn.gif) repeat-x;
+    background: #E0EDFF url(../images/controls/btn.gif) repeat-x;
      text-align:center;color: #2C4D79;  text-decoration:none; cursor:pointer;
 }
 /* 按钮左边部位 */
 .l-btn-l
 {
     position:absolute; width:3px; left:0px; top:0px;height:21px;
-    background: #E0EDFF url(../static/platform/images/controls/btn-l.gif) no-repeat;
+    background: #E0EDFF url(../images/controls/btn-l.gif) no-repeat;
 }
 /* 按钮右边部位 */
 .l-btn-r
 {position:absolute; width:3px; right:0px; top:0px;height:21px;
-    background: #E0EDFF url(../static/platform/images/controls/btn-r.gif) no-repeat;
+    background: #E0EDFF url(../images/controls/btn-r.gif) no-repeat;
 }
 
 

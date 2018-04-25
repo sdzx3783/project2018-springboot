@@ -8,7 +8,7 @@
 <head>
 	<title>编辑 系统分类键定义</title>
 	<%@include file="/commons/include/form.jsp" %>
-	<script type="text/javascript" src="${ctx}/servlet/ValidJs?form=sysTypeKey"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/servlet/ValidJs?form=sysTypeKey"></script>
 	<script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/Share.js"></script>
 	<script type="text/javascript">
 		$(function() {

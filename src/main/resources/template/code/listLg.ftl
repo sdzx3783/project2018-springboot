@@ -20,7 +20,7 @@ java.util.Date
 <html>
 <head>
 <title>${comment }管理</title>
-<%@include file="/js/lg/getLg.jsp"%>
+<%@include file="/static/platform/js/lg/getLg.jsp"%>
 <script type="text/javascript">
 $(function(){
 	//动态添加 columns

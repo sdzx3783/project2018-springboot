@@ -11,7 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-@WebServlet(name="ValidJs",urlPatterns={"/servlet/ValidJs"})
+@WebServlet(name="ValidJs",urlPatterns={"/static/platform/servlet/ValidJs"})
 public class ValidJs extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

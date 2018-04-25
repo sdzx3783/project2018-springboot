@@ -4,7 +4,7 @@
 <head>
     <title>添加分类</title>
     <%@include file="/commons/include/form.jsp" %>
-    <script type="text/javascript" src="${ctx}/servlet/ValidJs?form=globalType"></script>
+    <script type="text/javascript" src="${ctx}/static/platform/servlet/ValidJs?form=globalType"></script>
     <script type="text/javascript" src="${ctx}/static/platform/js/hotent/platform/system/Share.js"></script>
     <script type="text/javascript">
         var isAdd=${isAdd};

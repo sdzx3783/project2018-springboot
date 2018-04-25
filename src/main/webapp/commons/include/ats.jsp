@@ -9,7 +9,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <f:link href="Aqua/css/ligerui-all.css"></f:link>
 <f:link href="hotent/ats.css"></f:link>
-<script type="text/javascript" src="${ctx}/js/dynamic.jsp"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/dynamic.jsp"></script>
 <script type="text/javascript" src="${ctx}/static/platform/js/jquery/jquery.js"></script>
 <f:js pre="static/platform/js/lang/common" ></f:js>
 <f:js pre="static/platform/js/lang/js" ></f:js>

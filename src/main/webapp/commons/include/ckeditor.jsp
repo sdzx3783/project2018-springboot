@@ -4,7 +4,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var="ctx" value="${pageContext.request.contextPath}" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<script type="text/javascript" src="${ctx}/js/dynamic.jsp"></script>
+<script type="text/javascript" src="${ctx}/static/platform/js/dynamic.jsp"></script>
 <script type="text/javascript" src="${ctx}/static/platform/js/jquery/jquery.js"></script>
 <script type="text/javascript" src="${ctx}/static/platform/js/lg/ligerui.min.js"></script>
 <script type="text/javascript" src="${ctx}/static/platform/js/ckeditor/ckeditor.js"></script>

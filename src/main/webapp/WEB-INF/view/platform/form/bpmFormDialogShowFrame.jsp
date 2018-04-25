@@ -20,7 +20,7 @@
     <f:link href="web.css" ></f:link>
     <%-- <link href="${ctx}/static/platform/js/lg/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css"  --%>
     <f:link href="Aqua/css/ligerui-all.css"></f:link>
-    <script type="text/javascript" src="${ctx}/js/dynamic.jsp"></script>
+    <script type="text/javascript" src="${ctx}/static/platform/js/dynamic.jsp"></script>
     <script type="text/javascript" src="${ctx}/static/platform/js/jquery/jquery.js"></script>
     <script type="text/javascript" src="${ctx}/static/platform/js/util/util.js"></script>
     <script type="text/javascript" src="${ctx}/static/platform/js/hotent/displaytag.js" ></script>

@@ -3,7 +3,7 @@ UE.registerUI('attachement', function(editor, uiName) {
 	// 创建dialog
 	var dialog = new UE.ui.Dialog({
 		// 指定弹出层中页面的路径，这里只能支持页面,因为跟addCustomizeDialog.js相同目录，所以无需加路径
-		iframeUrl : __ctx + '/js/ueditor1433/extend/attachement/attachementDialog.jsp',
+		iframeUrl : __ctx + '/static/platform/js/ueditor1433/extend/attachement/attachementDialog.jsp',
 		// 需要指定当前的编辑器实例
 		editor : editor,
 		// 指定dialog的名字

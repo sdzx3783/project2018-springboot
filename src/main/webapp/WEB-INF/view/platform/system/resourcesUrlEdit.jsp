@@ -7,7 +7,7 @@
 	<%@include file="/commons/include/form.jsp" %>
 	<script type="text/javascript"	src="${ctx }/static/platform/js/hotent/displaytag.js"></script>
 	<script type="text/javascript"	src="${ctx }/static/platform/js/lg/plugins/ligerComboBox.js"></script>
-	<script type="text/javascript" src="${ctx}/servlet/ValidJs?form=resourcesUrl"></script>
+	<script type="text/javascript" src="${ctx}/static/platform/servlet/ValidJs?form=resourcesUrl"></script>
 	<script type="text/javascript">
 		$(function() {
 			function showRequest(formData, jqForm, options) { 

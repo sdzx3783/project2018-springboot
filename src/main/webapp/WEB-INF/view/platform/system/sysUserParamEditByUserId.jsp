@@ -19,7 +19,7 @@
 	<script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/htCatCombo.js"></script>
 	<script type="text/javascript" src="${ctx}/static/platform/js/lg/plugins/htDicCombo.js"></script>
 <script type="text/javascript"
-	src="${ctx}/servlet/ValidJs?form=sysUserParam"></script>
+	src="${ctx}/static/platform/servlet/ValidJs?form=sysUserParam"></script>
 
 <style type="text/css">
 .error {
