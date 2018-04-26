@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
 import com.hotent.core.api.util.ContextUtil;
@@ -26,6 +28,7 @@ import com.hotent.platform.model.system.SysUser;
 import com.makshi.framework.mainframe.config.properties.SecurityProperties;
 
 public class AopFilter implements Filter {
+	private static final Logger log=LoggerFactory.getLogger(AopFilter.class);
 	private static String token_key;
 	private static AuthenticationFailHandler failAuthenticateHandler;
 	private static SecurityMetadataSource securityMetadataSource;
@@ -67,12 +70,14 @@ public class AopFilter implements Filter {
 	}
 
 	private boolean authentication(ServletRequest request) {
+		String requestURI = ((HttpServletRequest)request).getRequestURI();
+		log.info("requestURI: "+requestURI+" token:"+request.getAttribute(token_key));
 		boolean isAuthenticationed=false;
 		Object attribute = request.getAttribute(token_key);
 		SysUserDao sysUserDao = AppUtil.getBean(SysUserDao.class);
 		if(attribute!=null){
 			String account=(String) attribute;
-			if(StringUtils.isNoneEmpty(account)){
+			if(StringUtils.isNotEmpty(account)){
 				SysUser byAccount = sysUserDao.getByAccount(account);
 				if(byAccount!=null){
 					ContextUtil.setCurrentUser(byAccount);
