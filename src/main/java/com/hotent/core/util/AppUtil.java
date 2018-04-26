@@ -11,6 +11,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.stereotype.Component;
+
+import com.hotent.core.web.filter.AopFilter;
 @Component
 public class AppUtil implements ApplicationContextAware {
 	
@@ -27,6 +29,7 @@ public class AppUtil implements ApplicationContextAware {
 
 	public void setApplicationContext(ApplicationContext contex) throws BeansException {
 		applicationContext = contex;
+		AopFilter.init();
 	}
 
 	public static ApplicationContext getContext() {

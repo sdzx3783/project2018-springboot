@@ -1,0 +1,16 @@
+package com.hotent.core.web.security;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.hotent.core.web.exception.AuthenticationException;
+
+
+public interface AuthenticationFailHandler {
+	void onAuthenticationFailure(HttpServletRequest request,
+			HttpServletResponse response, AuthenticationException exception)
+			throws IOException, ServletException;
+}

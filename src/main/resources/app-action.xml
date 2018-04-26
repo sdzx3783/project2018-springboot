@@ -55,5 +55,13 @@
         </property>
     </bean>
 	
-	
+	<bean id="securityMetadataSource" class="com.hotent.core.web.security.SecurityMetadataSource">
+		<property name="anonymousUrls">
+			<set>
+				<value>/platform/login</value>
+				<value>/platform/logout</value>
+				<value>/login.jsp</value>
+			</set>
+		</property>
+	</bean>
 </beans>

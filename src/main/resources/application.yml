@@ -46,3 +46,7 @@ spring:
       enabled: true
   profiles:
     active: ${RUN_ENV}
+security:
+  defaultFailureUrl: /platform/login?error=true
+  token_key: x-auth-account
+  staticResPattern: /static/platform/**,/404*
