@@ -15,6 +15,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
 import com.hotent.core.api.util.ContextUtil;
@@ -42,21 +44,22 @@ public class AopFilter implements Filter {
 		try {
 			
 			requestURI=((HttpServletRequest) request).getRequestURI();
-			if(!securityMetadataSource.isanonymousUrl(requestURI)
-					&& !securityMetadataSource.isstaticRes(requestURI)
-					&& !authentication(request)){
-				throw new AuthenticationException("用户授权失败!");
-			}
-			ContextUtil.clearAll();
+//			if(!securityMetadataSource.isanonymousUrl(requestURI)
+//					&& !securityMetadataSource.isstaticRes(requestURI)
+//					&& !authentication(request)){
+//				throw new AuthenticationException("用户授权失败!");
+//			}
+//			ContextUtil.clearAll();
 			RequestContext.setHttpServletRequest((HttpServletRequest) request);
 			RequestContext.setHttpServletResponse((HttpServletResponse) response);
-			SessionLocaleResolver sessionResolver = (SessionLocaleResolver) AppUtil
-					.getBean(SessionLocaleResolver.class);
-			Locale local = sessionResolver.resolveLocale((HttpServletRequest) request);
-			ContextUtil.setLocale(local);
+//			SessionLocaleResolver sessionResolver = (SessionLocaleResolver) AppUtil
+//					.getBean(SessionLocaleResolver.class);
+//			Locale local = sessionResolver.resolveLocale((HttpServletRequest) request);
+//			ContextUtil.setLocale(local);
+			authentication(request);
 			chain.doFilter(request, response);
-		} catch (AuthenticationException e) {
-			failAuthenticateHandler.onAuthenticationFailure((HttpServletRequest)request, (HttpServletResponse) response, e);
+//		} catch (AuthenticationException e) {
+//			failAuthenticateHandler.onAuthenticationFailure((HttpServletRequest)request, (HttpServletResponse) response, e);
 		} finally {
 			ContextUtil.clearAll();
 		}
@@ -73,10 +76,13 @@ public class AopFilter implements Filter {
 		String requestURI = ((HttpServletRequest)request).getRequestURI();
 		log.info("requestURI: "+requestURI+" token:"+request.getAttribute(token_key));
 		boolean isAuthenticationed=false;
-		Object attribute = request.getAttribute(token_key);
+
+    	String account = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest().getHeader("x-auth-account");
+    	
+//		Object attribute = request.getAttribute(token_key);
 		SysUserDao sysUserDao = AppUtil.getBean(SysUserDao.class);
-		if(attribute!=null){
-			String account=(String) attribute;
+//		if(attribute!=null){
+//			String account=(String) attribute;
 			if(StringUtils.isNotEmpty(account)){
 				SysUser byAccount = sysUserDao.getByAccount(account);
 				if(byAccount!=null){
@@ -84,7 +90,7 @@ public class AopFilter implements Filter {
 					isAuthenticationed=true;
 				}
 			}
-		}
+//		}
 		return isAuthenticationed;
 	}
 
