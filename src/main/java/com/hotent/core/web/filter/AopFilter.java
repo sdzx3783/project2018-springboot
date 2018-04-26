@@ -44,22 +44,21 @@ public class AopFilter implements Filter {
 		try {
 			
 			requestURI=((HttpServletRequest) request).getRequestURI();
-//			if(!securityMetadataSource.isanonymousUrl(requestURI)
-//					&& !securityMetadataSource.isstaticRes(requestURI)
-//					&& !authentication(request)){
-//				throw new AuthenticationException("用户授权失败!");
-//			}
-//			ContextUtil.clearAll();
+			if(!securityMetadataSource.isanonymousUrl(requestURI)
+					&& !securityMetadataSource.isstaticRes(requestURI)
+					&& !authentication(request)){
+				throw new AuthenticationException("用户授权失败!");
+			}
+			ContextUtil.clearAll();
 			RequestContext.setHttpServletRequest((HttpServletRequest) request);
 			RequestContext.setHttpServletResponse((HttpServletResponse) response);
-//			SessionLocaleResolver sessionResolver = (SessionLocaleResolver) AppUtil
-//					.getBean(SessionLocaleResolver.class);
-//			Locale local = sessionResolver.resolveLocale((HttpServletRequest) request);
-//			ContextUtil.setLocale(local);
-			authentication(request);
+			SessionLocaleResolver sessionResolver = (SessionLocaleResolver) AppUtil
+					.getBean(SessionLocaleResolver.class);
+			Locale local = sessionResolver.resolveLocale((HttpServletRequest) request);
+			ContextUtil.setLocale(local);
 			chain.doFilter(request, response);
-//		} catch (AuthenticationException e) {
-//			failAuthenticateHandler.onAuthenticationFailure((HttpServletRequest)request, (HttpServletResponse) response, e);
+		} catch (AuthenticationException e) {
+			failAuthenticateHandler.onAuthenticationFailure((HttpServletRequest)request, (HttpServletResponse) response, e);
 		} finally {
 			ContextUtil.clearAll();
 		}
@@ -74,23 +73,19 @@ public class AopFilter implements Filter {
 
 	private boolean authentication(ServletRequest request) {
 		String requestURI = ((HttpServletRequest)request).getRequestURI();
-		log.info("requestURI: "+requestURI+" token:"+request.getAttribute(token_key));
 		boolean isAuthenticationed=false;
 
-    	String account = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest().getHeader("x-auth-account");
+    	String account = ((HttpServletRequest)request).getHeader(token_key);
+		log.info("requestURI: "+requestURI+" token:"+account);
     	
-//		Object attribute = request.getAttribute(token_key);
 		SysUserDao sysUserDao = AppUtil.getBean(SysUserDao.class);
-//		if(attribute!=null){
-//			String account=(String) attribute;
-			if(StringUtils.isNotEmpty(account)){
-				SysUser byAccount = sysUserDao.getByAccount(account);
-				if(byAccount!=null){
-					ContextUtil.setCurrentUser(byAccount);
-					isAuthenticationed=true;
-				}
+		if(StringUtils.isNotEmpty(account)){
+			SysUser byAccount = sysUserDao.getByAccount(account);
+			if(byAccount!=null){
+				ContextUtil.setCurrentUser(byAccount);
+				isAuthenticationed=true;
 			}
-//		}
+		}
 		return isAuthenticationed;
 	}
 
