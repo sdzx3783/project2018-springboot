@@ -10,6 +10,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -21,6 +22,7 @@ import com.hotent.core.api.util.PropertyUtil;
 import com.hotent.core.engine.FreemarkEngine;
 import com.hotent.core.engine.GroovyScriptEngine;
 import com.hotent.core.util.AppUtil;
+import com.hotent.core.util.ResourceUtil;
 import com.hotent.core.util.StringUtil;
 import com.hotent.core.web.controller.BaseController;
 import com.hotent.core.web.util.RequestUtil;
@@ -55,8 +57,6 @@ public class MainController extends BaseController {
 	private PositionService positionService;
 	@Resource
 	private SysRoleService sysRoleService;
-	
-	
 	
 	
 	/**
@@ -127,8 +127,12 @@ public class MainController extends BaseController {
 			
 			currentSystem.setLogo(logo);
 		}
-		return this.getView("console",mainViewName)
-			.addObject("skinStyle",skinStyle)
+		String contextPath = request.getContextPath();
+		String appName = PropertyUtil.getByAlias("appName");
+		ModelAndView mv=new ModelAndView();
+		mv.setViewName("console/main.html");
+		String text = ResourceUtil.getText("main.default.title", null, ContextUtil.getLocale());
+		return mv.addObject("skinStyle",skinStyle)
 			.addObject("currentSystem", currentSystem)
 			.addObject("currentSystemId", currentSystem == null?null:currentSystem.getSystemId())
 			.addObject("subSystemList",subSystemList)
@@ -137,7 +141,12 @@ public class MainController extends BaseController {
 			.addObject("sysOrgs",sysOrgs)
 			.addObject("positions",positions)
 			.addObject("curSysOrg",curSysOrg)
-			.addObject("curPosition",curPosition);
+			.addObject("curPosition",curPosition)
+			.addObject("appName", appName)
+			.addObject("ctx", contextPath)
+			.addObject("fullname", curUser.getFullname())
+			.addObject("account",curUser.getAccount())
+			.addObject("maintitle", text);
 
 	}
 	

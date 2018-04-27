@@ -1,6 +1,9 @@
 package com.makshi.framework.mainframe.controller;
 
+import java.util.Map;
+
 import javax.annotation.Resource;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -15,7 +18,13 @@ public class LoginController {
 	private ReloadableResourceBundleMessageSource  messageSource;
 	
     @RequestMapping("/login")
-    public String demo(HttpServletRequest request,HttpServletResponse response){
+    public String demo(HttpServletRequest request,HttpServletResponse response, Map<String, Object> map){
+    	Cookie[] cookies = request.getCookies();
+    	Cookie cookie = new Cookie("origSwitch", "mycookie");
+		cookie.setPath("/");
+		cookie.setMaxAge(-1);
+		response.addCookie(cookie);
+    	map.put("ctx", "/test");
         return "login.html";
     }
 }

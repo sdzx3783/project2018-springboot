@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"  th:inline="text">
-<head>
- 	<meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta name="renderer" content="webkit"/>
+<html xmlns:th="http://www.thymeleaf.org">
+<head  th:inline="text">
+ 	<meta charset="UTF-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"></meta>
+    <meta name="renderer" content="webkit"></meta>
     <title>[[${appName}]]</title>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" th:href="@{${ctx}+'/favicon.ico'}" type="image/x-icon" />
-    <link title="index" name="styleTag" rel="stylesheet" type="text/css" href="[[${ctx}]]/static/platform/styles/[[${skinStyle}]]/css/Aqua/css/ligerui-all.css">
-    <link title="index" name="styleTag" rel="stylesheet" type="text/css" href="[[${ctx}]]/static/platform/styles/[[${skinStyle}]]/css/index.css">
-    <link title="index" name="styleTag" rel="stylesheet" type="text/css" href="[[${ctx}]]/static/platform/styles/[[${skinStyle}]]/css/select.css">
-    <link title="index" name="styleTag" rel="stylesheet" type="text/css" href="[[${ctx}]]/static/platform/styles/[[${skinStyle}]]/css/tree/zTreeStyle.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"></meta>
+    <link rel="shortcut icon" th:href="@{${ctx}+'/favicon.ico'}" type="image/x-icon"/>
+    <link title="index"  name="styleTag" rel="stylesheet" type="text/css" th:href="@{${ctx}+'/static/platform/styles/'+${skinStyle}+'/css/Aqua/css/ligerui-all.css'}"/>
+    <link title="index" name="styleTag" rel="stylesheet" type="text/css" th:href="@{${ctx}+'/static/platform/styles/'+${skinStyle}+'/css/index.css'}"/>
+    <link title="index" name="styleTag" rel="stylesheet" type="text/css" th:href="@{${ctx}+'/static/platform/styles/'+${skinStyle}+'/css/select.css'}"/>
+    <link title="index" name="styleTag" rel="stylesheet" type="text/css" th:href="@{${ctx}+'/static/platform/styles/'+${skinStyle}+'/css/tree/zTreeStyle.css'}"/>
     <script type="text/javascript" th:src="@{${ctx}+'/static/platform/js/lang/common/zh_CN.js'}"></script>
     <script type="text/javascript" th:src="@{${ctx}+'/static/platform/js/lang/js/zh_CN.js'}"></script>
-    <link rel="stylesheet" href="@{${ctx}+'/static/platform/styles/custom/all_update.css'}" />
+    <link rel="stylesheet" th:href="@{${ctx}+'/static/platform/styles/custom/all_update.css'}" />
     <style>
     *{
         font-family: "Microsoft YaHei", "Verdana, Arial, Helvetica, sans-serif" !important;
@@ -178,23 +178,24 @@
         display: none !important;
     }
     </style>
-    <script src="[[${ctx}]]/static/platform/js/dynamic.jsp"></script>
-    <script src="[[${ctx}]]/static/platform/js/jquery/jquery.js"></script>
-    <script src="[[${ctx}]]/static/platform/js/util/util.js"></script>
-    <script src="[[${ctx}]]/static/platform/js/util/form.js"></script>
-    <script src="[[${ctx}]]/static/platform/js/lg/base.js"></script>
-    <script src="[[${ctx}]]/static/platform/js/lg/plugins/ligerDialog.js"></script>
-    <script src="[[${ctx}]]/static/platform/js/lg/plugins/ligerDrag.js"></script>
-    <script src="[[${ctx}]]/static/platform/js/lg/plugins/ligerLayout.js"></script>
-    <script src="[[${ctx}]]/static/platform/js/lg/plugins/ligerMenu.js"></script>
-    <script src="[[${ctx}]]/static/platform/js/lg/plugins/ligerTab.js"></script>
-    <script src="[[${ctx}]]/static/platform/js/lg/plugins/ligerAccordion.js"  ></script>
-    <script src="[[${ctx}]]/static/platform/js/tree/jquery.ztree.js"></script>
-    <script src="[[${ctx}]]/static/platform/js/hotent/platform/system/sysPopupRemind/SysPopupRemindUtil.js"></script>
-    <script src="[[${ctx}]]/static/platform/js/custom/jquery.nicescroll.js"></script><!-- 自定义滚动条插件 -->
-    <script type="text/javascript">
+    <script th:src="@{${ctx}+'/static/platform/js/dynamic.jsp'}"></script>
+    <script th:src="@{${ctx}+'/static/platform/js/jquery/jquery.js'}"></script>
+    <script th:src="@{${ctx}+'/static/platform/js/util/util.js'}"></script>
+    <script th:src="@{${ctx}+'/static/platform/js/util/form.js'}"></script>
+    <script th:src="@{${ctx}+'/static/platform/js/lg/base.js'}"></script>
+    <script th:src="@{${ctx}+'/static/platform/js/lg/plugins/ligerDialog.js'}"></script>
+    <script th:src="@{${ctx}+'/static/platform/js/lg/plugins/ligerDrag.js'}"></script>
+    <script th:src="@{${ctx}+'/static/platform/js/lg/plugins/ligerLayout.js'}"></script>
+    <script th:src="@{${ctx}+'/static/platform/js/lg/plugins/ligerMenu.js'}"></script>
+    <script th:src="@{${ctx}+'/static/platform/js/lg/plugins/ligerTab.js'}"></script>
+    <script th:src="@{${ctx}+'/static/platform/js/lg/plugins/ligerAccordion.js'}"></script>
+    <script th:src="@{${ctx}+'/static/platform/js/tree/jquery.ztree.js'}"></script>
+    <script th:src="@{${ctx}+'/static/platform/js/hotent/platform/system/sysPopupRemind/SysPopupRemindUtil.js'}"></script>
+    <script th:src="@{${ctx}+'/static/platform/js/custom/jquery.nicescroll.js'}"></script><!-- 自定义滚动条插件 -->
+    <script >
+    	//<![CDATA[  
         if(top != this){//当这个窗口出现在iframe里，表示其目前已经timeout，需要把外面的框架窗口也重定向登录页面
-              top.location = '<%=request.getContextPath()%>/platform/console/main.ht';
+              top.location = "[[${ctx}]]/platform/console/main.ht";
         }
  
         var mian_layout_;
@@ -809,18 +810,20 @@
               if(mwei < iwei && $("#menuPanel .more-menu-item").length == 0) {
                   $("#menuPanel").append(more).addClass("over-width");
               }
-          }         
+          }       
+        //]]>
      </script>
      
      
-     <link title="index" name="styleTag" rel="stylesheet" type="text/css" href="[[${ctx}]]/static/platform/styles/default/css/jquery/plugins/jquery.chosen.css">
-<script type="text/javascript" src="[[${ctx}]]/static/platform/js/jquery/plugins/jquery.chosen.js"></script>
-<script type="text/javascript" src="[[${ctx}]]/static/platform/js/jquery/plugins/jquery.htselect.js"></script>
+     <link title="index" name="styleTag" rel="stylesheet" type="text/css" th:href="@{${ctx}+'/static/platform/styles/default/css/jquery/plugins/jquery.chosen.css'}"/>
+<script type="text/javascript" th:src="@{${ctx}+'/static/platform/js/jquery/plugins/jquery.chosen.js'}"></script>
+<script type="text/javascript" th:src="@{${ctx}+'/static/platform/js/jquery/plugins/jquery.htselect.js'}"></script>
 <script type="text/javascript">
+	//<![CDATA[
     var isStop = false,pWidth,sWidth;
     $(function(){
     	if($(".logout.switch").length<=0){
-    		$(".logout.default").removeClass("notview");
+    		$(".logout.default").removeClass();
     	}else{
     		$(".logout.default").remove();
     	}
@@ -994,7 +997,7 @@
              }
          });
     }
-  	
+	//]]>
 </script>
 <style>
 .moreinfo{ display:inline}
@@ -1080,9 +1083,48 @@ a.menuItem{
 </head>
 <body onresize="menuResize();">  
     <div id="pageloading"></div>
- 	<div th:replace="maintop :: header">
- 		
- 	</div>
+ 	
+ 	<div class="index_top" th:fragment="header">
+    <div class="left_logo">
+        <a href="/platform/console/main.ht"><img id="logoImg" th:src="@{${ctx}+${currentSystem.logo}}"/></a>
+    </div>
+    <div class="welcome-bar">
+        <a target="_blank" href="/platform/system/messageReceiver/list.ht?Q_receiveTime_S=1"><div id="msg" class="email-block"></div></a>
+
+		<div class="welcome-cell welcome-title"  th:inline="text">
+            欢迎您，[[${fullname}]]
+            <input type="hidden" id="account" th:value="${account}"/>
+        </div>
+        <!-- 设置操作 -->
+        <div class="welcome-cell welcome-setting dorpdown">
+            设置
+            <div class="dorpdown-layer">
+                <ul>
+                 
+                </ul>
+            </div>
+        </div>
+        <!-- 设置操作 -->
+
+        <!-- 登出操作 -->
+        <div class="welcome-cell welcome-logout">
+            <a class="logout switch" th:each="cookie:${#httpServletRequest.getCookies()}" th:if="${cookie.getName().equals('origSwitch')} and ${cookie.getValue()}}" 
+            	th:href="@{${ctx}+'/j_spring_security_exit_user?j_username=${cookie.origSwitch.value}'}">退出</a>
+            <a class="logout default notshow" th:href="@{${ctx}+'/logout'}">退出切换用户</a>
+        </div>
+    </div>
+
+    <div class="index_menu">
+        <div class="menuParent">
+            <div id="company" class="company">
+            </div>
+            <div id="menuPanel" class="menuPanel"></div>
+        </div>
+    </div>
+
+    <div class="head_bg"></div>
+</div>
+ 	
     <div id="layoutMain">
         
         <!-- 左侧树形菜单 -->
@@ -1092,12 +1134,12 @@ a.menuItem{
  
         <!-- 右侧内容 -->
         <div position="center" id="framecenter"> 
-            <div tabid="home" title="<img src='[[${ctx}]]/static/platform/styles/[[${skinStyle}]]/images/icon/work.jpg' style='vertical-align:middle;'> 我的工作台">
-                <iframe frameborder="0" id="iframe" th:if="${currentSystem.homePage }"  name="home" th:src="(${currentSystem.isLocal}==1)?[[${ctx}]][[${currentSystem.homePage}]]:[[${currentSystem.homePage}]][[${currentSystem.homePage}]]"></iframe>
+            <div tabid="home" th:title="'&lt;img src=\''+${ctx}+'/static/platform/styles/'+${skinStyle}+'/images/icon/work.jpg\''+'/&gt;'+${maintitle}">
+                <iframe frameborder="0" id="iframe" th:if="${currentSystem.homePage }"  name="home" th:src="@{${currentSystem.isLocal}=='1' ? ${ctx}+${currentSystem.homePage}:${currentSystem.homePage}+${currentSystem.homePage}}"></iframe>
             </div>
         </div>
  
-        <input id="userId" type="hidden" value="[[${userId}]]" />
+        <input id="userId" type="hidden" th:value="${userId}" />
     </div>
 <script>
     $(function(){

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html  th:inline="text">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -20,7 +20,12 @@
     <div class="main">
         <img src="/static/platform/images/login_bg2.png" alt=""/>
         <div class="form">
-            <h2>用户登录 </h2>
+            <h2>用户登录[[${ctx}]]<a href="comments.html" 
+         th:href="@{/product/comments(prodId=1)}" 
+         th:if="${ctx}" th:switch="${ctx}"><span  th:case="''">view1</span><span th:title="${ctx}" th:case="'/test'">view2</span></a>
+     </h2><span><a th:each="cookie:${#httpServletRequest.getCookies()}" th:if="${cookie.getName().equals('origSwitch')}  and ${cookie.getValue()}=='mycookie'" th:title="${cookie.getValue()}" th:href="@{${ctx}+'/xxxx'}">cookie</a></span>
+			<span><a th:each="cookie:${#httpServletRequest.getCookies()}" th:if="${cookie.getValue()}" th:title="${cookie.getValue()}">cookie2</a></span>
+			<span><a th:each="cookie:${#httpServletRequest.getCookies()}" th:if="${cookie.getValue()}" th:title="${cookie.getValue()}">cookie2</a></span>
 			<form id="form-login" action="/platform/login" method="post">
                 <div class="form-line user-line">
                     <input type="text" class="input" id="txt_username" name="username" placeholder="请输入用户名/手机号码"/>
