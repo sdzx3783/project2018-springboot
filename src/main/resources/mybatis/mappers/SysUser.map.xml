@@ -387,7 +387,7 @@
 	<select id="getUsersByQuery" resultType="com.hotent.platform.model.system.SysUser">
 		SELECT DISTINCT a.*,b.userPosId,b.orgId,b.posId as posId1,b.jobId
 	    FROM sys_user a left join sys_user_pos b on a.userid = b.userid and b.ISDELETE=0 and  b.USERPOSID=(select b1.USERPOSID from sys_user_pos b1 where b1.userid=b.userid and b1.isdelete=0 order by ISCHARGE desc LIMIT 1)
-		inner join w_user_infomation w on a.userid = w.f_userid
+		left join w_user_infomation w on a.userid = w.f_userid
 		where 1 = 1 and a.account &lt;&gt; 'admin' and a.status &lt;&gt; -1
 		<if test="@Ognl@isNotEmpty(fullname)"> AND fullname  LIKE #{fullname}  </if>
 		<if test="@Ognl@isNotEmpty(account)"> AND account  LIKE #{account}  </if>

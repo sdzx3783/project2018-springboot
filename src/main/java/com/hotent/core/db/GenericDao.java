@@ -59,8 +59,7 @@ public abstract class GenericDao<E, PK extends Serializable> extends BaseMyBatis
 	}
 
 	public List<E> getBySqlKey(String sqlKey, QueryFilter queryFilter) {
-		new ArrayList();
-		List list;
+		List list=new ArrayList();;
 		if (queryFilter.getPageBean() == null) {
 			list = this.getBySqlKey(sqlKey, (Object) queryFilter.getFilters());
 		} else {
