@@ -39,6 +39,12 @@
       <artifactId>spring-session-jdbc</artifactId>
     </dependency>
     -->
+    
+    <!-- SPRING CLOUD -->
+    <dependency>
+    	<groupId>org.springframework.cloud</groupId>
+    	<artifactId>spring-cloud-starter-eureka</artifactId>
+    </dependency>
 
     <!--MYBATIS -->
     <dependency>

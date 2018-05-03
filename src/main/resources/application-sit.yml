@@ -15,4 +15,4 @@ eureka:
       defaultZone: http://192.168.1.46:1111/eureka/
 spring:
   application:
-    name: platform-whl
+    name: platform
