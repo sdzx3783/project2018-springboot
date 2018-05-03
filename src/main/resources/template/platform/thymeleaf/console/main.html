@@ -190,7 +190,6 @@
     <script th:src="@{${ctx}+'/static/platform/js/lg/plugins/ligerTab.js'}"></script>
     <script th:src="@{${ctx}+'/static/platform/js/lg/plugins/ligerAccordion.js'}"></script>
     <script th:src="@{${ctx}+'/static/platform/js/tree/jquery.ztree.js'}"></script>
-    <script th:src="@{${ctx}+'/static/platform/js/hotent/platform/system/sysPopupRemind/SysPopupRemindUtil.js'}"></script>
     <script th:src="@{${ctx}+'/static/platform/js/custom/jquery.nicescroll.js'}"></script><!-- 自定义滚动条插件 -->
     <script >
     	//<![CDATA[  
@@ -233,100 +232,9 @@
             }, 100);
         }
  
-        function getdb(){
-            var moreTemplate =  '<div class="mtab-line txr">' +
-                                    '<a href="javascript:morePendingMatters()">更多...</a>' +
-                                '</div>';
-            var emptyTemplate = '<div class="mtab-line txr">' +
-                                  '当前没有记录' +
-                                '</div>';
-             $.ajax({
-                 type : "get",
-                 dataType: 'JSON',
-                 url : "/platform/bpm/task/pd_mt_db_index.ht",
-                 success : function(data) {
-                    var html        = '',
-                        message     = JSON.parse(data.message),
-                        jsonObjArr  = message.data,
-                        count       = message.total;
+       
  
-                    $("#pendingMatters").html("");
-                        if(null == message || message == ""){
-                        $("#pendingMatters").html(emptyTemplate);
-                        return;
-                    }
- 
-                    jsonObjArr.splice(3, 2);
-                    $.each(jsonObjArr, function (i, item){  
-                        var date =  new Date(item.createTime.time);
-                        date     =  date.format('yyyy-MM-dd hh:mm:ss');
-                        html     += '<div class="mtab-line">' +
-                                        '<a href="javascript:executeTask('+item.id+')" class="mtab-title">' + item.subject + '</a>' +
-                                        '<span class="mtab-aside">' + item.creator +  '</span>' +
-                                    '</div>';
-                    });  
-                    if(count == 0){html += emptyTemplate;}
-                    if(count > 3){html += moreTemplate;}
-                    $("#pendingMatters").html(html);
-                    menudbResetHtml(count);
-                 }
-             });
-        }
- 
-        function getjb(){
-            var moreTemplate =  '<div class="mtab-line txr">' +
-                                    '<a href="javascript:alreadyMatters()">更多...</a>' +
-                                '</div>';
-            var emptyTemplate = '<div class="mtab-line txr">' +
-                                  '当前没有记录' +
-                                '</div>';
-             $.ajax({
-                 type : "get",
-                 dataType: 'JSON',
-                 url : "/platform/bpm/task/pd_mt_yb_index.ht",
-                 success : function(data) {
-                    var html        = '',
-                        message     = JSON.parse(data.message),
-                        jsonObjArr  = message.data,
-                        count       = message.total;
-                    $("#completedMatters").html("");
-                    if(null == message || message == ""){
-                        $("#completedMatters").html(emptyTemplate);
-                        return;
-                    }
- 
-                    jsonObjArr.splice(3, 2);
-                    $.each(jsonObjArr, function (i, item){  
-                        var date =  new Date(item.createtime.time);
-                        date     =  date.format('yyyy-MM-dd hh:mm:ss');
-                        html     += '<div class="mtab-line">' +
-                                        '<a href="javascript:searchFinishTask('+item.runId+')" class="mtab-title">' + item.subject + '</a>' +
-                                        '<span class="mtab-aside">' + item.creator + '</span>' +
-                                    '</div>';
-                    });  
-                    if(count == 0){html += emptyTemplate;}
-                    if(count > 3){html += moreTemplate;}
- 
-                    $("#completedMatters").html(html);
-                    menujbResetHtml(count);
-                 }
-             });
-        }
-        //获取批量审批数量
-        function getBatchApproval(){
-            
-             $.ajax({
-                 type : "get",
-                 dataType: 'JSON',
-                 url : "/platform/bpm/task/pd_mt_batch_index.ht",
-                 success : function(data) {
-                    var html        = '',
-                        message     = JSON.parse(data.message),
-                        count       = message.total;
-                    menubatchResetHtml(count);
-                 }
-             });
-        }
+        
         
         function menudbResetHtml(count){
              $("#db_span_show").html("我的待办("+count+")");
@@ -361,20 +269,7 @@
             });
        }
         
-        //获取未读消息数量
-        function getNotReadMsg(){
-             $.ajax({
-                 type : "get",
-                 dataType: 'JSON',
-                 url : "/platform/system/messageReceiver/getNotReadCount.ht",
-                 success : function(data) {
-                    var html        = '',
-                        message     = JSON.parse(data.message),
-                        count       = message.total;
-                    menuMsgResetHtml(count);
-                 }
-             });
-        }
+      
         
         //未读消息数量
        function menuMsgResetHtml(count){
@@ -595,10 +490,7 @@
                 mian_layout_.setLeftCollapse(true);
             }
  
-            getdb();//待办
-            getjb();//经办
-            getBatchApproval();//批量审批
-            getNotReadMsg();//我的消息
+         
  
             if(callback){callback();}
         }
@@ -741,8 +633,6 @@
                 });
             });
             
-            //右下角提醒框
-            SysPopupRemindUtil.show("", null, "60");
  
             function initRemoveIframe(){
                 if($('.l-dialog-frame').remove().length <= 0){
@@ -845,13 +735,8 @@
         form.submit();
         });
         
-        $.get(__ctx + "/makshi/worksheet/workSheet/dakaCk.ht", function(data) {
-            var obj = new com.hotent.form.ResultMessage(data);
-            if (obj.isSuccess()) {
-                $("#daka").show();
-            }
-        });
-        getNotReadMsg2();
+        
+       
     });
     
     function selectSystem() {
@@ -983,20 +868,7 @@
         });
     }
     
-  //获取未读消息数量
-    function getNotReadMsg2(){
-         $.ajax({
-             type : "get",
-             dataType: 'JSON',
-             url : "/platform/system/messageReceiver/getNotReadCount.ht",
-             success : function(data) {
-                var html        = '',
-                    message     = JSON.parse(data.message),
-                    count       = message.total;
-               $("#msg").html("("+count+")");
-             }
-         });
-    }
+  
 	//]]>
 </script>
 <style>

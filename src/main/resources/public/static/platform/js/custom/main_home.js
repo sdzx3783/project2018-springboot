@@ -7,14 +7,14 @@ function searchFinishTask(taskId){
     var rtn = jQuery.openFullWindow(url);
 }
 function refProcessData(){
-    getdb();
+   // getdb();
    // getNotReadMsg();
-    getjb();
-    getScheduleDay();
-    getMessage();
-    getDoc(100,"#noticeTab");
-    getEmail();
-    getDoc(3,"#newDocTab");
+   // getjb();
+   // getScheduleDay();
+   // getMessage();
+    //getDoc(100,"#noticeTab");
+    //getEmail();
+    //getDoc(3,"#newDocTab");
 }
 function getdb(){
     var moreTemplate =  '<div class="mtab-line txr">' +
@@ -58,21 +58,6 @@ function getdb(){
      });
 }
 
-//获取未读消息数量
-function getNotReadMsg(){
-     $.ajax({
-         type : "get",
-         dataType: 'JSON',
-         url : "/platform/system/messageReceiver/getNotReadCount.ht",
-         success : function(data) {
-            var html        = '',
-                message     = JSON.parse(data.message),
-                count       = message.total;
-            menuMsgResetHtml(count);
-            $("#msg").html(count);
-         }
-     });
-}
 function getMessage(){
 //    var moreTemplate =  '<div class="mtab-line txr">' +
 //                            '<a target="_blank" href="/platform/system/messageReceiver/list.ht?Q_receiveTime_S=1">更多...</a>' +
@@ -608,19 +593,19 @@ $(function() {
     }
 
     // 初始化调用天气接口
-    initWeather();
+    //initWeather();
     // ==================================================================
     // =============================天气模块=============================
 
-    getdb();
+    //getdb();
    // getNotReadMsg();
-    getjb();
-    getScheduleDay();
-    getMessage();
-    getDoc(100,"#noticeTab");
-    getyqlj();
-    getEmail();
-    getDoc(3,"#newDocTab");
+    //getjb();
+    //getScheduleDay();
+    //getMessage();
+   // getDoc(100,"#noticeTab");
+    //getyqlj();
+    //getEmail();
+   // getDoc(3,"#newDocTab");
 });
 
 
