@@ -1108,7 +1108,7 @@ a.menuItem{
 
         <!-- 登出操作 -->
         <div class="welcome-cell welcome-logout">
-            <a class="logout switch"  
+            <a class="logout switch" th:each="cookie:${#httpServletRequest.getCookies()}" th:if="${'origSwitch'.equals(cookie.getName())} and ${cookie.getValue()}" 
             	th:href="@{${ctx}+'/j_spring_security_exit_user?j_username=${cookie.origSwitch.value}'}">退出</a>
             <a class="logout default notshow" th:href="@{${ctx}+'/logout'}">退出切换用户</a>
         </div>
